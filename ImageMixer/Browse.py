@@ -1,12 +1,17 @@
 from PyQt5.QtWidgets import QFileDialog
-import cv2
+import cv2 
+from InputViewer import InputViewer
+from PyQt5.QtGui import QImage
 
 class Browse:
-    def __init__(self, widget):
+    def __init__(self, widget,image_num,input_viewer):
         self._widget = widget
         self._is_grey = False
+        self.image_num=image_num
+        self.input_viewer=input_viewer
         self._image_path = None  # To store the selected image path
         self.setup_double_click_event()
+        
 
     @property
     def image_path(self):
@@ -21,8 +26,10 @@ class Browse:
         self._widget.mouseDoubleClickEvent = self.handle_double_click
 
     def handle_double_click(self, event):
-        """Handle the double-click event to open the file dialog and process the image."""
         self.browse_image()
+        if self._image_path:  # If a valid image was selected
+            self.set_image()
+
 
     def browse_image(self):
         """Open file dialog to select an image."""
@@ -30,9 +37,23 @@ class Browse:
             None, "Select Image", "", "Image Files (*.png *.jpg *.jpeg *.bmp *.tif *.tiff)"
         )
         if file_path:
-            self._image_path = file_path  # Set the image path directly
-            self.check_extension()          # Check the extension
-            self.check_grey_scale()        # Check if the image is grayscale
+            self._image_path = file_path  
+            self.check_extension()          
+            self.check_grey_scale()  
+
+
+    def set_image(self):
+        if not self._image_path:
+            print("Image path is not set.")
+            return
+
+       
+        self.input_viewer.displayImage(self._image_path, self.image_num,self._is_grey,0)
+
+
+
+            
+              
 
     def check_extension(self):
         """Check if the file has a valid image extension."""

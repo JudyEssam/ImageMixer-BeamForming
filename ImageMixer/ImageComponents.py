@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from numpy.fft import rfft2, irfft2, fftshift, ifftshift
+from numpy.fft import fft2,rfft2, irfft2, fftshift, ifftshift
 
 class ImageComponents:
     def __init__(self, image):
@@ -23,7 +23,7 @@ class ImageComponents:
 
     def __compute_rfft(self):
        
-        self.__rfft_result = rfft2(self.__original_image)
+        self.__rfft_result = fft2(self.__original_image)
         self.__rfft_result = fftshift(self.__rfft_result)  # Center the FFT
         
       
