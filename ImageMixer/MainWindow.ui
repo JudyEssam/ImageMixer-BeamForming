@@ -40,8 +40,6 @@
          <property name="font">
           <font>
            <pointsize>-1</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -67,7 +65,7 @@ border-radius: 10px;     </string>
           </property>
           <attribute name="icon">
            <iconset>
-            <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
+            <normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
           </attribute>
           <attribute name="title">
            <string>Image Mixer</string>
@@ -152,10 +150,7 @@ font-size: 15px;
                          <widget class="QLabel" name="label_30">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -186,10 +181,7 @@ border:None;</string>
                          <widget class="QLabel" name="label_31">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -254,6 +246,15 @@ QSlider::handle:pressed {
 background: #1f536b; /* Color of the handle when pressed */
 border: 1px solid #3498db; /* Border of the handle when pressed */
 }</string>
+                        </property>
+                        <property name="maximum">
+                         <number>100</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>10</number>
+                        </property>
+                        <property name="sliderPosition">
+                         <number>100</number>
                         </property>
                         <property name="orientation">
                          <enum>Qt::Horizontal</enum>
@@ -378,6 +379,15 @@ background: #1f536b; /* Color of the handle when pressed */
 border: 1px solid #3498db; /* Border of the handle when pressed */
 }</string>
                       </property>
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>10</number>
+                      </property>
+                      <property name="sliderPosition">
+                       <number>100</number>
+                      </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
                       </property>
@@ -493,10 +503,7 @@ font-size: 15px;
                          <widget class="QLabel" name="label_32">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -526,10 +533,7 @@ border:None;</string>
                          <widget class="QLabel" name="label_33">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -639,10 +643,7 @@ font-size: 15px;
                          <widget class="QLabel" name="label_34">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -673,10 +674,7 @@ border:None;</string>
                          <widget class="QLabel" name="label_35">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -744,6 +742,15 @@ QSlider::handle:pressed {
 background: #1f536b; /* Color of the handle when pressed */
 border: 1px solid #3498db; /* Border of the handle when pressed */
 }</string>
+                      </property>
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>10</number>
+                      </property>
+                      <property name="sliderPosition">
+                       <number>100</number>
                       </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
@@ -866,6 +873,15 @@ background: #1f536b; /* Color of the handle when pressed */
 border: 1px solid #3498db; /* Border of the handle when pressed */
 }</string>
                       </property>
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                      <property name="singleStep">
+                       <number>10</number>
+                      </property>
+                      <property name="sliderPosition">
+                       <number>100</number>
+                      </property>
                       <property name="orientation">
                        <enum>Qt::Horizontal</enum>
                       </property>
@@ -981,10 +997,7 @@ font-size: 15px;
                          <widget class="QLabel" name="label_36">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -1014,10 +1027,7 @@ border:None;</string>
                          <widget class="QLabel" name="label_37">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -1071,10 +1081,7 @@ border:None;</string>
                  <widget class="QLabel" name="mixerOutputTo_3">
                   <property name="font">
                    <font>
-                    <family>Overpass Black</family>
                     <pointsize>-1</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -1126,10 +1133,7 @@ border: None;</string>
                      <widget class="QRadioButton" name="radioButton1">
                       <property name="font">
                        <font>
-                        <family>Oswald SemiBold</family>
                         <pointsize>-1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="cursor">
@@ -1150,10 +1154,7 @@ font-size: 18px;</string>
                      <widget class="QRadioButton" name="radioButton2">
                       <property name="font">
                        <font>
-                        <family>Oswald SemiBold</family>
                         <pointsize>-1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="cursor">
@@ -1183,10 +1184,7 @@ font-size: 18px;</string>
                        <widget class="QLabel" name="label_op1_3">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="styleSheet">
@@ -1216,10 +1214,7 @@ border:None;</string>
                        <widget class="QLabel" name="label_op2_3">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="styleSheet">
@@ -1256,10 +1251,8 @@ border:None;</string>
                    <widget class="QPushButton" name="mixxer_3">
                     <property name="font">
                      <font>
-                      <family>-apple-system</family>
+                      <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                       <pointsize>-1</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="cursor">
@@ -1309,7 +1302,7 @@ QPushButton:pressed {
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
+                      <normaloff>../../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>../../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1385,10 +1378,7 @@ border: None;</string>
                      <widget class="QLabel" name="selectedArea_5">
                       <property name="font">
                        <font>
-                        <family>Overpass Black</family>
                         <pointsize>-1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
@@ -1410,10 +1400,7 @@ border: None;</string>
                          <widget class="QRadioButton" name="radioButton_In_3">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="cursor">
@@ -1427,16 +1414,19 @@ font-weight:10000px;
                           <property name="text">
                            <string>Inside Region</string>
                           </property>
+                          <property name="checkable">
+                           <bool>false</bool>
+                          </property>
+                          <property name="checked">
+                           <bool>false</bool>
+                          </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QRadioButton" name="radioButton_Out_3">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="cursor">
@@ -1458,10 +1448,8 @@ font-weight:10000px;
                        <widget class="QPushButton" name="Deselect_3">
                         <property name="font">
                          <font>
-                          <family>-apple-system</family>
+                          <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="cursor">
@@ -1592,7 +1580,7 @@ QPushButton:pressed {
          <widget class="QWidget" name="Musical_Instruments_Tab">
           <attribute name="icon">
            <iconset>
-            <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
+            <normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
           </attribute>
           <attribute name="title">
            <string>Beamforming</string>
