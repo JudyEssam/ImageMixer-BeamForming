@@ -5,7 +5,7 @@ from BeamSimulator import BeamForming
 
 class RecievingMode(BeamForming):
     def __init__(self):
-        super.__init__(self)
+        super().__init__(self)
 
     def find_DOA(self): #for Receiving mode only- Get Direction of arrival (we don't know the beam angle)
         recieved_signal= self.apply_signal_to_array('R')
@@ -21,6 +21,7 @@ class RecievingMode(BeamForming):
 
         # print angle that gave us the max value
         print(theta_scan[np.argmax(results)] * 180 / np.pi) 
+       
         #Graphing DOA
         # plt.plot(theta_scan*180/np.pi, results) # lets plot angle in degrees
         # plt.xlabel("Theta [Degrees]")

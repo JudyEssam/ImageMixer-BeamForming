@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 class TransmissionMode(BeamForming):
     def __init__(self):
-        super.__init__(self)
+        super().__init__(self)
  
     def find_interference_map(self):
         k= self._signal.get_wavenumber()
