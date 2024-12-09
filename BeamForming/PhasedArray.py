@@ -31,9 +31,15 @@ class PhasedArray:
         self._steer_vector = np.array(self._element_gain)* np.exp(geometry_phases + 1j * np.array(self._element_phases))
 
     def get_steer_vector(self):
+         self.form_steer_vector()
          return self._steer_vector
     def get_array_factor(self): #parameters of the array
          return self._antennas_num, self._antennas_spacing, self._beam_angle
+    def get_antennas_num(self): #parameters of the array
+         return self._antennas_num
     
     def visualize_array():
          pass
+    
+    def set_signal_wavelength(self,signal_wavelength):
+         self._signal_wavelength= signal_wavelength
