@@ -8,3 +8,8 @@ class Antenna:
 
         self.phase=phase    #there's already interinsic phase shift due to spacing and exterinsic phase shift
         #applying phase shift to the elements (steering angle) change the direction of the beam (beam_angle)
+
+ 
+
+
+        

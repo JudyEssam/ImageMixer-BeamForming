@@ -6,6 +6,7 @@ from TrasmissionMode import TransmissionMode
 from RecievingMode import RecievingMode
 from PhasedArray import PhasedArray
 from Antenna import Antenna
+from Signal import Signal
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -15,8 +16,36 @@ class MainWindow(QMainWindow):
 
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
         self.mode_combox.currentIndexChanged.connect(self.selectMode)
+        
+        self.form_array_button= self.findChild(QPushButton, 'apply_array')
+        self.form_array_button.clicked.connect(self.formArray)
+        self.form_antenna_button= self.findChild(QPushButton, 'apply_element')
+        self.form_antenna_button.clicked.connect(self.formAntenna)
+        self.form_signal_button= self.findChild(QPushButton, 'apply_signal')
+        self.form_signal_button.clicked.connect(self.formSignal)
+        
+        #for array parameters
+        self.spacing_spinbox=self.findChild(QSpinBox, 'elements_spacing')
+        self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
+        self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
+        self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
+
+       #for element parameters
+        self.isotropic_checkbox= self.findChild(QCheckBox, 'Isotropic_checkbox')
+        self.isotropic_checkbox.clicked.connect(self.check_isotropic) 
+        self.phase_widget= self.findChild(QListWidget, 'componList_2')
+        self.gain_widget= self.findChild(QListWidget, 'componList_3')
+
+        #for signal parameters
+        self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
+        self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
+        self.amplitude=self.findChild(QSpinBox, 'amplitude')
+        self.add_freq_button=self.findChild(QPushButton, 'add_frequency')
+        self.add_freq_button.clicked.connect(lambda : self.signal.add_freq(self.freq_spinbox.value()))
+        
         self.mode=None
-        self.phased_array=None
+        self.array=None
+        self.signal= Signal()
 
 
     def selectMode(self, index):
@@ -26,6 +55,38 @@ class MainWindow(QMainWindow):
         elif index==1:
             self.mode= RecievingMode()
 
+    def formArray(self):
+        antennas_num= self.elements_num_spinbox.value
+        antennas_spacing=self.spacing_spinbox.value
+        beam_angle=self.beam_angle_spinbox.value
+        shape= 'linear' if self.shape_combox.currentIndex()==1 else 'circular'
+        self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)
+        self.array.show_sliders_phase(antennas_num,self.phase_widget)
+
+    
+    def check_isotropic(self):
+        if self.isotropic_checkbox.isChecked():
+            self.array.show_sliders_gain()
+
+
+    def formAntenna(self):
+        antennas_num = self.array.get_antennas_num()
+        if self.isotropic_checkbox.isChecked():
+            is_isotropic=True
+            gains= [1]*antennas_num
+        else:
+            is_isotropic= False
+            gains= self.array.get_gain_sliders_vals() 
+        phases= self.array.get_phase_sliders_vals() 
+        
+        for idx in range(antennas_num):
+            antenna=Antenna(is_isotropic=is_isotropic, phase= phases[idx], gain= gains[idx])
+            self.array.add_antenna(antenna)
+        self.array.set_elements_phases_and_gains(phases, gains)
+    
+    def formSignal(self):
+        amplitude= self.amplitude.value()
+        self.signal.create_signal(amplitude)
 
 
 if __name__ == '__main__':
@@ -33,4 +94,4 @@ if __name__ == '__main__':
     window = MainWindow()
     window.show()
     window.showMaximized()
-    sys.exit(app.exec_())        
+    sys.exit(app.exec_())

@@ -16,6 +16,7 @@ class SelectableLabel(QLabel):
         self.start_pos = None
         self.prev_y = None
         self.mode=mode
+        self.original_copy= None
         
         
 

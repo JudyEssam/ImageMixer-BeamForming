@@ -22,7 +22,7 @@ class Image:
         self.qimage = QImage(self.image.data, width, height, bytes_per_line, QImage.Format_Grayscale8)
 
     def change_brightness(self, value): 
-        self.image = cv2.convertScaleAbs(self.image, alpha=1, beta=value)
+        self.image_after = cv2.convertScaleAbs(self.image, alpha=1, beta=value)
 
     def change_contrast(self, value):
         self.image = cv2.convertScaleAbs(self.image, alpha=value, beta=0)
