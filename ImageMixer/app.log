@@ -1,0 +1,1436 @@
+2024-12-12 22:08:09,163 - INFO - MainWindow initialized.
+2024-12-12 22:08:09,167 - DEBUG - uiname is MainWindow
+2024-12-12 22:08:09,168 - DEBUG - toplevel widget is MainWindow
+2024-12-12 22:08:09,168 - DEBUG - setting property geometry
+2024-12-12 22:08:09,168 - DEBUG - setting property windowTitle
+2024-12-12 22:08:09,168 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,168 - DEBUG - push MainWindow MainWindow
+2024-12-12 22:08:09,168 - DEBUG - push QWidget centralwidget
+2024-12-12 22:08:09,168 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,168 - DEBUG - push QGridLayout gridLayout
+2024-12-12 22:08:09,168 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,168 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,169 - DEBUG - push QFrame frame
+2024-12-12 22:08:09,169 - DEBUG - push QGridLayout gridLayout_3
+2024-12-12 22:08:09,169 - DEBUG - setting property minimumSize
+2024-12-12 22:08:09,169 - DEBUG - setting property font
+2024-12-12 22:08:09,169 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,169 - DEBUG - setting property currentIndex
+2024-12-12 22:08:09,169 - DEBUG - setting property iconSize
+2024-12-12 22:08:09,169 - DEBUG - push QTabWidget tabWidget
+2024-12-12 22:08:09,169 - DEBUG - setting property minimumSize
+2024-12-12 22:08:09,169 - DEBUG - push QWidget Uniform_Range_Tab
+2024-12-12 22:08:09,169 - DEBUG - push QGridLayout gridLayout_36
+2024-12-12 22:08:09,169 - DEBUG - push QHBoxLayout horizontalLayout_36
+2024-12-12 22:08:09,169 - DEBUG - push QVBoxLayout verticalLayout_left_4
+2024-12-12 22:08:09,169 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,170 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,170 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,170 - DEBUG - push QFrame frame_17
+2024-12-12 22:08:09,170 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,170 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,170 - DEBUG - push QGridLayout gridLayout_17
+2024-12-12 22:08:09,170 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,170 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,170 - DEBUG - push QVBoxLayout verticalLayout_61
+2024-12-12 22:08:09,170 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,170 - DEBUG - setting property text
+2024-12-12 22:08:09,170 - DEBUG - push QLabel label_38
+2024-12-12 22:08:09,170 - DEBUG - pop widget QLabel label_38
+2024-12-12 22:08:09,170 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,170 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,170 - DEBUG - setting property orientation
+2024-12-12 22:08:09,170 - DEBUG - push QFrame line_30
+2024-12-12 22:08:09,170 - DEBUG - pop widget QFrame line_30
+2024-12-12 22:08:09,170 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,170 - DEBUG - push QHBoxLayout horizontalLayout_38
+2024-12-12 22:08:09,170 - DEBUG - push QVBoxLayout verticalLayout_62
+2024-12-12 22:08:09,171 - DEBUG - setting property font
+2024-12-12 22:08:09,171 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,171 - DEBUG - setting property text
+2024-12-12 22:08:09,171 - DEBUG - push QLabel label_30
+2024-12-12 22:08:09,171 - DEBUG - pop widget QLabel label_30
+2024-12-12 22:08:09,171 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,172 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,172 - DEBUG - push QWidget original_1
+2024-12-12 22:08:09,172 - DEBUG - pop widget QWidget original_1
+2024-12-12 22:08:09,172 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,172 - DEBUG - pop layout QVBoxLayout verticalLayout_62
+2024-12-12 22:08:09,172 - DEBUG - push QVBoxLayout verticalLayout_63
+2024-12-12 22:08:09,172 - DEBUG - setting property font
+2024-12-12 22:08:09,172 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,173 - DEBUG - setting property text
+2024-12-12 22:08:09,173 - DEBUG - push QLabel label_31
+2024-12-12 22:08:09,173 - DEBUG - pop widget QLabel label_31
+2024-12-12 22:08:09,173 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,173 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,173 - DEBUG - push QWidget component_image_1
+2024-12-12 22:08:09,173 - DEBUG - pop widget QWidget component_image_1
+2024-12-12 22:08:09,173 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,173 - DEBUG - pop layout QVBoxLayout verticalLayout_63
+2024-12-12 22:08:09,173 - DEBUG - pop layout QHBoxLayout horizontalLayout_38
+2024-12-12 22:08:09,173 - DEBUG - setting property spacing
+2024-12-12 22:08:09,173 - DEBUG - setting property sizeConstraint
+2024-12-12 22:08:09,173 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:08:09,173 - DEBUG - push QHBoxLayout horizontalLayout_47
+2024-12-12 22:08:09,173 - DEBUG - setting property sizePolicy
+2024-12-12 22:08:09,173 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,173 - DEBUG - setting property maximum
+2024-12-12 22:08:09,173 - DEBUG - setting property singleStep
+2024-12-12 22:08:09,173 - DEBUG - setting property sliderPosition
+2024-12-12 22:08:09,173 - DEBUG - setting property orientation
+2024-12-12 22:08:09,173 - DEBUG - push QSlider Slider_weight3_5
+2024-12-12 22:08:09,173 - DEBUG - pop widget QSlider Slider_weight3_5
+2024-12-12 22:08:09,173 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,174 - DEBUG - setting property cursor
+2024-12-12 22:08:09,174 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,174 - DEBUG - push QComboBox combo1_6
+2024-12-12 22:08:09,174 - DEBUG - pop widget QComboBox combo1_6
+2024-12-12 22:08:09,174 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152F00>
+2024-12-12 22:08:09,174 - DEBUG - pop layout QHBoxLayout horizontalLayout_47
+2024-12-12 22:08:09,174 - DEBUG - pop layout QVBoxLayout verticalLayout_61
+2024-12-12 22:08:09,174 - DEBUG - pop layout QGridLayout gridLayout_17
+2024-12-12 22:08:09,174 - DEBUG - pop widget QFrame frame_17
+2024-12-12 22:08:09,174 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D615152CC0>
+2024-12-12 22:08:09,174 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,174 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,174 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,174 - DEBUG - push QFrame frame_18
+2024-12-12 22:08:09,174 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,174 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,174 - DEBUG - push QGridLayout gridLayout_19
+2024-12-12 22:08:09,174 - DEBUG - setting property spacing
+2024-12-12 22:08:09,174 - DEBUG - setting property sizeConstraint
+2024-12-12 22:08:09,174 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:08:09,174 - DEBUG - push QHBoxLayout horizontalLayout_49
+2024-12-12 22:08:09,174 - DEBUG - setting property sizePolicy
+2024-12-12 22:08:09,174 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,174 - DEBUG - setting property maximum
+2024-12-12 22:08:09,174 - DEBUG - setting property singleStep
+2024-12-12 22:08:09,174 - DEBUG - setting property sliderPosition
+2024-12-12 22:08:09,174 - DEBUG - setting property orientation
+2024-12-12 22:08:09,174 - DEBUG - push QSlider Slider_weight3_7
+2024-12-12 22:08:09,174 - DEBUG - pop widget QSlider Slider_weight3_7
+2024-12-12 22:08:09,174 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,175 - DEBUG - setting property cursor
+2024-12-12 22:08:09,175 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,175 - DEBUG - push QComboBox combo1_8
+2024-12-12 22:08:09,175 - DEBUG - pop widget QComboBox combo1_8
+2024-12-12 22:08:09,175 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,175 - DEBUG - pop layout QHBoxLayout horizontalLayout_49
+2024-12-12 22:08:09,175 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,175 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,175 - DEBUG - push QVBoxLayout verticalLayout_64
+2024-12-12 22:08:09,175 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,175 - DEBUG - setting property text
+2024-12-12 22:08:09,175 - DEBUG - push QLabel label_40
+2024-12-12 22:08:09,175 - DEBUG - pop widget QLabel label_40
+2024-12-12 22:08:09,175 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,177 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,177 - DEBUG - setting property orientation
+2024-12-12 22:08:09,177 - DEBUG - push QFrame line_31
+2024-12-12 22:08:09,177 - DEBUG - pop widget QFrame line_31
+2024-12-12 22:08:09,177 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,177 - DEBUG - push QHBoxLayout horizontalLayout_40
+2024-12-12 22:08:09,177 - DEBUG - push QVBoxLayout verticalLayout_65
+2024-12-12 22:08:09,177 - DEBUG - setting property font
+2024-12-12 22:08:09,177 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,177 - DEBUG - setting property text
+2024-12-12 22:08:09,177 - DEBUG - push QLabel label_32
+2024-12-12 22:08:09,177 - DEBUG - pop widget QLabel label_32
+2024-12-12 22:08:09,177 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,177 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,177 - DEBUG - push QWidget original_3
+2024-12-12 22:08:09,177 - DEBUG - pop widget QWidget original_3
+2024-12-12 22:08:09,177 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,177 - DEBUG - pop layout QVBoxLayout verticalLayout_65
+2024-12-12 22:08:09,177 - DEBUG - push QVBoxLayout verticalLayout_66
+2024-12-12 22:08:09,177 - DEBUG - setting property font
+2024-12-12 22:08:09,177 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,177 - DEBUG - setting property text
+2024-12-12 22:08:09,177 - DEBUG - push QLabel label_33
+2024-12-12 22:08:09,177 - DEBUG - pop widget QLabel label_33
+2024-12-12 22:08:09,177 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,179 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,179 - DEBUG - push QWidget component_image_3
+2024-12-12 22:08:09,179 - DEBUG - pop widget QWidget component_image_3
+2024-12-12 22:08:09,179 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615151BE0>
+2024-12-12 22:08:09,179 - DEBUG - pop layout QVBoxLayout verticalLayout_66
+2024-12-12 22:08:09,179 - DEBUG - pop layout QHBoxLayout horizontalLayout_40
+2024-12-12 22:08:09,179 - DEBUG - pop layout QVBoxLayout verticalLayout_64
+2024-12-12 22:08:09,179 - DEBUG - pop layout QGridLayout gridLayout_19
+2024-12-12 22:08:09,179 - DEBUG - pop widget QFrame frame_18
+2024-12-12 22:08:09,179 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D615152CC0>
+2024-12-12 22:08:09,179 - DEBUG - pop layout QVBoxLayout verticalLayout_left_4
+2024-12-12 22:08:09,179 - DEBUG - push QVBoxLayout verticalLayout_left_5
+2024-12-12 22:08:09,179 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,179 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,179 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,179 - DEBUG - push QFrame frame_19
+2024-12-12 22:08:09,179 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,179 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,179 - DEBUG - push QGridLayout gridLayout_20
+2024-12-12 22:08:09,179 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,179 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,179 - DEBUG - push QVBoxLayout verticalLayout_67
+2024-12-12 22:08:09,179 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,180 - DEBUG - setting property text
+2024-12-12 22:08:09,180 - DEBUG - push QLabel label_39
+2024-12-12 22:08:09,180 - DEBUG - pop widget QLabel label_39
+2024-12-12 22:08:09,180 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,180 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,180 - DEBUG - setting property orientation
+2024-12-12 22:08:09,180 - DEBUG - push QFrame line_32
+2024-12-12 22:08:09,181 - DEBUG - pop widget QFrame line_32
+2024-12-12 22:08:09,181 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,181 - DEBUG - push QHBoxLayout horizontalLayout_42
+2024-12-12 22:08:09,181 - DEBUG - push QVBoxLayout verticalLayout_68
+2024-12-12 22:08:09,181 - DEBUG - setting property font
+2024-12-12 22:08:09,181 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,181 - DEBUG - setting property text
+2024-12-12 22:08:09,181 - DEBUG - push QLabel label_34
+2024-12-12 22:08:09,181 - DEBUG - pop widget QLabel label_34
+2024-12-12 22:08:09,181 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,181 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,181 - DEBUG - push QWidget original_2
+2024-12-12 22:08:09,181 - DEBUG - pop widget QWidget original_2
+2024-12-12 22:08:09,181 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,181 - DEBUG - pop layout QVBoxLayout verticalLayout_68
+2024-12-12 22:08:09,181 - DEBUG - push QVBoxLayout verticalLayout_69
+2024-12-12 22:08:09,182 - DEBUG - setting property font
+2024-12-12 22:08:09,182 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,182 - DEBUG - setting property text
+2024-12-12 22:08:09,182 - DEBUG - push QLabel label_35
+2024-12-12 22:08:09,182 - DEBUG - pop widget QLabel label_35
+2024-12-12 22:08:09,182 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,182 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,182 - DEBUG - push QWidget component_image_2
+2024-12-12 22:08:09,182 - DEBUG - pop widget QWidget component_image_2
+2024-12-12 22:08:09,182 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,182 - DEBUG - pop layout QVBoxLayout verticalLayout_69
+2024-12-12 22:08:09,182 - DEBUG - pop layout QHBoxLayout horizontalLayout_42
+2024-12-12 22:08:09,182 - DEBUG - pop layout QVBoxLayout verticalLayout_67
+2024-12-12 22:08:09,182 - DEBUG - setting property spacing
+2024-12-12 22:08:09,182 - DEBUG - setting property sizeConstraint
+2024-12-12 22:08:09,182 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:08:09,182 - DEBUG - push QHBoxLayout horizontalLayout_48
+2024-12-12 22:08:09,183 - DEBUG - setting property sizePolicy
+2024-12-12 22:08:09,183 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,183 - DEBUG - setting property maximum
+2024-12-12 22:08:09,183 - DEBUG - setting property singleStep
+2024-12-12 22:08:09,183 - DEBUG - setting property sliderPosition
+2024-12-12 22:08:09,183 - DEBUG - setting property orientation
+2024-12-12 22:08:09,183 - DEBUG - push QSlider Slider_weight3_6
+2024-12-12 22:08:09,183 - DEBUG - pop widget QSlider Slider_weight3_6
+2024-12-12 22:08:09,183 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,184 - DEBUG - setting property cursor
+2024-12-12 22:08:09,184 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,184 - DEBUG - push QComboBox combo1_7
+2024-12-12 22:08:09,184 - DEBUG - pop widget QComboBox combo1_7
+2024-12-12 22:08:09,184 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615153F50>
+2024-12-12 22:08:09,184 - DEBUG - pop layout QHBoxLayout horizontalLayout_48
+2024-12-12 22:08:09,184 - DEBUG - pop layout QGridLayout gridLayout_20
+2024-12-12 22:08:09,184 - DEBUG - pop widget QFrame frame_19
+2024-12-12 22:08:09,184 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D615152CC0>
+2024-12-12 22:08:09,184 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,184 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,184 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,185 - DEBUG - push QFrame frame_20
+2024-12-12 22:08:09,185 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,185 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,185 - DEBUG - push QGridLayout gridLayout_21
+2024-12-12 22:08:09,186 - DEBUG - setting property spacing
+2024-12-12 22:08:09,186 - DEBUG - setting property sizeConstraint
+2024-12-12 22:08:09,186 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:08:09,186 - DEBUG - push QHBoxLayout horizontalLayout_50
+2024-12-12 22:08:09,186 - DEBUG - setting property sizePolicy
+2024-12-12 22:08:09,186 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,186 - DEBUG - setting property maximum
+2024-12-12 22:08:09,186 - DEBUG - setting property singleStep
+2024-12-12 22:08:09,186 - DEBUG - setting property sliderPosition
+2024-12-12 22:08:09,186 - DEBUG - setting property orientation
+2024-12-12 22:08:09,186 - DEBUG - push QSlider Slider_weight3_8
+2024-12-12 22:08:09,186 - DEBUG - pop widget QSlider Slider_weight3_8
+2024-12-12 22:08:09,186 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,187 - DEBUG - setting property cursor
+2024-12-12 22:08:09,187 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,187 - DEBUG - push QComboBox combo1_9
+2024-12-12 22:08:09,187 - DEBUG - pop widget QComboBox combo1_9
+2024-12-12 22:08:09,187 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,187 - DEBUG - pop layout QHBoxLayout horizontalLayout_50
+2024-12-12 22:08:09,187 - DEBUG - setting property leftMargin
+2024-12-12 22:08:09,187 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,187 - DEBUG - push QVBoxLayout verticalLayout_70
+2024-12-12 22:08:09,187 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,187 - DEBUG - setting property text
+2024-12-12 22:08:09,188 - DEBUG - push QLabel label_41
+2024-12-12 22:08:09,188 - DEBUG - pop widget QLabel label_41
+2024-12-12 22:08:09,188 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,188 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,188 - DEBUG - setting property orientation
+2024-12-12 22:08:09,188 - DEBUG - push QFrame line_33
+2024-12-12 22:08:09,188 - DEBUG - pop widget QFrame line_33
+2024-12-12 22:08:09,188 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,188 - DEBUG - push QHBoxLayout horizontalLayout_44
+2024-12-12 22:08:09,188 - DEBUG - push QVBoxLayout verticalLayout_71
+2024-12-12 22:08:09,188 - DEBUG - setting property font
+2024-12-12 22:08:09,188 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,188 - DEBUG - setting property text
+2024-12-12 22:08:09,188 - DEBUG - push QLabel label_36
+2024-12-12 22:08:09,188 - DEBUG - pop widget QLabel label_36
+2024-12-12 22:08:09,188 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,188 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,188 - DEBUG - push QWidget original_4
+2024-12-12 22:08:09,188 - DEBUG - pop widget QWidget original_4
+2024-12-12 22:08:09,188 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,188 - DEBUG - pop layout QVBoxLayout verticalLayout_71
+2024-12-12 22:08:09,188 - DEBUG - push QVBoxLayout verticalLayout_72
+2024-12-12 22:08:09,190 - DEBUG - setting property font
+2024-12-12 22:08:09,190 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,190 - DEBUG - setting property text
+2024-12-12 22:08:09,190 - DEBUG - push QLabel label_37
+2024-12-12 22:08:09,190 - DEBUG - pop widget QLabel label_37
+2024-12-12 22:08:09,190 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,190 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,190 - DEBUG - push QWidget component_image_4
+2024-12-12 22:08:09,190 - DEBUG - pop widget QWidget component_image_4
+2024-12-12 22:08:09,190 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152720>
+2024-12-12 22:08:09,190 - DEBUG - pop layout QVBoxLayout verticalLayout_72
+2024-12-12 22:08:09,190 - DEBUG - pop layout QHBoxLayout horizontalLayout_44
+2024-12-12 22:08:09,191 - DEBUG - pop layout QVBoxLayout verticalLayout_70
+2024-12-12 22:08:09,191 - DEBUG - pop layout QGridLayout gridLayout_21
+2024-12-12 22:08:09,191 - DEBUG - pop widget QFrame frame_20
+2024-12-12 22:08:09,191 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D615152CC0>
+2024-12-12 22:08:09,191 - DEBUG - pop layout QVBoxLayout verticalLayout_left_5
+2024-12-12 22:08:09,191 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,191 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,191 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,191 - DEBUG - push QFrame frame_right
+2024-12-12 22:08:09,192 - DEBUG - push QVBoxLayout verticalLayout_73
+2024-12-12 22:08:09,192 - DEBUG - setting property font
+2024-12-12 22:08:09,192 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,192 - DEBUG - setting property text
+2024-12-12 22:08:09,192 - DEBUG - push QLabel mixerOutputTo_3
+2024-12-12 22:08:09,193 - DEBUG - pop widget QLabel mixerOutputTo_3
+2024-12-12 22:08:09,193 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,193 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,193 - DEBUG - setting property orientation
+2024-12-12 22:08:09,193 - DEBUG - push QFrame line_34
+2024-12-12 22:08:09,193 - DEBUG - pop widget QFrame line_34
+2024-12-12 22:08:09,193 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,193 - DEBUG - push QVBoxLayout verticalLayout_74
+2024-12-12 22:08:09,193 - DEBUG - push QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:08:09,193 - DEBUG - setting property font
+2024-12-12 22:08:09,194 - DEBUG - setting property cursor
+2024-12-12 22:08:09,194 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,194 - DEBUG - setting property text
+2024-12-12 22:08:09,194 - DEBUG - push QRadioButton radioButton1
+2024-12-12 22:08:09,194 - DEBUG - pop widget QRadioButton radioButton1
+2024-12-12 22:08:09,194 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,194 - DEBUG - setting property font
+2024-12-12 22:08:09,194 - DEBUG - setting property cursor
+2024-12-12 22:08:09,194 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,195 - DEBUG - setting property text
+2024-12-12 22:08:09,195 - DEBUG - push QRadioButton radioButton2
+2024-12-12 22:08:09,195 - DEBUG - pop widget QRadioButton radioButton2
+2024-12-12 22:08:09,195 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,195 - DEBUG - pop layout QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:08:09,195 - DEBUG - setting property bottomMargin
+2024-12-12 22:08:09,195 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,195 - DEBUG - push QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:08:09,195 - DEBUG - push QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:08:09,195 - DEBUG - setting property font
+2024-12-12 22:08:09,195 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,196 - DEBUG - setting property text
+2024-12-12 22:08:09,196 - DEBUG - push QLabel label_op1_3
+2024-12-12 22:08:09,196 - DEBUG - pop widget QLabel label_op1_3
+2024-12-12 22:08:09,197 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,197 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,197 - DEBUG - push QWidget output_1
+2024-12-12 22:08:09,197 - DEBUG - pop widget QWidget output_1
+2024-12-12 22:08:09,197 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,197 - DEBUG - pop layout QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:08:09,197 - DEBUG - push QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:08:09,197 - DEBUG - setting property font
+2024-12-12 22:08:09,197 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,197 - DEBUG - setting property text
+2024-12-12 22:08:09,197 - DEBUG - push QLabel label_op2_3
+2024-12-12 22:08:09,198 - DEBUG - pop widget QLabel label_op2_3
+2024-12-12 22:08:09,198 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,198 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,198 - DEBUG - push QWidget output_2
+2024-12-12 22:08:09,198 - DEBUG - pop widget QWidget output_2
+2024-12-12 22:08:09,198 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,198 - DEBUG - pop layout QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:08:09,198 - DEBUG - pop layout QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:08:09,198 - DEBUG - pop layout QVBoxLayout verticalLayout_74
+2024-12-12 22:08:09,198 - DEBUG - setting property bottomMargin
+2024-12-12 22:08:09,198 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,198 - DEBUG - push QHBoxLayout horizontalLayout_45
+2024-12-12 22:08:09,198 - DEBUG - setting property font
+2024-12-12 22:08:09,199 - DEBUG - setting property cursor
+2024-12-12 22:08:09,199 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,199 - DEBUG - setting property text
+2024-12-12 22:08:09,199 - DEBUG - setting property icon
+2024-12-12 22:08:09,199 - DEBUG - setting property iconSize
+2024-12-12 22:08:09,199 - DEBUG - push QPushButton mixxer_3
+2024-12-12 22:08:09,199 - DEBUG - pop widget QPushButton mixxer_3
+2024-12-12 22:08:09,199 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,199 - DEBUG - setting property sizePolicy
+2024-12-12 22:08:09,199 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,199 - DEBUG - setting property value
+2024-12-12 22:08:09,199 - DEBUG - setting property textVisible
+2024-12-12 22:08:09,199 - DEBUG - push QProgressBar progressBar_3
+2024-12-12 22:08:09,199 - DEBUG - pop widget QProgressBar progressBar_3
+2024-12-12 22:08:09,199 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,199 - DEBUG - pop layout QHBoxLayout horizontalLayout_45
+2024-12-12 22:08:09,199 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,201 - DEBUG - setting property orientation
+2024-12-12 22:08:09,201 - DEBUG - push QFrame line_35
+2024-12-12 22:08:09,201 - DEBUG - pop widget QFrame line_35
+2024-12-12 22:08:09,201 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,201 - DEBUG - setting property topMargin
+2024-12-12 22:08:09,201 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,201 - DEBUG - push QVBoxLayout verticalLayout_75
+2024-12-12 22:08:09,201 - DEBUG - push QVBoxLayout verticalLayout_76
+2024-12-12 22:08:09,201 - DEBUG - setting property font
+2024-12-12 22:08:09,202 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,202 - DEBUG - setting property text
+2024-12-12 22:08:09,203 - DEBUG - push QLabel selectedArea_5
+2024-12-12 22:08:09,203 - DEBUG - pop widget QLabel selectedArea_5
+2024-12-12 22:08:09,203 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,203 - DEBUG - push QHBoxLayout horizontalLayout_46
+2024-12-12 22:08:09,203 - DEBUG - push QVBoxLayout verticalLayout_77
+2024-12-12 22:08:09,203 - DEBUG - setting property font
+2024-12-12 22:08:09,204 - DEBUG - setting property cursor
+2024-12-12 22:08:09,204 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,204 - DEBUG - setting property text
+2024-12-12 22:08:09,204 - DEBUG - setting property checkable
+2024-12-12 22:08:09,204 - DEBUG - setting property checked
+2024-12-12 22:08:09,204 - DEBUG - push QRadioButton radioButton_In_3
+2024-12-12 22:08:09,204 - DEBUG - pop widget QRadioButton radioButton_In_3
+2024-12-12 22:08:09,204 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,204 - DEBUG - setting property font
+2024-12-12 22:08:09,204 - DEBUG - setting property cursor
+2024-12-12 22:08:09,204 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,204 - DEBUG - setting property text
+2024-12-12 22:08:09,205 - DEBUG - push QRadioButton radioButton_Out_3
+2024-12-12 22:08:09,205 - DEBUG - pop widget QRadioButton radioButton_Out_3
+2024-12-12 22:08:09,205 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,205 - DEBUG - pop layout QVBoxLayout verticalLayout_77
+2024-12-12 22:08:09,205 - DEBUG - setting property font
+2024-12-12 22:08:09,205 - DEBUG - setting property cursor
+2024-12-12 22:08:09,205 - DEBUG - setting property layoutDirection
+2024-12-12 22:08:09,205 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,205 - DEBUG - setting property text
+2024-12-12 22:08:09,205 - DEBUG - setting property iconSize
+2024-12-12 22:08:09,205 - DEBUG - push QPushButton Deselect_3
+2024-12-12 22:08:09,205 - DEBUG - pop widget QPushButton Deselect_3
+2024-12-12 22:08:09,205 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,205 - DEBUG - pop layout QHBoxLayout horizontalLayout_46
+2024-12-12 22:08:09,205 - DEBUG - pop layout QVBoxLayout verticalLayout_76
+2024-12-12 22:08:09,205 - DEBUG - pop layout QVBoxLayout verticalLayout_75
+2024-12-12 22:08:09,205 - DEBUG - setting property topMargin
+2024-12-12 22:08:09,205 - DEBUG - setting property pyuicMargins
+2024-12-12 22:08:09,205 - DEBUG - push QVBoxLayout verticalLayout_78
+2024-12-12 22:08:09,206 - DEBUG - setting property styleSheet
+2024-12-12 22:08:09,206 - DEBUG - setting property orientation
+2024-12-12 22:08:09,206 - DEBUG - push QFrame line_36
+2024-12-12 22:08:09,206 - DEBUG - pop widget QFrame line_36
+2024-12-12 22:08:09,206 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D6151650A0>
+2024-12-12 22:08:09,206 - DEBUG - pop layout QVBoxLayout verticalLayout_78
+2024-12-12 22:08:09,206 - DEBUG - push QVBoxLayout verticalLayout_81
+2024-12-12 22:08:09,206 - DEBUG - pop layout QVBoxLayout verticalLayout_81
+2024-12-12 22:08:09,206 - DEBUG - pop layout QVBoxLayout verticalLayout_73
+2024-12-12 22:08:09,206 - DEBUG - pop widget QFrame frame_right
+2024-12-12 22:08:09,206 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D615152CC0>
+2024-12-12 22:08:09,206 - DEBUG - pop layout QHBoxLayout horizontalLayout_36
+2024-12-12 22:08:09,206 - DEBUG - pop layout QGridLayout gridLayout_36
+2024-12-12 22:08:09,206 - DEBUG - pop widget QWidget Uniform_Range_Tab
+2024-12-12 22:08:09,208 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x000002D615152C30>
+2024-12-12 22:08:09,339 - DEBUG - push QWidget Musical_Instruments_Tab
+2024-12-12 22:08:09,339 - DEBUG - push QGridLayout gridLayout_37
+2024-12-12 22:08:09,339 - DEBUG - setting property frameShape
+2024-12-12 22:08:09,339 - DEBUG - setting property frameShadow
+2024-12-12 22:08:09,339 - DEBUG - push QFrame frame_10
+2024-12-12 22:08:09,339 - DEBUG - push QGridLayout gridLayout_18
+2024-12-12 22:08:09,339 - DEBUG - pop layout QGridLayout gridLayout_18
+2024-12-12 22:08:09,339 - DEBUG - pop widget QFrame frame_10
+2024-12-12 22:08:09,339 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D6151662A0>
+2024-12-12 22:08:09,340 - DEBUG - pop layout QGridLayout gridLayout_37
+2024-12-12 22:08:09,340 - DEBUG - pop widget QWidget Musical_Instruments_Tab
+2024-12-12 22:08:09,340 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x000002D615152C30>
+2024-12-12 22:08:09,340 - DEBUG - pop widget QTabWidget tabWidget
+2024-12-12 22:08:09,340 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x000002D615152B10>
+2024-12-12 22:08:09,340 - DEBUG - pop layout QGridLayout gridLayout_3
+2024-12-12 22:08:09,340 - DEBUG - pop widget QFrame frame
+2024-12-12 22:08:09,340 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x000002D6151529F0>
+2024-12-12 22:08:09,340 - DEBUG - pop layout QGridLayout gridLayout
+2024-12-12 22:08:09,342 - DEBUG - pop widget QWidget centralwidget
+2024-12-12 22:08:09,342 - DEBUG - new topwidget <__main__.MainWindow object at 0x000002D6144B67B0>
+2024-12-12 22:08:09,342 - DEBUG - push QStatusBar statusbar
+2024-12-12 22:08:09,342 - DEBUG - pop widget QStatusBar statusbar
+2024-12-12 22:08:09,343 - DEBUG - new topwidget <__main__.MainWindow object at 0x000002D6144B67B0>
+2024-12-12 22:08:09,343 - DEBUG - setting property text
+2024-12-12 22:08:09,343 - DEBUG - setting property text
+2024-12-12 22:08:09,343 - DEBUG - pop widget MainWindow MainWindow
+2024-12-12 22:08:09,343 - DEBUG - new topwidget None
+2024-12-12 22:08:09,343 - INFO - UI loaded successfully.
+2024-12-12 22:08:09,344 - DEBUG - Mix button connected to handler.
+2024-12-12 22:09:36,864 - INFO - MainWindow initialized.
+2024-12-12 22:09:36,866 - DEBUG - uiname is MainWindow
+2024-12-12 22:09:36,866 - DEBUG - toplevel widget is MainWindow
+2024-12-12 22:09:36,866 - DEBUG - setting property geometry
+2024-12-12 22:09:36,866 - DEBUG - setting property windowTitle
+2024-12-12 22:09:36,866 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,866 - DEBUG - push MainWindow MainWindow
+2024-12-12 22:09:36,866 - DEBUG - push QWidget centralwidget
+2024-12-12 22:09:36,866 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,866 - DEBUG - push QGridLayout gridLayout
+2024-12-12 22:09:36,866 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,866 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,866 - DEBUG - push QFrame frame
+2024-12-12 22:09:36,866 - DEBUG - push QGridLayout gridLayout_3
+2024-12-12 22:09:36,866 - DEBUG - setting property minimumSize
+2024-12-12 22:09:36,866 - DEBUG - setting property font
+2024-12-12 22:09:36,867 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,867 - DEBUG - setting property currentIndex
+2024-12-12 22:09:36,867 - DEBUG - setting property iconSize
+2024-12-12 22:09:36,867 - DEBUG - push QTabWidget tabWidget
+2024-12-12 22:09:36,867 - DEBUG - setting property minimumSize
+2024-12-12 22:09:36,867 - DEBUG - push QWidget Uniform_Range_Tab
+2024-12-12 22:09:36,867 - DEBUG - push QGridLayout gridLayout_36
+2024-12-12 22:09:36,867 - DEBUG - push QHBoxLayout horizontalLayout_36
+2024-12-12 22:09:36,867 - DEBUG - push QVBoxLayout verticalLayout_left_4
+2024-12-12 22:09:36,867 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,867 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,867 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,867 - DEBUG - push QFrame frame_17
+2024-12-12 22:09:36,867 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,867 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,868 - DEBUG - push QGridLayout gridLayout_17
+2024-12-12 22:09:36,868 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,868 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,868 - DEBUG - push QVBoxLayout verticalLayout_61
+2024-12-12 22:09:36,868 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,868 - DEBUG - setting property text
+2024-12-12 22:09:36,868 - DEBUG - push QLabel label_38
+2024-12-12 22:09:36,868 - DEBUG - pop widget QLabel label_38
+2024-12-12 22:09:36,868 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,868 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,868 - DEBUG - setting property orientation
+2024-12-12 22:09:36,868 - DEBUG - push QFrame line_30
+2024-12-12 22:09:36,868 - DEBUG - pop widget QFrame line_30
+2024-12-12 22:09:36,869 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,869 - DEBUG - push QHBoxLayout horizontalLayout_38
+2024-12-12 22:09:36,869 - DEBUG - push QVBoxLayout verticalLayout_62
+2024-12-12 22:09:36,869 - DEBUG - setting property font
+2024-12-12 22:09:36,869 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,869 - DEBUG - setting property text
+2024-12-12 22:09:36,869 - DEBUG - push QLabel label_30
+2024-12-12 22:09:36,869 - DEBUG - pop widget QLabel label_30
+2024-12-12 22:09:36,869 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,869 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,869 - DEBUG - push QWidget original_1
+2024-12-12 22:09:36,869 - DEBUG - pop widget QWidget original_1
+2024-12-12 22:09:36,869 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,869 - DEBUG - pop layout QVBoxLayout verticalLayout_62
+2024-12-12 22:09:36,869 - DEBUG - push QVBoxLayout verticalLayout_63
+2024-12-12 22:09:36,870 - DEBUG - setting property font
+2024-12-12 22:09:36,870 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,870 - DEBUG - setting property text
+2024-12-12 22:09:36,870 - DEBUG - push QLabel label_31
+2024-12-12 22:09:36,870 - DEBUG - pop widget QLabel label_31
+2024-12-12 22:09:36,870 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,870 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,870 - DEBUG - push QWidget component_image_1
+2024-12-12 22:09:36,870 - DEBUG - pop widget QWidget component_image_1
+2024-12-12 22:09:36,870 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,870 - DEBUG - pop layout QVBoxLayout verticalLayout_63
+2024-12-12 22:09:36,870 - DEBUG - pop layout QHBoxLayout horizontalLayout_38
+2024-12-12 22:09:36,870 - DEBUG - setting property spacing
+2024-12-12 22:09:36,870 - DEBUG - setting property sizeConstraint
+2024-12-12 22:09:36,870 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:09:36,870 - DEBUG - push QHBoxLayout horizontalLayout_47
+2024-12-12 22:09:36,870 - DEBUG - setting property sizePolicy
+2024-12-12 22:09:36,870 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,870 - DEBUG - setting property maximum
+2024-12-12 22:09:36,871 - DEBUG - setting property singleStep
+2024-12-12 22:09:36,871 - DEBUG - setting property sliderPosition
+2024-12-12 22:09:36,871 - DEBUG - setting property orientation
+2024-12-12 22:09:36,871 - DEBUG - push QSlider Slider_weight3_5
+2024-12-12 22:09:36,871 - DEBUG - pop widget QSlider Slider_weight3_5
+2024-12-12 22:09:36,871 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,871 - DEBUG - setting property cursor
+2024-12-12 22:09:36,871 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,871 - DEBUG - push QComboBox combo1_6
+2024-12-12 22:09:36,871 - DEBUG - pop widget QComboBox combo1_6
+2024-12-12 22:09:36,871 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52F00>
+2024-12-12 22:09:36,871 - DEBUG - pop layout QHBoxLayout horizontalLayout_47
+2024-12-12 22:09:36,871 - DEBUG - pop layout QVBoxLayout verticalLayout_61
+2024-12-12 22:09:36,871 - DEBUG - pop layout QGridLayout gridLayout_17
+2024-12-12 22:09:36,871 - DEBUG - pop widget QFrame frame_17
+2024-12-12 22:09:36,871 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C52CC0>
+2024-12-12 22:09:36,871 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,872 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,872 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,872 - DEBUG - push QFrame frame_18
+2024-12-12 22:09:36,872 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,872 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,872 - DEBUG - push QGridLayout gridLayout_19
+2024-12-12 22:09:36,872 - DEBUG - setting property spacing
+2024-12-12 22:09:36,872 - DEBUG - setting property sizeConstraint
+2024-12-12 22:09:36,872 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:09:36,872 - DEBUG - push QHBoxLayout horizontalLayout_49
+2024-12-12 22:09:36,872 - DEBUG - setting property sizePolicy
+2024-12-12 22:09:36,872 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,872 - DEBUG - setting property maximum
+2024-12-12 22:09:36,872 - DEBUG - setting property singleStep
+2024-12-12 22:09:36,872 - DEBUG - setting property sliderPosition
+2024-12-12 22:09:36,872 - DEBUG - setting property orientation
+2024-12-12 22:09:36,872 - DEBUG - push QSlider Slider_weight3_7
+2024-12-12 22:09:36,872 - DEBUG - pop widget QSlider Slider_weight3_7
+2024-12-12 22:09:36,872 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,872 - DEBUG - setting property cursor
+2024-12-12 22:09:36,873 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,873 - DEBUG - push QComboBox combo1_8
+2024-12-12 22:09:36,873 - DEBUG - pop widget QComboBox combo1_8
+2024-12-12 22:09:36,873 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,873 - DEBUG - pop layout QHBoxLayout horizontalLayout_49
+2024-12-12 22:09:36,873 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,873 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,873 - DEBUG - push QVBoxLayout verticalLayout_64
+2024-12-12 22:09:36,873 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,873 - DEBUG - setting property text
+2024-12-12 22:09:36,873 - DEBUG - push QLabel label_40
+2024-12-12 22:09:36,873 - DEBUG - pop widget QLabel label_40
+2024-12-12 22:09:36,873 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,873 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,873 - DEBUG - setting property orientation
+2024-12-12 22:09:36,873 - DEBUG - push QFrame line_31
+2024-12-12 22:09:36,873 - DEBUG - pop widget QFrame line_31
+2024-12-12 22:09:36,873 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,874 - DEBUG - push QHBoxLayout horizontalLayout_40
+2024-12-12 22:09:36,874 - DEBUG - push QVBoxLayout verticalLayout_65
+2024-12-12 22:09:36,874 - DEBUG - setting property font
+2024-12-12 22:09:36,874 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,874 - DEBUG - setting property text
+2024-12-12 22:09:36,874 - DEBUG - push QLabel label_32
+2024-12-12 22:09:36,874 - DEBUG - pop widget QLabel label_32
+2024-12-12 22:09:36,874 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,874 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,874 - DEBUG - push QWidget original_3
+2024-12-12 22:09:36,874 - DEBUG - pop widget QWidget original_3
+2024-12-12 22:09:36,874 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,874 - DEBUG - pop layout QVBoxLayout verticalLayout_65
+2024-12-12 22:09:36,875 - DEBUG - push QVBoxLayout verticalLayout_66
+2024-12-12 22:09:36,875 - DEBUG - setting property font
+2024-12-12 22:09:36,875 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,875 - DEBUG - setting property text
+2024-12-12 22:09:36,875 - DEBUG - push QLabel label_33
+2024-12-12 22:09:36,875 - DEBUG - pop widget QLabel label_33
+2024-12-12 22:09:36,875 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,875 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,876 - DEBUG - push QWidget component_image_3
+2024-12-12 22:09:36,876 - DEBUG - pop widget QWidget component_image_3
+2024-12-12 22:09:36,876 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C51BE0>
+2024-12-12 22:09:36,876 - DEBUG - pop layout QVBoxLayout verticalLayout_66
+2024-12-12 22:09:36,876 - DEBUG - pop layout QHBoxLayout horizontalLayout_40
+2024-12-12 22:09:36,876 - DEBUG - pop layout QVBoxLayout verticalLayout_64
+2024-12-12 22:09:36,876 - DEBUG - pop layout QGridLayout gridLayout_19
+2024-12-12 22:09:36,876 - DEBUG - pop widget QFrame frame_18
+2024-12-12 22:09:36,876 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C52CC0>
+2024-12-12 22:09:36,876 - DEBUG - pop layout QVBoxLayout verticalLayout_left_4
+2024-12-12 22:09:36,876 - DEBUG - push QVBoxLayout verticalLayout_left_5
+2024-12-12 22:09:36,876 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,876 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,876 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,876 - DEBUG - push QFrame frame_19
+2024-12-12 22:09:36,876 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,876 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,876 - DEBUG - push QGridLayout gridLayout_20
+2024-12-12 22:09:36,876 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,876 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,876 - DEBUG - push QVBoxLayout verticalLayout_67
+2024-12-12 22:09:36,877 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,877 - DEBUG - setting property text
+2024-12-12 22:09:36,877 - DEBUG - push QLabel label_39
+2024-12-12 22:09:36,877 - DEBUG - pop widget QLabel label_39
+2024-12-12 22:09:36,877 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,877 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,877 - DEBUG - setting property orientation
+2024-12-12 22:09:36,877 - DEBUG - push QFrame line_32
+2024-12-12 22:09:36,877 - DEBUG - pop widget QFrame line_32
+2024-12-12 22:09:36,877 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,877 - DEBUG - push QHBoxLayout horizontalLayout_42
+2024-12-12 22:09:36,877 - DEBUG - push QVBoxLayout verticalLayout_68
+2024-12-12 22:09:36,877 - DEBUG - setting property font
+2024-12-12 22:09:36,878 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,878 - DEBUG - setting property text
+2024-12-12 22:09:36,878 - DEBUG - push QLabel label_34
+2024-12-12 22:09:36,878 - DEBUG - pop widget QLabel label_34
+2024-12-12 22:09:36,878 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,878 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,878 - DEBUG - push QWidget original_2
+2024-12-12 22:09:36,878 - DEBUG - pop widget QWidget original_2
+2024-12-12 22:09:36,878 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,878 - DEBUG - pop layout QVBoxLayout verticalLayout_68
+2024-12-12 22:09:36,878 - DEBUG - push QVBoxLayout verticalLayout_69
+2024-12-12 22:09:36,878 - DEBUG - setting property font
+2024-12-12 22:09:36,878 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,878 - DEBUG - setting property text
+2024-12-12 22:09:36,878 - DEBUG - push QLabel label_35
+2024-12-12 22:09:36,878 - DEBUG - pop widget QLabel label_35
+2024-12-12 22:09:36,878 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,879 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,879 - DEBUG - push QWidget component_image_2
+2024-12-12 22:09:36,879 - DEBUG - pop widget QWidget component_image_2
+2024-12-12 22:09:36,879 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,879 - DEBUG - pop layout QVBoxLayout verticalLayout_69
+2024-12-12 22:09:36,879 - DEBUG - pop layout QHBoxLayout horizontalLayout_42
+2024-12-12 22:09:36,879 - DEBUG - pop layout QVBoxLayout verticalLayout_67
+2024-12-12 22:09:36,879 - DEBUG - setting property spacing
+2024-12-12 22:09:36,879 - DEBUG - setting property sizeConstraint
+2024-12-12 22:09:36,879 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:09:36,879 - DEBUG - push QHBoxLayout horizontalLayout_48
+2024-12-12 22:09:36,879 - DEBUG - setting property sizePolicy
+2024-12-12 22:09:36,879 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,879 - DEBUG - setting property maximum
+2024-12-12 22:09:36,879 - DEBUG - setting property singleStep
+2024-12-12 22:09:36,879 - DEBUG - setting property sliderPosition
+2024-12-12 22:09:36,879 - DEBUG - setting property orientation
+2024-12-12 22:09:36,879 - DEBUG - push QSlider Slider_weight3_6
+2024-12-12 22:09:36,879 - DEBUG - pop widget QSlider Slider_weight3_6
+2024-12-12 22:09:36,879 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,879 - DEBUG - setting property cursor
+2024-12-12 22:09:36,879 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,879 - DEBUG - push QComboBox combo1_7
+2024-12-12 22:09:36,880 - DEBUG - pop widget QComboBox combo1_7
+2024-12-12 22:09:36,880 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C53F50>
+2024-12-12 22:09:36,880 - DEBUG - pop layout QHBoxLayout horizontalLayout_48
+2024-12-12 22:09:36,880 - DEBUG - pop layout QGridLayout gridLayout_20
+2024-12-12 22:09:36,880 - DEBUG - pop widget QFrame frame_19
+2024-12-12 22:09:36,880 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C52CC0>
+2024-12-12 22:09:36,880 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,880 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,880 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,880 - DEBUG - push QFrame frame_20
+2024-12-12 22:09:36,880 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,880 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,880 - DEBUG - push QGridLayout gridLayout_21
+2024-12-12 22:09:36,880 - DEBUG - setting property spacing
+2024-12-12 22:09:36,880 - DEBUG - setting property sizeConstraint
+2024-12-12 22:09:36,880 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:09:36,880 - DEBUG - push QHBoxLayout horizontalLayout_50
+2024-12-12 22:09:36,880 - DEBUG - setting property sizePolicy
+2024-12-12 22:09:36,880 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,881 - DEBUG - setting property maximum
+2024-12-12 22:09:36,881 - DEBUG - setting property singleStep
+2024-12-12 22:09:36,881 - DEBUG - setting property sliderPosition
+2024-12-12 22:09:36,881 - DEBUG - setting property orientation
+2024-12-12 22:09:36,881 - DEBUG - push QSlider Slider_weight3_8
+2024-12-12 22:09:36,881 - DEBUG - pop widget QSlider Slider_weight3_8
+2024-12-12 22:09:36,881 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,881 - DEBUG - setting property cursor
+2024-12-12 22:09:36,881 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,881 - DEBUG - push QComboBox combo1_9
+2024-12-12 22:09:36,881 - DEBUG - pop widget QComboBox combo1_9
+2024-12-12 22:09:36,881 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,881 - DEBUG - pop layout QHBoxLayout horizontalLayout_50
+2024-12-12 22:09:36,881 - DEBUG - setting property leftMargin
+2024-12-12 22:09:36,881 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,881 - DEBUG - push QVBoxLayout verticalLayout_70
+2024-12-12 22:09:36,881 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,881 - DEBUG - setting property text
+2024-12-12 22:09:36,881 - DEBUG - push QLabel label_41
+2024-12-12 22:09:36,881 - DEBUG - pop widget QLabel label_41
+2024-12-12 22:09:36,881 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,882 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,882 - DEBUG - setting property orientation
+2024-12-12 22:09:36,882 - DEBUG - push QFrame line_33
+2024-12-12 22:09:36,882 - DEBUG - pop widget QFrame line_33
+2024-12-12 22:09:36,882 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,882 - DEBUG - push QHBoxLayout horizontalLayout_44
+2024-12-12 22:09:36,882 - DEBUG - push QVBoxLayout verticalLayout_71
+2024-12-12 22:09:36,882 - DEBUG - setting property font
+2024-12-12 22:09:36,882 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,882 - DEBUG - setting property text
+2024-12-12 22:09:36,882 - DEBUG - push QLabel label_36
+2024-12-12 22:09:36,882 - DEBUG - pop widget QLabel label_36
+2024-12-12 22:09:36,882 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,882 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,882 - DEBUG - push QWidget original_4
+2024-12-12 22:09:36,883 - DEBUG - pop widget QWidget original_4
+2024-12-12 22:09:36,883 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,883 - DEBUG - pop layout QVBoxLayout verticalLayout_71
+2024-12-12 22:09:36,883 - DEBUG - push QVBoxLayout verticalLayout_72
+2024-12-12 22:09:36,883 - DEBUG - setting property font
+2024-12-12 22:09:36,883 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,883 - DEBUG - setting property text
+2024-12-12 22:09:36,883 - DEBUG - push QLabel label_37
+2024-12-12 22:09:36,883 - DEBUG - pop widget QLabel label_37
+2024-12-12 22:09:36,883 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,883 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,883 - DEBUG - push QWidget component_image_4
+2024-12-12 22:09:36,883 - DEBUG - pop widget QWidget component_image_4
+2024-12-12 22:09:36,883 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52720>
+2024-12-12 22:09:36,883 - DEBUG - pop layout QVBoxLayout verticalLayout_72
+2024-12-12 22:09:36,883 - DEBUG - pop layout QHBoxLayout horizontalLayout_44
+2024-12-12 22:09:36,883 - DEBUG - pop layout QVBoxLayout verticalLayout_70
+2024-12-12 22:09:36,883 - DEBUG - pop layout QGridLayout gridLayout_21
+2024-12-12 22:09:36,883 - DEBUG - pop widget QFrame frame_20
+2024-12-12 22:09:36,883 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C52CC0>
+2024-12-12 22:09:36,883 - DEBUG - pop layout QVBoxLayout verticalLayout_left_5
+2024-12-12 22:09:36,883 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,884 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,884 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,884 - DEBUG - push QFrame frame_right
+2024-12-12 22:09:36,884 - DEBUG - push QVBoxLayout verticalLayout_73
+2024-12-12 22:09:36,884 - DEBUG - setting property font
+2024-12-12 22:09:36,884 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,884 - DEBUG - setting property text
+2024-12-12 22:09:36,884 - DEBUG - push QLabel mixerOutputTo_3
+2024-12-12 22:09:36,884 - DEBUG - pop widget QLabel mixerOutputTo_3
+2024-12-12 22:09:36,884 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,885 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,885 - DEBUG - setting property orientation
+2024-12-12 22:09:36,885 - DEBUG - push QFrame line_34
+2024-12-12 22:09:36,885 - DEBUG - pop widget QFrame line_34
+2024-12-12 22:09:36,885 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,885 - DEBUG - push QVBoxLayout verticalLayout_74
+2024-12-12 22:09:36,885 - DEBUG - push QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:09:36,885 - DEBUG - setting property font
+2024-12-12 22:09:36,885 - DEBUG - setting property cursor
+2024-12-12 22:09:36,887 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,887 - DEBUG - setting property text
+2024-12-12 22:09:36,887 - DEBUG - push QRadioButton radioButton1
+2024-12-12 22:09:36,887 - DEBUG - pop widget QRadioButton radioButton1
+2024-12-12 22:09:36,887 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,887 - DEBUG - setting property font
+2024-12-12 22:09:36,887 - DEBUG - setting property cursor
+2024-12-12 22:09:36,888 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,888 - DEBUG - setting property text
+2024-12-12 22:09:36,888 - DEBUG - push QRadioButton radioButton2
+2024-12-12 22:09:36,888 - DEBUG - pop widget QRadioButton radioButton2
+2024-12-12 22:09:36,888 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,888 - DEBUG - pop layout QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:09:36,888 - DEBUG - setting property bottomMargin
+2024-12-12 22:09:36,888 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,888 - DEBUG - push QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:09:36,888 - DEBUG - push QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:09:36,888 - DEBUG - setting property font
+2024-12-12 22:09:36,888 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,888 - DEBUG - setting property text
+2024-12-12 22:09:36,888 - DEBUG - push QLabel label_op1_3
+2024-12-12 22:09:36,888 - DEBUG - pop widget QLabel label_op1_3
+2024-12-12 22:09:36,888 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,888 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,889 - DEBUG - push QWidget output_1
+2024-12-12 22:09:36,889 - DEBUG - pop widget QWidget output_1
+2024-12-12 22:09:36,889 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,889 - DEBUG - pop layout QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:09:36,889 - DEBUG - push QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:09:36,889 - DEBUG - setting property font
+2024-12-12 22:09:36,889 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,889 - DEBUG - setting property text
+2024-12-12 22:09:36,889 - DEBUG - push QLabel label_op2_3
+2024-12-12 22:09:36,889 - DEBUG - pop widget QLabel label_op2_3
+2024-12-12 22:09:36,889 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,889 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,889 - DEBUG - push QWidget output_2
+2024-12-12 22:09:36,889 - DEBUG - pop widget QWidget output_2
+2024-12-12 22:09:36,889 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,889 - DEBUG - pop layout QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:09:36,889 - DEBUG - pop layout QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:09:36,889 - DEBUG - pop layout QVBoxLayout verticalLayout_74
+2024-12-12 22:09:36,889 - DEBUG - setting property bottomMargin
+2024-12-12 22:09:36,889 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,889 - DEBUG - push QHBoxLayout horizontalLayout_45
+2024-12-12 22:09:36,889 - DEBUG - setting property font
+2024-12-12 22:09:36,890 - DEBUG - setting property cursor
+2024-12-12 22:09:36,890 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,890 - DEBUG - setting property text
+2024-12-12 22:09:36,890 - DEBUG - setting property icon
+2024-12-12 22:09:36,890 - DEBUG - setting property iconSize
+2024-12-12 22:09:36,890 - DEBUG - push QPushButton mixxer_3
+2024-12-12 22:09:36,890 - DEBUG - pop widget QPushButton mixxer_3
+2024-12-12 22:09:36,890 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,890 - DEBUG - setting property sizePolicy
+2024-12-12 22:09:36,890 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,890 - DEBUG - setting property value
+2024-12-12 22:09:36,890 - DEBUG - setting property textVisible
+2024-12-12 22:09:36,890 - DEBUG - push QProgressBar progressBar_3
+2024-12-12 22:09:36,890 - DEBUG - pop widget QProgressBar progressBar_3
+2024-12-12 22:09:36,890 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,890 - DEBUG - pop layout QHBoxLayout horizontalLayout_45
+2024-12-12 22:09:36,891 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,891 - DEBUG - setting property orientation
+2024-12-12 22:09:36,891 - DEBUG - push QFrame line_35
+2024-12-12 22:09:36,891 - DEBUG - pop widget QFrame line_35
+2024-12-12 22:09:36,891 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,891 - DEBUG - setting property topMargin
+2024-12-12 22:09:36,891 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,891 - DEBUG - push QVBoxLayout verticalLayout_75
+2024-12-12 22:09:36,891 - DEBUG - push QVBoxLayout verticalLayout_76
+2024-12-12 22:09:36,891 - DEBUG - setting property font
+2024-12-12 22:09:36,891 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,891 - DEBUG - setting property text
+2024-12-12 22:09:36,891 - DEBUG - push QLabel selectedArea_5
+2024-12-12 22:09:36,891 - DEBUG - pop widget QLabel selectedArea_5
+2024-12-12 22:09:36,891 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,891 - DEBUG - push QHBoxLayout horizontalLayout_46
+2024-12-12 22:09:36,891 - DEBUG - push QVBoxLayout verticalLayout_77
+2024-12-12 22:09:36,892 - DEBUG - setting property font
+2024-12-12 22:09:36,892 - DEBUG - setting property cursor
+2024-12-12 22:09:36,892 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,892 - DEBUG - setting property text
+2024-12-12 22:09:36,892 - DEBUG - setting property checkable
+2024-12-12 22:09:36,892 - DEBUG - setting property checked
+2024-12-12 22:09:36,892 - DEBUG - push QRadioButton radioButton_In_3
+2024-12-12 22:09:36,892 - DEBUG - pop widget QRadioButton radioButton_In_3
+2024-12-12 22:09:36,892 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,893 - DEBUG - setting property font
+2024-12-12 22:09:36,893 - DEBUG - setting property cursor
+2024-12-12 22:09:36,893 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,893 - DEBUG - setting property text
+2024-12-12 22:09:36,893 - DEBUG - push QRadioButton radioButton_Out_3
+2024-12-12 22:09:36,893 - DEBUG - pop widget QRadioButton radioButton_Out_3
+2024-12-12 22:09:36,893 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,893 - DEBUG - pop layout QVBoxLayout verticalLayout_77
+2024-12-12 22:09:36,893 - DEBUG - setting property font
+2024-12-12 22:09:36,893 - DEBUG - setting property cursor
+2024-12-12 22:09:36,893 - DEBUG - setting property layoutDirection
+2024-12-12 22:09:36,893 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,893 - DEBUG - setting property text
+2024-12-12 22:09:36,893 - DEBUG - setting property iconSize
+2024-12-12 22:09:36,893 - DEBUG - push QPushButton Deselect_3
+2024-12-12 22:09:36,894 - DEBUG - pop widget QPushButton Deselect_3
+2024-12-12 22:09:36,894 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,894 - DEBUG - pop layout QHBoxLayout horizontalLayout_46
+2024-12-12 22:09:36,894 - DEBUG - pop layout QVBoxLayout verticalLayout_76
+2024-12-12 22:09:36,894 - DEBUG - pop layout QVBoxLayout verticalLayout_75
+2024-12-12 22:09:36,894 - DEBUG - setting property topMargin
+2024-12-12 22:09:36,894 - DEBUG - setting property pyuicMargins
+2024-12-12 22:09:36,894 - DEBUG - push QVBoxLayout verticalLayout_78
+2024-12-12 22:09:36,894 - DEBUG - setting property styleSheet
+2024-12-12 22:09:36,894 - DEBUG - setting property orientation
+2024-12-12 22:09:36,894 - DEBUG - push QFrame line_36
+2024-12-12 22:09:36,894 - DEBUG - pop widget QFrame line_36
+2024-12-12 22:09:36,894 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C650A0>
+2024-12-12 22:09:36,894 - DEBUG - pop layout QVBoxLayout verticalLayout_78
+2024-12-12 22:09:36,894 - DEBUG - push QVBoxLayout verticalLayout_81
+2024-12-12 22:09:36,894 - DEBUG - pop layout QVBoxLayout verticalLayout_81
+2024-12-12 22:09:36,895 - DEBUG - pop layout QVBoxLayout verticalLayout_73
+2024-12-12 22:09:36,895 - DEBUG - pop widget QFrame frame_right
+2024-12-12 22:09:36,895 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C52CC0>
+2024-12-12 22:09:36,895 - DEBUG - pop layout QHBoxLayout horizontalLayout_36
+2024-12-12 22:09:36,895 - DEBUG - pop layout QGridLayout gridLayout_36
+2024-12-12 22:09:36,895 - DEBUG - pop widget QWidget Uniform_Range_Tab
+2024-12-12 22:09:36,895 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x0000029845C52C30>
+2024-12-12 22:09:36,958 - DEBUG - push QWidget Musical_Instruments_Tab
+2024-12-12 22:09:36,958 - DEBUG - push QGridLayout gridLayout_37
+2024-12-12 22:09:36,958 - DEBUG - setting property frameShape
+2024-12-12 22:09:36,958 - DEBUG - setting property frameShadow
+2024-12-12 22:09:36,958 - DEBUG - push QFrame frame_10
+2024-12-12 22:09:36,958 - DEBUG - push QGridLayout gridLayout_18
+2024-12-12 22:09:36,958 - DEBUG - pop layout QGridLayout gridLayout_18
+2024-12-12 22:09:36,959 - DEBUG - pop widget QFrame frame_10
+2024-12-12 22:09:36,959 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C662A0>
+2024-12-12 22:09:36,959 - DEBUG - pop layout QGridLayout gridLayout_37
+2024-12-12 22:09:36,959 - DEBUG - pop widget QWidget Musical_Instruments_Tab
+2024-12-12 22:09:36,959 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x0000029845C52C30>
+2024-12-12 22:09:36,959 - DEBUG - pop widget QTabWidget tabWidget
+2024-12-12 22:09:36,959 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000029845C52B10>
+2024-12-12 22:09:36,959 - DEBUG - pop layout QGridLayout gridLayout_3
+2024-12-12 22:09:36,959 - DEBUG - pop widget QFrame frame
+2024-12-12 22:09:36,959 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000029845C529F0>
+2024-12-12 22:09:36,959 - DEBUG - pop layout QGridLayout gridLayout
+2024-12-12 22:09:36,959 - DEBUG - pop widget QWidget centralwidget
+2024-12-12 22:09:36,959 - DEBUG - new topwidget <__main__.MainWindow object at 0x0000029844F767B0>
+2024-12-12 22:09:36,960 - DEBUG - push QStatusBar statusbar
+2024-12-12 22:09:36,960 - DEBUG - pop widget QStatusBar statusbar
+2024-12-12 22:09:36,960 - DEBUG - new topwidget <__main__.MainWindow object at 0x0000029844F767B0>
+2024-12-12 22:09:36,960 - DEBUG - setting property text
+2024-12-12 22:09:36,960 - DEBUG - setting property text
+2024-12-12 22:09:36,960 - DEBUG - pop widget MainWindow MainWindow
+2024-12-12 22:09:36,960 - DEBUG - new topwidget None
+2024-12-12 22:09:36,960 - INFO - UI loaded successfully.
+2024-12-12 22:09:36,961 - DEBUG - Mix button connected to handler.
+2024-12-12 22:11:05,194 - INFO - MainWindow initialized.
+2024-12-12 22:11:05,196 - DEBUG - uiname is MainWindow
+2024-12-12 22:11:05,196 - DEBUG - toplevel widget is MainWindow
+2024-12-12 22:11:05,196 - DEBUG - setting property geometry
+2024-12-12 22:11:05,196 - DEBUG - setting property windowTitle
+2024-12-12 22:11:05,196 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,196 - DEBUG - push MainWindow MainWindow
+2024-12-12 22:11:05,196 - DEBUG - push QWidget centralwidget
+2024-12-12 22:11:05,196 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,196 - DEBUG - push QGridLayout gridLayout
+2024-12-12 22:11:05,196 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,196 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,197 - DEBUG - push QFrame frame
+2024-12-12 22:11:05,197 - DEBUG - push QGridLayout gridLayout_3
+2024-12-12 22:11:05,197 - DEBUG - setting property minimumSize
+2024-12-12 22:11:05,197 - DEBUG - setting property font
+2024-12-12 22:11:05,197 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,197 - DEBUG - setting property currentIndex
+2024-12-12 22:11:05,197 - DEBUG - setting property iconSize
+2024-12-12 22:11:05,197 - DEBUG - push QTabWidget tabWidget
+2024-12-12 22:11:05,197 - DEBUG - setting property minimumSize
+2024-12-12 22:11:05,197 - DEBUG - push QWidget Uniform_Range_Tab
+2024-12-12 22:11:05,197 - DEBUG - push QGridLayout gridLayout_36
+2024-12-12 22:11:05,197 - DEBUG - push QHBoxLayout horizontalLayout_36
+2024-12-12 22:11:05,197 - DEBUG - push QVBoxLayout verticalLayout_left_4
+2024-12-12 22:11:05,198 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,198 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,198 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,198 - DEBUG - push QFrame frame_17
+2024-12-12 22:11:05,198 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,198 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,198 - DEBUG - push QGridLayout gridLayout_17
+2024-12-12 22:11:05,198 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,198 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,198 - DEBUG - push QVBoxLayout verticalLayout_61
+2024-12-12 22:11:05,198 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,198 - DEBUG - setting property text
+2024-12-12 22:11:05,198 - DEBUG - push QLabel label_38
+2024-12-12 22:11:05,198 - DEBUG - pop widget QLabel label_38
+2024-12-12 22:11:05,198 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,198 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,198 - DEBUG - setting property orientation
+2024-12-12 22:11:05,199 - DEBUG - push QFrame line_30
+2024-12-12 22:11:05,199 - DEBUG - pop widget QFrame line_30
+2024-12-12 22:11:05,199 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,199 - DEBUG - push QHBoxLayout horizontalLayout_38
+2024-12-12 22:11:05,199 - DEBUG - push QVBoxLayout verticalLayout_62
+2024-12-12 22:11:05,199 - DEBUG - setting property font
+2024-12-12 22:11:05,199 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,199 - DEBUG - setting property text
+2024-12-12 22:11:05,199 - DEBUG - push QLabel label_30
+2024-12-12 22:11:05,199 - DEBUG - pop widget QLabel label_30
+2024-12-12 22:11:05,199 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,199 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,199 - DEBUG - push QWidget original_1
+2024-12-12 22:11:05,199 - DEBUG - pop widget QWidget original_1
+2024-12-12 22:11:05,199 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,199 - DEBUG - pop layout QVBoxLayout verticalLayout_62
+2024-12-12 22:11:05,199 - DEBUG - push QVBoxLayout verticalLayout_63
+2024-12-12 22:11:05,199 - DEBUG - setting property font
+2024-12-12 22:11:05,200 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,200 - DEBUG - setting property text
+2024-12-12 22:11:05,200 - DEBUG - push QLabel label_31
+2024-12-12 22:11:05,200 - DEBUG - pop widget QLabel label_31
+2024-12-12 22:11:05,200 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,200 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,200 - DEBUG - push QWidget component_image_1
+2024-12-12 22:11:05,200 - DEBUG - pop widget QWidget component_image_1
+2024-12-12 22:11:05,200 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,200 - DEBUG - pop layout QVBoxLayout verticalLayout_63
+2024-12-12 22:11:05,200 - DEBUG - pop layout QHBoxLayout horizontalLayout_38
+2024-12-12 22:11:05,200 - DEBUG - setting property spacing
+2024-12-12 22:11:05,200 - DEBUG - setting property sizeConstraint
+2024-12-12 22:11:05,200 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:11:05,200 - DEBUG - push QHBoxLayout horizontalLayout_47
+2024-12-12 22:11:05,200 - DEBUG - setting property sizePolicy
+2024-12-12 22:11:05,200 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,200 - DEBUG - setting property maximum
+2024-12-12 22:11:05,200 - DEBUG - setting property singleStep
+2024-12-12 22:11:05,200 - DEBUG - setting property sliderPosition
+2024-12-12 22:11:05,200 - DEBUG - setting property orientation
+2024-12-12 22:11:05,200 - DEBUG - push QSlider Slider_weight3_5
+2024-12-12 22:11:05,200 - DEBUG - pop widget QSlider Slider_weight3_5
+2024-12-12 22:11:05,200 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,200 - DEBUG - setting property cursor
+2024-12-12 22:11:05,200 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,200 - DEBUG - push QComboBox combo1_6
+2024-12-12 22:11:05,202 - DEBUG - pop widget QComboBox combo1_6
+2024-12-12 22:11:05,202 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2F90>
+2024-12-12 22:11:05,202 - DEBUG - pop layout QHBoxLayout horizontalLayout_47
+2024-12-12 22:11:05,202 - DEBUG - pop layout QVBoxLayout verticalLayout_61
+2024-12-12 22:11:05,202 - DEBUG - pop layout QGridLayout gridLayout_17
+2024-12-12 22:11:05,202 - DEBUG - pop widget QFrame frame_17
+2024-12-12 22:11:05,202 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2D50>
+2024-12-12 22:11:05,202 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,202 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,202 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,202 - DEBUG - push QFrame frame_18
+2024-12-12 22:11:05,202 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,202 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,202 - DEBUG - push QGridLayout gridLayout_19
+2024-12-12 22:11:05,202 - DEBUG - setting property spacing
+2024-12-12 22:11:05,202 - DEBUG - setting property sizeConstraint
+2024-12-12 22:11:05,202 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:11:05,202 - DEBUG - push QHBoxLayout horizontalLayout_49
+2024-12-12 22:11:05,202 - DEBUG - setting property sizePolicy
+2024-12-12 22:11:05,202 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,202 - DEBUG - setting property maximum
+2024-12-12 22:11:05,202 - DEBUG - setting property singleStep
+2024-12-12 22:11:05,202 - DEBUG - setting property sliderPosition
+2024-12-12 22:11:05,202 - DEBUG - setting property orientation
+2024-12-12 22:11:05,203 - DEBUG - push QSlider Slider_weight3_7
+2024-12-12 22:11:05,203 - DEBUG - pop widget QSlider Slider_weight3_7
+2024-12-12 22:11:05,203 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,203 - DEBUG - setting property cursor
+2024-12-12 22:11:05,203 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,203 - DEBUG - push QComboBox combo1_8
+2024-12-12 22:11:05,203 - DEBUG - pop widget QComboBox combo1_8
+2024-12-12 22:11:05,203 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,203 - DEBUG - pop layout QHBoxLayout horizontalLayout_49
+2024-12-12 22:11:05,203 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,203 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,203 - DEBUG - push QVBoxLayout verticalLayout_64
+2024-12-12 22:11:05,203 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,203 - DEBUG - setting property text
+2024-12-12 22:11:05,203 - DEBUG - push QLabel label_40
+2024-12-12 22:11:05,203 - DEBUG - pop widget QLabel label_40
+2024-12-12 22:11:05,204 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,204 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,204 - DEBUG - setting property orientation
+2024-12-12 22:11:05,204 - DEBUG - push QFrame line_31
+2024-12-12 22:11:05,204 - DEBUG - pop widget QFrame line_31
+2024-12-12 22:11:05,204 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,204 - DEBUG - push QHBoxLayout horizontalLayout_40
+2024-12-12 22:11:05,204 - DEBUG - push QVBoxLayout verticalLayout_65
+2024-12-12 22:11:05,204 - DEBUG - setting property font
+2024-12-12 22:11:05,204 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,204 - DEBUG - setting property text
+2024-12-12 22:11:05,204 - DEBUG - push QLabel label_32
+2024-12-12 22:11:05,204 - DEBUG - pop widget QLabel label_32
+2024-12-12 22:11:05,204 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,205 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,205 - DEBUG - push QWidget original_3
+2024-12-12 22:11:05,205 - DEBUG - pop widget QWidget original_3
+2024-12-12 22:11:05,205 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,205 - DEBUG - pop layout QVBoxLayout verticalLayout_65
+2024-12-12 22:11:05,205 - DEBUG - push QVBoxLayout verticalLayout_66
+2024-12-12 22:11:05,205 - DEBUG - setting property font
+2024-12-12 22:11:05,205 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,205 - DEBUG - setting property text
+2024-12-12 22:11:05,205 - DEBUG - push QLabel label_33
+2024-12-12 22:11:05,205 - DEBUG - pop widget QLabel label_33
+2024-12-12 22:11:05,205 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,205 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,205 - DEBUG - push QWidget component_image_3
+2024-12-12 22:11:05,205 - DEBUG - pop widget QWidget component_image_3
+2024-12-12 22:11:05,205 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB1C70>
+2024-12-12 22:11:05,205 - DEBUG - pop layout QVBoxLayout verticalLayout_66
+2024-12-12 22:11:05,206 - DEBUG - pop layout QHBoxLayout horizontalLayout_40
+2024-12-12 22:11:05,206 - DEBUG - pop layout QVBoxLayout verticalLayout_64
+2024-12-12 22:11:05,206 - DEBUG - pop layout QGridLayout gridLayout_19
+2024-12-12 22:11:05,206 - DEBUG - pop widget QFrame frame_18
+2024-12-12 22:11:05,206 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2D50>
+2024-12-12 22:11:05,206 - DEBUG - pop layout QVBoxLayout verticalLayout_left_4
+2024-12-12 22:11:05,206 - DEBUG - push QVBoxLayout verticalLayout_left_5
+2024-12-12 22:11:05,206 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,206 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,206 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,206 - DEBUG - push QFrame frame_19
+2024-12-12 22:11:05,206 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,206 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,206 - DEBUG - push QGridLayout gridLayout_20
+2024-12-12 22:11:05,206 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,206 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,206 - DEBUG - push QVBoxLayout verticalLayout_67
+2024-12-12 22:11:05,207 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,207 - DEBUG - setting property text
+2024-12-12 22:11:05,207 - DEBUG - push QLabel label_39
+2024-12-12 22:11:05,207 - DEBUG - pop widget QLabel label_39
+2024-12-12 22:11:05,207 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,207 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,207 - DEBUG - setting property orientation
+2024-12-12 22:11:05,207 - DEBUG - push QFrame line_32
+2024-12-12 22:11:05,208 - DEBUG - pop widget QFrame line_32
+2024-12-12 22:11:05,208 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,208 - DEBUG - push QHBoxLayout horizontalLayout_42
+2024-12-12 22:11:05,208 - DEBUG - push QVBoxLayout verticalLayout_68
+2024-12-12 22:11:05,208 - DEBUG - setting property font
+2024-12-12 22:11:05,208 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,208 - DEBUG - setting property text
+2024-12-12 22:11:05,208 - DEBUG - push QLabel label_34
+2024-12-12 22:11:05,208 - DEBUG - pop widget QLabel label_34
+2024-12-12 22:11:05,208 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,208 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,208 - DEBUG - push QWidget original_2
+2024-12-12 22:11:05,208 - DEBUG - pop widget QWidget original_2
+2024-12-12 22:11:05,208 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,208 - DEBUG - pop layout QVBoxLayout verticalLayout_68
+2024-12-12 22:11:05,208 - DEBUG - push QVBoxLayout verticalLayout_69
+2024-12-12 22:11:05,209 - DEBUG - setting property font
+2024-12-12 22:11:05,209 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,209 - DEBUG - setting property text
+2024-12-12 22:11:05,209 - DEBUG - push QLabel label_35
+2024-12-12 22:11:05,209 - DEBUG - pop widget QLabel label_35
+2024-12-12 22:11:05,209 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,209 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,209 - DEBUG - push QWidget component_image_2
+2024-12-12 22:11:05,209 - DEBUG - pop widget QWidget component_image_2
+2024-12-12 22:11:05,209 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,209 - DEBUG - pop layout QVBoxLayout verticalLayout_69
+2024-12-12 22:11:05,209 - DEBUG - pop layout QHBoxLayout horizontalLayout_42
+2024-12-12 22:11:05,209 - DEBUG - pop layout QVBoxLayout verticalLayout_67
+2024-12-12 22:11:05,209 - DEBUG - setting property spacing
+2024-12-12 22:11:05,209 - DEBUG - setting property sizeConstraint
+2024-12-12 22:11:05,209 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:11:05,209 - DEBUG - push QHBoxLayout horizontalLayout_48
+2024-12-12 22:11:05,209 - DEBUG - setting property sizePolicy
+2024-12-12 22:11:05,209 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,209 - DEBUG - setting property maximum
+2024-12-12 22:11:05,209 - DEBUG - setting property singleStep
+2024-12-12 22:11:05,209 - DEBUG - setting property sliderPosition
+2024-12-12 22:11:05,209 - DEBUG - setting property orientation
+2024-12-12 22:11:05,210 - DEBUG - push QSlider Slider_weight3_6
+2024-12-12 22:11:05,210 - DEBUG - pop widget QSlider Slider_weight3_6
+2024-12-12 22:11:05,210 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,210 - DEBUG - setting property cursor
+2024-12-12 22:11:05,210 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,210 - DEBUG - push QComboBox combo1_7
+2024-12-12 22:11:05,210 - DEBUG - pop widget QComboBox combo1_7
+2024-12-12 22:11:05,210 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC40E0>
+2024-12-12 22:11:05,210 - DEBUG - pop layout QHBoxLayout horizontalLayout_48
+2024-12-12 22:11:05,210 - DEBUG - pop layout QGridLayout gridLayout_20
+2024-12-12 22:11:05,210 - DEBUG - pop widget QFrame frame_19
+2024-12-12 22:11:05,210 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2D50>
+2024-12-12 22:11:05,210 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,210 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,210 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,210 - DEBUG - push QFrame frame_20
+2024-12-12 22:11:05,210 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,210 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,210 - DEBUG - push QGridLayout gridLayout_21
+2024-12-12 22:11:05,211 - DEBUG - setting property spacing
+2024-12-12 22:11:05,211 - DEBUG - setting property sizeConstraint
+2024-12-12 22:11:05,211 - DEBUG - setting property pyuicSpacing
+2024-12-12 22:11:05,211 - DEBUG - push QHBoxLayout horizontalLayout_50
+2024-12-12 22:11:05,211 - DEBUG - setting property sizePolicy
+2024-12-12 22:11:05,211 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,211 - DEBUG - setting property maximum
+2024-12-12 22:11:05,211 - DEBUG - setting property singleStep
+2024-12-12 22:11:05,211 - DEBUG - setting property sliderPosition
+2024-12-12 22:11:05,211 - DEBUG - setting property orientation
+2024-12-12 22:11:05,211 - DEBUG - push QSlider Slider_weight3_8
+2024-12-12 22:11:05,211 - DEBUG - pop widget QSlider Slider_weight3_8
+2024-12-12 22:11:05,211 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,211 - DEBUG - setting property cursor
+2024-12-12 22:11:05,211 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,211 - DEBUG - push QComboBox combo1_9
+2024-12-12 22:11:05,211 - DEBUG - pop widget QComboBox combo1_9
+2024-12-12 22:11:05,211 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,211 - DEBUG - pop layout QHBoxLayout horizontalLayout_50
+2024-12-12 22:11:05,211 - DEBUG - setting property leftMargin
+2024-12-12 22:11:05,211 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,212 - DEBUG - push QVBoxLayout verticalLayout_70
+2024-12-12 22:11:05,212 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,212 - DEBUG - setting property text
+2024-12-12 22:11:05,212 - DEBUG - push QLabel label_41
+2024-12-12 22:11:05,212 - DEBUG - pop widget QLabel label_41
+2024-12-12 22:11:05,212 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,212 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,213 - DEBUG - setting property orientation
+2024-12-12 22:11:05,213 - DEBUG - push QFrame line_33
+2024-12-12 22:11:05,213 - DEBUG - pop widget QFrame line_33
+2024-12-12 22:11:05,213 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,213 - DEBUG - push QHBoxLayout horizontalLayout_44
+2024-12-12 22:11:05,213 - DEBUG - push QVBoxLayout verticalLayout_71
+2024-12-12 22:11:05,213 - DEBUG - setting property font
+2024-12-12 22:11:05,213 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,213 - DEBUG - setting property text
+2024-12-12 22:11:05,213 - DEBUG - push QLabel label_36
+2024-12-12 22:11:05,213 - DEBUG - pop widget QLabel label_36
+2024-12-12 22:11:05,214 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,214 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,214 - DEBUG - push QWidget original_4
+2024-12-12 22:11:05,214 - DEBUG - pop widget QWidget original_4
+2024-12-12 22:11:05,214 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,214 - DEBUG - pop layout QVBoxLayout verticalLayout_71
+2024-12-12 22:11:05,214 - DEBUG - push QVBoxLayout verticalLayout_72
+2024-12-12 22:11:05,214 - DEBUG - setting property font
+2024-12-12 22:11:05,214 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,214 - DEBUG - setting property text
+2024-12-12 22:11:05,214 - DEBUG - push QLabel label_37
+2024-12-12 22:11:05,214 - DEBUG - pop widget QLabel label_37
+2024-12-12 22:11:05,214 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,214 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,214 - DEBUG - push QWidget component_image_4
+2024-12-12 22:11:05,214 - DEBUG - pop widget QWidget component_image_4
+2024-12-12 22:11:05,214 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB27B0>
+2024-12-12 22:11:05,214 - DEBUG - pop layout QVBoxLayout verticalLayout_72
+2024-12-12 22:11:05,215 - DEBUG - pop layout QHBoxLayout horizontalLayout_44
+2024-12-12 22:11:05,215 - DEBUG - pop layout QVBoxLayout verticalLayout_70
+2024-12-12 22:11:05,215 - DEBUG - pop layout QGridLayout gridLayout_21
+2024-12-12 22:11:05,215 - DEBUG - pop widget QFrame frame_20
+2024-12-12 22:11:05,215 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2D50>
+2024-12-12 22:11:05,215 - DEBUG - pop layout QVBoxLayout verticalLayout_left_5
+2024-12-12 22:11:05,215 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,215 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,215 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,215 - DEBUG - push QFrame frame_right
+2024-12-12 22:11:05,215 - DEBUG - push QVBoxLayout verticalLayout_73
+2024-12-12 22:11:05,215 - DEBUG - setting property font
+2024-12-12 22:11:05,215 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,215 - DEBUG - setting property text
+2024-12-12 22:11:05,216 - DEBUG - push QLabel mixerOutputTo_3
+2024-12-12 22:11:05,216 - DEBUG - pop widget QLabel mixerOutputTo_3
+2024-12-12 22:11:05,216 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,216 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,216 - DEBUG - setting property orientation
+2024-12-12 22:11:05,216 - DEBUG - push QFrame line_34
+2024-12-12 22:11:05,216 - DEBUG - pop widget QFrame line_34
+2024-12-12 22:11:05,216 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,216 - DEBUG - push QVBoxLayout verticalLayout_74
+2024-12-12 22:11:05,216 - DEBUG - push QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:11:05,216 - DEBUG - setting property font
+2024-12-12 22:11:05,216 - DEBUG - setting property cursor
+2024-12-12 22:11:05,216 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,216 - DEBUG - setting property text
+2024-12-12 22:11:05,216 - DEBUG - push QRadioButton radioButton1
+2024-12-12 22:11:05,217 - DEBUG - pop widget QRadioButton radioButton1
+2024-12-12 22:11:05,217 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,217 - DEBUG - setting property font
+2024-12-12 22:11:05,217 - DEBUG - setting property cursor
+2024-12-12 22:11:05,217 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,217 - DEBUG - setting property text
+2024-12-12 22:11:05,217 - DEBUG - push QRadioButton radioButton2
+2024-12-12 22:11:05,217 - DEBUG - pop widget QRadioButton radioButton2
+2024-12-12 22:11:05,217 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,217 - DEBUG - pop layout QHBoxLayout horizontalLayout_Routput_3
+2024-12-12 22:11:05,217 - DEBUG - setting property bottomMargin
+2024-12-12 22:11:05,217 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,217 - DEBUG - push QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:11:05,217 - DEBUG - push QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:11:05,217 - DEBUG - setting property font
+2024-12-12 22:11:05,217 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,217 - DEBUG - setting property text
+2024-12-12 22:11:05,218 - DEBUG - push QLabel label_op1_3
+2024-12-12 22:11:05,218 - DEBUG - pop widget QLabel label_op1_3
+2024-12-12 22:11:05,218 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,218 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,218 - DEBUG - push QWidget output_1
+2024-12-12 22:11:05,218 - DEBUG - pop widget QWidget output_1
+2024-12-12 22:11:05,218 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,218 - DEBUG - pop layout QVBoxLayout verticalLayout_OP1_3
+2024-12-12 22:11:05,218 - DEBUG - push QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:11:05,218 - DEBUG - setting property font
+2024-12-12 22:11:05,219 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,219 - DEBUG - setting property text
+2024-12-12 22:11:05,219 - DEBUG - push QLabel label_op2_3
+2024-12-12 22:11:05,219 - DEBUG - pop widget QLabel label_op2_3
+2024-12-12 22:11:05,219 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,219 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,219 - DEBUG - push QWidget output_2
+2024-12-12 22:11:05,219 - DEBUG - pop widget QWidget output_2
+2024-12-12 22:11:05,219 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,219 - DEBUG - pop layout QVBoxLayout verticalLayout_OP2_3
+2024-12-12 22:11:05,219 - DEBUG - pop layout QHBoxLayout horizontalLayout_output_3
+2024-12-12 22:11:05,219 - DEBUG - pop layout QVBoxLayout verticalLayout_74
+2024-12-12 22:11:05,219 - DEBUG - setting property bottomMargin
+2024-12-12 22:11:05,219 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,219 - DEBUG - push QHBoxLayout horizontalLayout_45
+2024-12-12 22:11:05,220 - DEBUG - setting property font
+2024-12-12 22:11:05,220 - DEBUG - setting property cursor
+2024-12-12 22:11:05,220 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,220 - DEBUG - setting property text
+2024-12-12 22:11:05,220 - DEBUG - setting property icon
+2024-12-12 22:11:05,220 - DEBUG - setting property iconSize
+2024-12-12 22:11:05,220 - DEBUG - push QPushButton mixxer_3
+2024-12-12 22:11:05,220 - DEBUG - pop widget QPushButton mixxer_3
+2024-12-12 22:11:05,220 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,221 - DEBUG - setting property sizePolicy
+2024-12-12 22:11:05,221 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,221 - DEBUG - setting property value
+2024-12-12 22:11:05,221 - DEBUG - setting property textVisible
+2024-12-12 22:11:05,221 - DEBUG - push QProgressBar progressBar_3
+2024-12-12 22:11:05,221 - DEBUG - pop widget QProgressBar progressBar_3
+2024-12-12 22:11:05,221 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,221 - DEBUG - pop layout QHBoxLayout horizontalLayout_45
+2024-12-12 22:11:05,221 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,221 - DEBUG - setting property orientation
+2024-12-12 22:11:05,221 - DEBUG - push QFrame line_35
+2024-12-12 22:11:05,221 - DEBUG - pop widget QFrame line_35
+2024-12-12 22:11:05,221 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,221 - DEBUG - setting property topMargin
+2024-12-12 22:11:05,221 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,222 - DEBUG - push QVBoxLayout verticalLayout_75
+2024-12-12 22:11:05,222 - DEBUG - push QVBoxLayout verticalLayout_76
+2024-12-12 22:11:05,222 - DEBUG - setting property font
+2024-12-12 22:11:05,222 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,222 - DEBUG - setting property text
+2024-12-12 22:11:05,222 - DEBUG - push QLabel selectedArea_5
+2024-12-12 22:11:05,222 - DEBUG - pop widget QLabel selectedArea_5
+2024-12-12 22:11:05,222 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,222 - DEBUG - push QHBoxLayout horizontalLayout_46
+2024-12-12 22:11:05,222 - DEBUG - push QVBoxLayout verticalLayout_77
+2024-12-12 22:11:05,222 - DEBUG - setting property font
+2024-12-12 22:11:05,222 - DEBUG - setting property cursor
+2024-12-12 22:11:05,222 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,222 - DEBUG - setting property text
+2024-12-12 22:11:05,222 - DEBUG - setting property checkable
+2024-12-12 22:11:05,222 - DEBUG - setting property checked
+2024-12-12 22:11:05,223 - DEBUG - push QRadioButton radioButton_In_3
+2024-12-12 22:11:05,223 - DEBUG - pop widget QRadioButton radioButton_In_3
+2024-12-12 22:11:05,223 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,223 - DEBUG - setting property font
+2024-12-12 22:11:05,223 - DEBUG - setting property cursor
+2024-12-12 22:11:05,223 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,223 - DEBUG - setting property text
+2024-12-12 22:11:05,223 - DEBUG - push QRadioButton radioButton_Out_3
+2024-12-12 22:11:05,223 - DEBUG - pop widget QRadioButton radioButton_Out_3
+2024-12-12 22:11:05,223 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,223 - DEBUG - pop layout QVBoxLayout verticalLayout_77
+2024-12-12 22:11:05,223 - DEBUG - setting property font
+2024-12-12 22:11:05,223 - DEBUG - setting property cursor
+2024-12-12 22:11:05,223 - DEBUG - setting property layoutDirection
+2024-12-12 22:11:05,223 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,224 - DEBUG - setting property text
+2024-12-12 22:11:05,224 - DEBUG - setting property iconSize
+2024-12-12 22:11:05,224 - DEBUG - push QPushButton Deselect_3
+2024-12-12 22:11:05,224 - DEBUG - pop widget QPushButton Deselect_3
+2024-12-12 22:11:05,224 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,224 - DEBUG - pop layout QHBoxLayout horizontalLayout_46
+2024-12-12 22:11:05,224 - DEBUG - pop layout QVBoxLayout verticalLayout_76
+2024-12-12 22:11:05,224 - DEBUG - pop layout QVBoxLayout verticalLayout_75
+2024-12-12 22:11:05,224 - DEBUG - setting property topMargin
+2024-12-12 22:11:05,224 - DEBUG - setting property pyuicMargins
+2024-12-12 22:11:05,224 - DEBUG - push QVBoxLayout verticalLayout_78
+2024-12-12 22:11:05,225 - DEBUG - setting property styleSheet
+2024-12-12 22:11:05,225 - DEBUG - setting property orientation
+2024-12-12 22:11:05,225 - DEBUG - push QFrame line_36
+2024-12-12 22:11:05,225 - DEBUG - pop widget QFrame line_36
+2024-12-12 22:11:05,225 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FC5130>
+2024-12-12 22:11:05,225 - DEBUG - pop layout QVBoxLayout verticalLayout_78
+2024-12-12 22:11:05,225 - DEBUG - push QVBoxLayout verticalLayout_81
+2024-12-12 22:11:05,225 - DEBUG - pop layout QVBoxLayout verticalLayout_81
+2024-12-12 22:11:05,225 - DEBUG - pop layout QVBoxLayout verticalLayout_73
+2024-12-12 22:11:05,225 - DEBUG - pop widget QFrame frame_right
+2024-12-12 22:11:05,225 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2D50>
+2024-12-12 22:11:05,225 - DEBUG - pop layout QHBoxLayout horizontalLayout_36
+2024-12-12 22:11:05,226 - DEBUG - pop layout QGridLayout gridLayout_36
+2024-12-12 22:11:05,226 - DEBUG - pop widget QWidget Uniform_Range_Tab
+2024-12-12 22:11:05,226 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x0000027936FB2CC0>
+2024-12-12 22:11:05,320 - DEBUG - push QWidget Musical_Instruments_Tab
+2024-12-12 22:11:05,320 - DEBUG - push QGridLayout gridLayout_37
+2024-12-12 22:11:05,320 - DEBUG - setting property frameShape
+2024-12-12 22:11:05,320 - DEBUG - setting property frameShadow
+2024-12-12 22:11:05,320 - DEBUG - push QFrame frame_10
+2024-12-12 22:11:05,320 - DEBUG - push QGridLayout gridLayout_18
+2024-12-12 22:11:05,320 - DEBUG - pop layout QGridLayout gridLayout_18
+2024-12-12 22:11:05,320 - DEBUG - pop widget QFrame frame_10
+2024-12-12 22:11:05,320 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FC6330>
+2024-12-12 22:11:05,320 - DEBUG - pop layout QGridLayout gridLayout_37
+2024-12-12 22:11:05,320 - DEBUG - pop widget QWidget Musical_Instruments_Tab
+2024-12-12 22:11:05,320 - DEBUG - new topwidget <PyQt5.QtWidgets.QTabWidget object at 0x0000027936FB2CC0>
+2024-12-12 22:11:05,320 - DEBUG - pop widget QTabWidget tabWidget
+2024-12-12 22:11:05,321 - DEBUG - new topwidget <PyQt5.QtWidgets.QFrame object at 0x0000027936FB2BA0>
+2024-12-12 22:11:05,321 - DEBUG - pop layout QGridLayout gridLayout_3
+2024-12-12 22:11:05,321 - DEBUG - pop widget QFrame frame
+2024-12-12 22:11:05,321 - DEBUG - new topwidget <PyQt5.QtWidgets.QWidget object at 0x0000027936FB2A80>
+2024-12-12 22:11:05,321 - DEBUG - pop layout QGridLayout gridLayout
+2024-12-12 22:11:05,321 - DEBUG - pop widget QWidget centralwidget
+2024-12-12 22:11:05,321 - DEBUG - new topwidget <__main__.MainWindow object at 0x0000027935DE6840>
+2024-12-12 22:11:05,321 - DEBUG - push QStatusBar statusbar
+2024-12-12 22:11:05,321 - DEBUG - pop widget QStatusBar statusbar
+2024-12-12 22:11:05,321 - DEBUG - new topwidget <__main__.MainWindow object at 0x0000027935DE6840>
+2024-12-12 22:11:05,322 - DEBUG - setting property text
+2024-12-12 22:11:05,322 - DEBUG - setting property text
+2024-12-12 22:11:05,322 - DEBUG - pop widget MainWindow MainWindow
+2024-12-12 22:11:05,322 - DEBUG - new topwidget None
+2024-12-12 22:11:05,323 - INFO - UI loaded successfully.
