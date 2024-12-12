@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        loadUi("MainWindow.ui", self)
+        loadUi("beammm.ui", self)
 
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
         self.mode_combox.currentIndexChanged.connect(self.selectMode)
@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         self.form_signal_button.clicked.connect(self.formSignal)
         
         #for array parameters
-        self.spacing_spinbox=self.findChild(QSpinBox, 'elements_spacing')
+        self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
         self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
         self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
         self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
@@ -39,9 +39,13 @@ class MainWindow(QMainWindow):
         #for signal parameters
         self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
         self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
-        self.amplitude=self.findChild(QSpinBox, 'amplitude')
+        self.amplitude=self.findChild(QDoubleSpinBox, 'amplitude')
         self.add_freq_button=self.findChild(QPushButton, 'add_frequency')
         self.add_freq_button.clicked.connect(lambda : self.signal.add_freq(self.freq_spinbox.value()))
+
+        #BEAM widgets
+        self.beam_pattern_widget= self.findChild(QListWidget, 'componList_9')
+        self.interference_map_widget= self.findChild(QListWidget, 'componList_10')
         
         self.mode=None
         self.array=None
@@ -50,23 +54,24 @@ class MainWindow(QMainWindow):
 
     def selectMode(self, index):
         if index==0:
-            self.mode= TransmissionMode()
-            pass
+            self.mode= TransmissionMode(self)
         elif index==1:
             self.mode= RecievingMode()
 
     def formArray(self):
-        antennas_num= self.elements_num_spinbox.value
-        antennas_spacing=self.spacing_spinbox.value
-        beam_angle=self.beam_angle_spinbox.value
+        antennas_num= self.elements_num_spinbox.value()
+        antennas_spacing=self.spacing_spinbox.value()
+        beam_angle=self.beam_angle_spinbox.value()
+        print("beam angle", type(beam_angle), beam_angle)
         shape= 'linear' if self.shape_combox.currentIndex()==1 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)
-        self.array.show_sliders_phase(antennas_num,self.phase_widget)
-
+        print("affffter")
+        self.array.show_sliders_phase(self.phase_widget)
+        print("beforeee")
     
     def check_isotropic(self):
         if self.isotropic_checkbox.isChecked():
-            self.array.show_sliders_gain()
+            self.array.show_sliders_gain(self.gain_widget)
 
 
     def formAntenna(self):
@@ -87,6 +92,8 @@ class MainWindow(QMainWindow):
     def formSignal(self):
         amplitude= self.amplitude.value()
         self.signal.create_signal(amplitude)
+        self.mode.use_array_and_signal()
+        self.mode.run_mode()
 
 
 if __name__ == '__main__':
