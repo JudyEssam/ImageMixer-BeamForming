@@ -6,7 +6,7 @@ from Browse import Browse
 from OutputViewer import OutputViewer
 from InputViewer import InputViewer 
 import logging
-
+from Mixer import Mixer
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -20,7 +20,7 @@ class MainWindow(QMainWindow):
                 )
         
         
-
+        self.mixer=Mixer()
         self.progressbar= self.findChild(QProgressBar, "progressBar_3" )
         self.output1 = self.findChild(QWidget, "output_1")
         self.output2 = self.findChild(QWidget, "output_2")
@@ -109,7 +109,7 @@ class MainWindow(QMainWindow):
         
 
         
-        self.mixButton.clicked.connect(self.display_output)
+        self.mixButton.clicked.connect(self.apply_mix)
 
     def update_componant1_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image1_slider.value())
@@ -135,10 +135,18 @@ class MainWindow(QMainWindow):
     def full_region_state(self):
         self.input_viewer.useFullRegion=True        
 
+    def apply_mix(self):
+        self.get_final_mix()  
+        self.display_output()   
+
+    def get_final_mix(self):
+        imge_components=self.input_viewer.get_finalffts()
+        combined_result = self.mixer.set_mixing_result(imge_components)
+        self.mixed_image=self.mixer.compute_inverse_rfft(combined_result)
+
     def display_output(self):
-        pass
-        # image_path = self.mixer.get_image_path()
-        # self.output_viewer.DisplayOutput(image_path)
+        self.output_viewer.DisplayOutput(self.mixed_image)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
