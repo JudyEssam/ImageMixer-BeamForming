@@ -226,21 +226,21 @@ class InputViewer:
             raise ValueError("FFT components are not set")
         for index, fft_component in enumerate(self.fft_components):
             if self.fft_labels[index] is None or self.images[index] is None or fft_component is None:
-                fft_component[index][1]=None
-                fft_component[index][2]=None
+                fft_component[1]=None
+                fft_component[2]=None
                 continue
             label = self.fft_labels[index]
             pixmap = label.pixmap()
             if pixmap is None:
-                fft_component[index][1]=None
-                fft_component[index][2]=None
+                fft_component[1]=None
+                fft_component[2]=None
                 continue
 
 
             pixmap_width, pixmap_height = pixmap.width(), pixmap.height()
             label_width, label_height = label.width(), label.height()
-            scale_x = fft_component[index][2].shape[1] / label_width
-            scale_y = fft_component[index][2].shape[0] / label_height
+            scale_x = fft_component[2].shape[1] / label_width
+            scale_y = fft_component[2].shape[0] / label_height
 
 
             x = int(self.shared_rect.x() * scale_x)
@@ -251,18 +251,18 @@ class InputViewer:
             
 
             if self.isInner and not self.useFullRegion:
-                fft_component[index][1]=fft_component[index][1][y:y + height, x:x + width]
-                fft_component[index][2] = fft_component[index][2][y:y + height, x:x + width]
+                fft_component[1]=fft_component[1][y:y + height, x:x + width]
+                fft_component[2] = fft_component[2][y:y + height, x:x + width]
 
 
             elif not self.isInner and not self.useFullRegion:
                 mask1 = np.ones_like(fft_component[index][1])
                 mask1[y:y + height, x:x + width] = 0
-                fft_component[index][1] *= mask2
+                fft_component[1] *= mask2
 
                 mask2 = np.ones_like(fft_component[index][2])
                 mask2[y:y + height, x:x + width] = 0
-                fft_component[index][2] *= mask2
+                fft_component[2] *= mask2
  
                 
 
