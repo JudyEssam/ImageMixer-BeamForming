@@ -1,13 +1,14 @@
 from PyQt5.QtGui import QPixmap, QPainter, QPen, QBrush,QImage
-from PyQt5.QtCore import Qt, QRect
+from PyQt5.QtCore import Qt, QRect, pyqtSignal
 from PyQt5.QtWidgets import QLabel
 from Image import Image 
 from ImageComponents import ImageComponents
 import numpy as np
+import cv2
 
 
 class SelectableLabel(QLabel):
-    def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect()):
+    def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
         super().__init__(parent)
         self.shared_rect = shared_rect
         self.update_callback = update_callback
@@ -15,6 +16,7 @@ class SelectableLabel(QLabel):
         self.image_num=image_num # This is the Image instance
         self.start_pos = None
         self.prev_y = None
+        self.input_viewer=input_viewer
         self.mode=mode
         self.original_copy= None
         
@@ -27,25 +29,37 @@ class SelectableLabel(QLabel):
             self.shared_rect.setBottomRight(self.start_pos)
             self.update_callback()
         elif event.button() == Qt.RightButton:
-            self.prev_y = event.pos().y()    
+            self.is_mouse_pressed=True
+            self.prev_y = event.pos().y()
+            self.prev_x=event.pos().x()    
 
     def mouseMoveEvent(self, event):
         if event.buttons() & Qt.LeftButton:
             self.shared_rect.setBottomRight(event.pos())
             self.update_callback()
-        elif event.buttons() & Qt.RightButton and self.prev_y is not None:
-            
-            delta_y = event.pos().y() - self.prev_y
-            self.prev_y = event.pos().y() 
-            brightness_value = delta_y 
-            self.images_array[0].change_brightness(brightness_value)
-            self.update_callback()    
+
+        elif event.buttons() & Qt.RightButton and self.prev_y is not None and self.is_mouse_pressed:
+            delta_y = event.pos().y()-self.prev_y
+            # self.prev_y = event.pos().y() 
+            brightness_value = delta_y
+            self.images_array[self.image_num].change_brightness(brightness_value)
+            updated_image = self.images_array[self.image_num].get_current_image()
+            self.input_viewer.update_displayed_image(self.image_num,updated_image)
+
+        elif  event.buttons() & Qt.RightButton and self.prev_x is not None and self.is_mouse_pressed:   
+            delta_x = event.pos().x() - self.prev_x
+            contrast_value=delta_x
+            self.images_array[self.image_num].change_contrast(contrast_value)
+            updated_image = self.images_array[self.image_num].get_current_image()
+            self.input_viewer.update_displayed_image(self.image_num,updated_image)
+
 
     def mouseReleaseEvent(self, event):
         if event.button() == Qt.LeftButton:
             self.shared_rect.setBottomRight(event.pos())
             self.start_pos = None
             self.update_callback()
+            self.is_mouse_pressed=False
 
     def paintEvent(self, event):
             super().paintEvent(event)  # Call the base class paint event
@@ -81,9 +95,6 @@ class InputViewer:
         if not (0 <= image_num < len(self.image_labels)):
             print(f"Invalid image number: {image_num}")
             return
-        
-        
-        
 
         # Assuming Image is your custom class for image processing
         self.image = Image(image_path, is_grey)
@@ -165,16 +176,16 @@ class InputViewer:
 
 
     def set_image_fft_widgets(self,image_widgets,fft_widgets):
-        self.image1_label = SelectableLabel(self.updateAllLabels, self.images,0,"image_widget",image_widgets[0])
-        self.image2_label = SelectableLabel(self.updateAllLabels, self.images,1,"image_widget",image_widgets[1])
-        self.image3_label = SelectableLabel(self.updateAllLabels, self.images,2,"image_widget",image_widgets[2])
-        self.image4_label = SelectableLabel(self.updateAllLabels, self.images,3,"image_widget",image_widgets[3])
+        self.image1_label = SelectableLabel(self.updateAllLabels, self.images,0,"image_widget",image_widgets[0],input_viewer=self)
+        self.image2_label = SelectableLabel(self.updateAllLabels, self.images,1,"image_widget",image_widgets[1],input_viewer=self)
+        self.image3_label = SelectableLabel(self.updateAllLabels, self.images,2,"image_widget",image_widgets[2],input_viewer=self)
+        self.image4_label = SelectableLabel(self.updateAllLabels, self.images,3,"image_widget",image_widgets[3],input_viewer=self)
 
 
-        self.fft1_label = SelectableLabel( self.updateAllLabels, self.images,0,"fft_widget",fft_widgets[0],self.shared_rect)
-        self.fft2_label = SelectableLabel( self.updateAllLabels, self.images,1,"fft_widget",fft_widgets[1],self.shared_rect)
-        self.fft3_label = SelectableLabel( self.updateAllLabels, self.images,2,"fft_widget",fft_widgets[2],self.shared_rect)
-        self.fft4_label = SelectableLabel( self.updateAllLabels, self.images,3,"fft_widget",fft_widgets[3],self.shared_rect)
+        self.fft1_label = SelectableLabel( self.updateAllLabels, self.images,0,"fft_widget",fft_widgets[0],self.shared_rect,input_viewer=self)
+        self.fft2_label = SelectableLabel( self.updateAllLabels, self.images,1,"fft_widget",fft_widgets[1],self.shared_rect,input_viewer=self)
+        self.fft3_label = SelectableLabel( self.updateAllLabels, self.images,2,"fft_widget",fft_widgets[2],self.shared_rect,input_viewer=self)
+        self.fft4_label = SelectableLabel( self.updateAllLabels, self.images,3,"fft_widget",fft_widgets[3],self.shared_rect,input_viewer=self)
 
         
         self.image_labels = [self.image1_label, self.image2_label, self.image3_label, self.image4_label]
@@ -191,6 +202,15 @@ class InputViewer:
     def updateAllLabels(self):
         for label in self.fft_labels:
             label.update()
+
+    def update_displayed_image(self, image_num, image):
+        height, width = image.shape
+        bytes_per_line = width
+        q_image = QImage(image.data, width, height, bytes_per_line, QImage.Format_Grayscale8)
+        pixmap = QPixmap.fromImage(q_image)
+        self.image_labels[image_num].setPixmap(pixmap)
+        
+
 
 
     def clearRectangle(self):

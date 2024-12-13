@@ -42,8 +42,6 @@
            <property name="font">
             <font>
              <pointsize>-1</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
@@ -69,7 +67,7 @@ border-radius: 10px;     </string>
             </property>
             <attribute name="icon">
              <iconset>
-              <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
+              <normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
             </attribute>
             <attribute name="title">
              <string>Image Mixer</string>
@@ -154,10 +152,7 @@ font-size: 15px;
                            <widget class="QLabel" name="label_30">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -187,10 +182,7 @@ background-color: #dce3eb;</string>
                            <widget class="QLabel" name="label_31">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -493,10 +485,7 @@ font-size: 15px;
                            <widget class="QLabel" name="label_32">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -525,10 +514,7 @@ background-color: #dce3eb;</string>
                            <widget class="QLabel" name="label_33">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -773,10 +759,7 @@ font-size: 15px;
                                 <widget class="QLabel" name="label_34">
                                  <property name="font">
                                   <font>
-                                   <family>Oswald SemiBold</family>
                                    <pointsize>-1</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="styleSheet">
@@ -806,10 +789,7 @@ background-color: #dce3eb;</string>
                                 <widget class="QLabel" name="label_35">
                                  <property name="font">
                                   <font>
-                                   <family>Oswald SemiBold</family>
                                    <pointsize>-1</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
                                   </font>
                                  </property>
                                  <property name="styleSheet">
@@ -977,10 +957,7 @@ QComboBox QAbstractItemView {
                            <widget class="QLabel" name="label_36">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -1009,10 +986,7 @@ background-color: #dce3eb;</string>
                            <widget class="QLabel" name="label_37">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
@@ -1065,10 +1039,7 @@ background-color: #dce3eb;</string>
                    <widget class="QLabel" name="mixerOutputTo_3">
                     <property name="font">
                      <font>
-                      <family>Overpass Black</family>
                       <pointsize>-1</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="styleSheet">
@@ -1120,10 +1091,7 @@ border: None;</string>
                        <widget class="QRadioButton" name="radioButton1_3">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="cursor">
@@ -1144,10 +1112,7 @@ font-size: 18px;</string>
                        <widget class="QRadioButton" name="radioButton2_3">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="cursor">
@@ -1177,10 +1142,7 @@ font-size: 18px;</string>
                          <widget class="QLabel" name="label_op1_3">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -1209,10 +1171,7 @@ background-color: #dce3eb;</string>
                          <widget class="QLabel" name="label_op2_3">
                           <property name="font">
                            <font>
-                            <family>Oswald SemiBold</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
@@ -1248,10 +1207,8 @@ background-color: #dce3eb;</string>
                      <widget class="QPushButton" name="mixxer_3">
                       <property name="font">
                        <font>
-                        <family>-apple-system</family>
+                        <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                         <pointsize>-1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="cursor">
@@ -1301,7 +1258,7 @@ QPushButton:pressed {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
+                        <normaloff>../../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>../../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1377,10 +1334,7 @@ border: None;</string>
                        <widget class="QLabel" name="selectedArea_5">
                         <property name="font">
                          <font>
-                          <family>Overpass Black</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="styleSheet">
@@ -1402,10 +1356,7 @@ border: None;</string>
                            <widget class="QRadioButton" name="radioButton_In_3">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="cursor">
@@ -1425,10 +1376,7 @@ font-weight:10000px;
                            <widget class="QRadioButton" name="radioButton_Out_3">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="cursor">
@@ -1450,10 +1398,8 @@ font-weight:10000px;
                          <widget class="QPushButton" name="Deselect_3">
                           <property name="font">
                            <font>
-                            <family>-apple-system</family>
+                            <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="cursor">
@@ -1584,7 +1530,7 @@ QPushButton:pressed {
            <widget class="QWidget" name="Musical_Instruments_Tab">
             <attribute name="icon">
              <iconset>
-              <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
+              <normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>../../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
             </attribute>
             <attribute name="title">
              <string>Beamforming</string>
@@ -1616,7 +1562,6 @@ QPushButton:pressed {
                    </property>
                    <property name="font">
                     <font>
-                     <family>Overpass Black</family>
                      <pointsize>-1</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
@@ -1744,7 +1689,6 @@ QComboBox QAbstractItemView {
                    </property>
                    <property name="font">
                     <font>
-                     <family>Overpass Black</family>
                      <pointsize>-1</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
@@ -2087,11 +2031,9 @@ margin-left:6px;
                        </property>
                        <property name="font">
                         <font>
-                         <family>Overpass SemiBold</family>
                          <pointsize>-1</pointsize>
                          <weight>75</weight>
                          <bold>true</bold>
-                         <kerning>true</kerning>
                         </font>
                        </property>
                        <property name="styleSheet">
@@ -2178,7 +2120,6 @@ QComboBox QAbstractItemView {
                          </property>
                          <property name="font">
                           <font>
-                           <family>Overpass SemiBold</family>
                            <pointsize>-1</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
@@ -2276,7 +2217,6 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                          </property>
                          <property name="font">
                           <font>
-                           <family>Overpass SemiBold</family>
                            <pointsize>-1</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
@@ -2377,7 +2317,6 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                          </property>
                          <property name="font">
                           <font>
-                           <family>Overpass SemiBold</family>
                            <pointsize>-1</pointsize>
                            <weight>75</weight>
                            <bold>true</bold>
@@ -2714,7 +2653,6 @@ margin-left:6px;
                        </property>
                        <property name="font">
                         <font>
-                         <family>Overpass SemiBold</family>
                          <pointsize>-1</pointsize>
                          <weight>75</weight>
                          <bold>true</bold>
@@ -2776,7 +2714,6 @@ border:None;</string>
                        </property>
                        <property name="font">
                         <font>
-                         <family>Overpass SemiBold</family>
                          <pointsize>-1</pointsize>
                          <weight>75</weight>
                          <bold>true</bold>
@@ -3057,11 +2994,9 @@ margin-left:6px;
                              </property>
                              <property name="font">
                               <font>
-                               <family>Overpass SemiBold</family>
                                <pointsize>-1</pointsize>
                                <weight>75</weight>
                                <bold>true</bold>
-                               <kerning>true</kerning>
                               </font>
                              </property>
                              <property name="styleSheet">
@@ -3161,11 +3096,9 @@ margin-right: 0px;
                              </property>
                              <property name="font">
                               <font>
-                               <family>Overpass SemiBold</family>
                                <pointsize>-1</pointsize>
                                <weight>75</weight>
                                <bold>true</bold>
-                               <kerning>true</kerning>
                               </font>
                              </property>
                              <property name="styleSheet">
@@ -3253,7 +3186,6 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                              </property>
                              <property name="font">
                               <font>
-                               <family>Overpass SemiBold</family>
                                <pointsize>-1</pointsize>
                                <weight>75</weight>
                                <bold>true</bold>
@@ -3329,7 +3261,6 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                              </property>
                              <property name="font">
                               <font>
-                               <family>Overpass SemiBold</family>
                                <pointsize>-1</pointsize>
                                <weight>75</weight>
                                <bold>true</bold>

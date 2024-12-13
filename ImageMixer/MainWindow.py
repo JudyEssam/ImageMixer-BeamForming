@@ -5,12 +5,21 @@ import os
 from Browse import Browse
 from OutputViewer import OutputViewer
 from InputViewer import InputViewer 
+import logging
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
         loadUi("MainWindow.ui", self)
+
+        logging.basicConfig(
+            filename='app.log',           # Log file name
+            level=logging.DEBUG,          # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+            format='%(asctime)s - %(levelname)s - %(message)s'  # Log message format
+                )
+        
+        
 
         self.progressbar= self.findChild(QProgressBar, "progressBar_3" )
         self.output1 = self.findChild(QWidget, "output_1")
@@ -103,8 +112,8 @@ class MainWindow(QMainWindow):
         self.mixButton.clicked.connect(self.display_output)
 
     def update_componant1_weight(self,image_num):
-
         self.input_viewer.set_components_weights(image_num,self.image1_slider.value())
+        print(self.input_viewer.fft_components[image_num][1].shape)
 
     def update_componant2_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image2_slider.value())
