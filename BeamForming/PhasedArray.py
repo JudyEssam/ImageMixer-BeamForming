@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QSlider, QVBoxLayout, QListWidgetItem
+from PyQt5.QtWidgets import QSlider, QVBoxLayout
 from PyQt5.QtCore import Qt
 import numpy as np
 
@@ -60,25 +60,19 @@ class PhasedArray:
         layout.setSpacing(30)
 
     def show_sliders_phase(self, sliders_widget):
-        phase_limits = (0, 360)
-
-        # Clear existing items in the QListWidget
-        sliders_widget.clear()
-        self.sliders_phase = []  # Reset the list to store sliders
-
+        phase_limits= (0,360)
+        if sliders_widget.layout() is None:
+            layout = QVBoxLayout(sliders_widget)
+            sliders_widget.setLayout(layout)
+        else:
+            layout = sliders_widget.layout()
         for _ in range(self._antennas_num):
-            slider = QSlider(Qt.Vertical)
-            slider.setRange(phase_limits[0], phase_limits[1])  # Set slider range
+            slider = QSlider(Qt.Vertical) 
+            slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
             slider.setValue(180)
-
-            # Create a QListWidgetItem to hold the slider
-            item = QListWidgetItem(sliders_widget)
-            item.setSizeHint(slider.sizeHint())  # Adjust size of the item to match the slider
-            sliders_widget.addItem(item)
-            sliders_widget.setItemWidget(item, slider)  # Embed the slider into the QListWidget
+            layout.addWidget(slider)
             self.sliders_phase.append(slider)
-
-        sliders_widget.setSpacing(30)  # Optional: Set spacing between items if desired
+        layout.setSpacing(30)
     
     def get_gain_sliders_vals(self):
          self.sliders_gain= [slider.value()/10 for slider in self.sliders_gain]
@@ -91,3 +85,8 @@ class PhasedArray:
     def set_elements_phases_and_gains(self, elements_phase, elements_gain):
         self._elements_phase=elements_phase
         self._elements_gain=elements_gain
+
+    def calculate_beam_angle(array_position, reference_position):
+        x_array, y_array = array_position
+        x_ref, y_ref = reference_position
+        return np.arctan2(y_array - y_ref, x_array - x_ref)  # Angle in radians

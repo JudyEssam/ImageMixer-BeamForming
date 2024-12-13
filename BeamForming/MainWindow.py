@@ -65,9 +65,7 @@ class MainWindow(QMainWindow):
         print("beam angle", type(beam_angle), beam_angle)
         shape= 'linear' if self.shape_combox.currentIndex()==1 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)
-        print("affffter")
         self.array.show_sliders_phase(self.phase_widget)
-        print("beforeee")
     
     def check_isotropic(self):
         if self.isotropic_checkbox.isChecked():
