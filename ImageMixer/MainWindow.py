@@ -32,7 +32,8 @@ class MainWindow(QMainWindow):
         self.image2 = self.findChild(QWidget, "original_2")
         self.image3 = self.findChild(QWidget, "original_3")
         self.image4 = self.findChild(QWidget, "original_4")
-        
+        self.RadioButton1.setChecked(True)
+
         self.images_widgets=[self.image1,self.image2,self.image3,self.image4]
         
         self.fft_widget2 = self.findChild(QWidget, "component_image_2")

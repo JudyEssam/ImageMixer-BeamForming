@@ -2113,3 +2113,31 @@
 2024-12-14 19:55:39,149 - INFO - Mixing result successfully computed.
 2024-12-14 19:55:39,159 - INFO - Performing inverse RFFT.
 2024-12-14 19:55:39,359 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:57:35,752 - INFO - Mixer class initialized.
+2024-12-14 19:57:58,777 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:57:58,777 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:57:58,797 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:57:58,807 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:57:58,857 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:57:58,857 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:57:58,857 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:57:58,927 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:57:59,002 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 19:57:59,057 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:57:59,167 - INFO - Mixing result successfully computed.
+2024-12-14 19:57:59,187 - INFO - Performing inverse RFFT.
+2024-12-14 19:57:59,387 - INFO - Inverse RFFT computation completed.
+2024-12-14 20:01:28,731 - INFO - Mixer class initialized.
+2024-12-14 20:01:55,193 - INFO - Processing mixing result with 4 image components.
+2024-12-14 20:01:55,193 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1080
+2024-12-14 20:01:55,203 - DEBUG - Image 0 padded to (1535, 1080).
+2024-12-14 20:01:55,213 - DEBUG - Image 1 padded to (1535, 1080).
+2024-12-14 20:01:55,223 - DEBUG - Image 2 padded to (1535, 1080).
+2024-12-14 20:01:55,273 - DEBUG - Image 3 padded to (1535, 1080).
+2024-12-14 20:01:55,273 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 20:01:55,403 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 20:01:55,483 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 20:01:55,573 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 20:01:55,690 - INFO - Mixing result successfully computed.
+2024-12-14 20:01:55,700 - INFO - Performing inverse RFFT.
+2024-12-14 20:01:55,911 - INFO - Inverse RFFT computation completed.
