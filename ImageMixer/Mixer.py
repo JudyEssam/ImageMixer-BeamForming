@@ -78,23 +78,26 @@ class Mixer:
 
                 # Apply gain to the appropriate list based on the mode
                 if mode == "real":
-                    real_array += list1 * gain
-                    imaginary_array += list2  # Imaginary stays unchanged for 'real' mode
+                    real_array += list1 * gain  # Add to real part
                 elif mode == "imaginary":
-                    real_array += list1  # Real stays unchanged for 'imaginary' mode
-                    imaginary_array += list2 * gain
+                    imaginary_array += list2 * gain  # Add to imaginary part
                 elif mode == "magnitude":
-                    real_array += list1 * gain * np.cos(list2)  # Real part from magnitude * cos(phase)
-                    imaginary_array += list1 * gain * np.sin(list2)  # Imaginary part from magnitude * sin(phase)
+                    real_array += list1 * gain  # Add to real part (magnitude mode directly modifies real array)
                 elif mode == "phase":
-                    real_array += list1 * np.cos(list2)  # Real part from magnitude * cos(phase)
-                    imaginary_array += list1 * np.sin(list2)  # Imaginary part from magnitude * sin(phase)
+                    imaginary_array += list2 * gain  # Add to imaginary part (phase mode directly modifies imaginary array)
                 else:
                     logging.error(f"Invalid mode '{mode}' at index {i}.")
                     raise ValueError(f"Invalid mode '{mode}' at index {i}. Must be 'real', 'imaginary', 'magnitude', or 'phase'.")
 
-            # Create the complex result by combining real and imaginary arrays
-            complex_result = real_array + 1j * imaginary_array
+            # Convert to complex form based on the mode
+            if "magnitude" in [component[0] for component in padded_components] or "phase" in [component[0] for component in padded_components]:
+               
+
+                complex_result = real_array * np.exp(1j * imaginary_array)
+
+            else:
+                # If only real and imaginary parts are used, combine them directly
+                complex_result = real_array + 1j * imaginary_array
 
             # Print the shapes of the final real and imaginary arrays
             print(f"Real array shape: {real_array.shape}")

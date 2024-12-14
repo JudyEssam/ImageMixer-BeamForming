@@ -21,7 +21,7 @@ class MixingWorker(QThread):
             self.mixed_image = self.mixer.compute_inverse_rfft(combined_result)
 
             # Update progress
-            for i in range(0, 101, 20):
+            for i in range(0, 101, 10):
                 if not self._is_running:
                     self.cancelled.emit()
                     return
