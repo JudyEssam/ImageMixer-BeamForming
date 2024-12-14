@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QProgressBar, QLabel, QWidget, QRadioButton
 from PyQt5.QtGui import QPixmap, QImage
 import cv2
-
+import numpy as np
 class OutputViewer:
     def __init__(self, output1_widget, output2_widget, radio_button1, radio_button2, progress_bar):
         """
@@ -53,7 +53,7 @@ class OutputViewer:
         """
         self.progress_bar.setValue(progress)
 
-    def DisplayOutput(self, image_path):
+    def DisplayOutput(self,inverse_image):
         """
         Display an image on the selected output widget.
 
@@ -65,18 +65,10 @@ class OutputViewer:
             print("No output widget selected.")
             return
 
-        # Load the image using OpenCV
-        image = cv2.imread(image_path)
-        if image is None:
-            print("Failed to load image.")
-            return
-
-        # Convert the image to RGB format for QImage
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        height, width, channels = image.shape
-        bytes_per_line = channels * width
-        q_image = QImage(image.data, width, height, bytes_per_line, QImage.Format_RGB888)
-
+        inverse_image = np.uint8(np.clip(inverse_image, 0, 255))
+        height, width = inverse_image.shape
+        bytes_per_line = width
+        q_image = QImage(inverse_image.data, width, height, bytes_per_line, QImage.Format_Grayscale8)
         # Set the QPixmap to the output label
         pixmap = QPixmap.fromImage(q_image)
         output_label.setPixmap(pixmap)

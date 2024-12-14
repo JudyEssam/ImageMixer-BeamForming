@@ -7,6 +7,7 @@ from OutputViewer import OutputViewer
 from InputViewer import InputViewer 
 import logging
 from Mixer import Mixer
+from MixingWorker import MixingWorker
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -108,9 +109,13 @@ class MainWindow(QMainWindow):
                 
         
 
-        
-        self.mixButton.clicked.connect(self.apply_mix)
-
+        self.worker = None
+        self.mixButton.clicked.connect(self.start_mixing)
+    def closeEvent(self, event):
+        if self.worker is not None:
+            self.worker.stop()
+            self.worker.wait()
+        event.accept()
     def update_componant1_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image1_slider.value())
         print(self.input_viewer.fft_components[image_num][1].shape)
@@ -135,17 +140,18 @@ class MainWindow(QMainWindow):
     def full_region_state(self):
         self.input_viewer.useFullRegion=True        
 
-    def apply_mix(self):
-        self.get_final_mix()  
-        self.display_output()   
+    def start_mixing(self):
+        if self.worker is not None:
+            self.worker.stop()
+            self.worker.wait()
 
-    def get_final_mix(self):
-        imge_components=self.input_viewer.get_finalffts()
-        combined_result = self.mixer.set_mixing_result(imge_components)
-        self.mixed_image=self.mixer.compute_inverse_rfft(combined_result)
+        self.worker = MixingWorker(self.mixer, self.input_viewer)
+        self.worker.progress.connect(self.output_viewer.loading)
+        self.worker.finished.connect(self.display_output)
+        self.worker.start()
 
-    def display_output(self):
-        self.output_viewer.DisplayOutput(self.mixed_image)
+    def display_output(self,mixed_image):
+        self.output_viewer.DisplayOutput(mixed_image)
 
 
 if __name__ == '__main__':

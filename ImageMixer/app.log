@@ -1434,3 +1434,682 @@
 2024-12-12 22:11:05,322 - DEBUG - pop widget MainWindow MainWindow
 2024-12-12 22:11:05,322 - DEBUG - new topwidget None
 2024-12-12 22:11:05,323 - INFO - UI loaded successfully.
+2024-12-14 10:42:19,137 - INFO - Mixer class initialized.
+2024-12-14 10:48:39,248 - INFO - Mixer class initialized.
+2024-12-14 13:50:54,286 - INFO - Mixer class initialized.
+2024-12-14 13:56:39,866 - INFO - Mixer class initialized.
+2024-12-14 13:57:12,722 - INFO - Mixer class initialized.
+2024-12-14 13:57:32,261 - INFO - Mixer class initialized.
+2024-12-14 13:57:52,375 - INFO - Processing mixing result with 4 image components.
+2024-12-14 13:57:52,375 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1080
+2024-12-14 13:57:52,395 - DEBUG - Image 0 padded to (1535, 1080).
+2024-12-14 13:57:52,405 - DEBUG - Image 1 padded to (1535, 1080).
+2024-12-14 13:57:52,415 - DEBUG - Image 2 padded to (1535, 1080).
+2024-12-14 13:57:52,425 - DEBUG - Image 3 padded to (1535, 1080).
+2024-12-14 13:57:52,425 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 13:57:52,525 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1080)
+2024-12-14 13:57:52,525 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 13:57:52,695 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1080)
+2024-12-14 13:57:52,695 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 13:57:52,846 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1080)
+2024-12-14 13:57:52,846 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 13:57:52,986 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1080)
+2024-12-14 13:57:53,026 - INFO - Mixing result successfully computed.
+2024-12-14 13:57:53,046 - INFO - Performing inverse RFFT.
+2024-12-14 13:57:54,159 - INFO - Inverse RFFT computation completed.
+2024-12-14 13:59:11,872 - INFO - Mixer class initialized.
+2024-12-14 13:59:34,024 - INFO - Processing mixing result with 4 image components.
+2024-12-14 13:59:34,024 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1080
+2024-12-14 13:59:34,044 - DEBUG - Image 0 padded to (1535, 1080).
+2024-12-14 13:59:34,054 - DEBUG - Image 1 padded to (1535, 1080).
+2024-12-14 13:59:34,094 - DEBUG - Image 2 padded to (1535, 1080).
+2024-12-14 13:59:34,104 - DEBUG - Image 3 padded to (1535, 1080).
+2024-12-14 13:59:34,104 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 13:59:34,244 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1080)
+2024-12-14 13:59:34,244 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 13:59:34,435 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1080)
+2024-12-14 13:59:34,435 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 13:59:34,595 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1080)
+2024-12-14 13:59:34,595 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 13:59:34,726 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1080)
+2024-12-14 13:59:34,763 - INFO - Mixing result successfully computed.
+2024-12-14 13:59:34,786 - INFO - Performing inverse RFFT.
+2024-12-14 13:59:35,712 - INFO - Inverse RFFT computation completed.
+2024-12-14 14:04:15,431 - INFO - Mixer class initialized.
+2024-12-14 14:04:40,648 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:04:40,648 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:05:01,733 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:05:01,733 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 14:05:01,753 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 14:05:01,753 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 14:05:01,773 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 14:05:01,833 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 14:05:01,833 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:05:01,983 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:01,983 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 14:05:02,173 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:02,173 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:05:02,353 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:02,353 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 14:05:02,500 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:02,539 - INFO - Mixing result successfully computed.
+2024-12-14 14:05:02,559 - INFO - Performing inverse RFFT.
+2024-12-14 14:05:03,299 - INFO - Inverse RFFT computation completed.
+2024-12-14 14:05:17,592 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:05:17,592 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 14:05:17,602 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 14:05:17,612 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 14:05:17,612 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 14:05:17,622 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 14:05:17,622 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:05:17,722 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:17,722 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:05:17,852 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:17,852 - INFO - Processing image 2 - Mode: magnitude, Gain: 1.0
+2024-12-14 14:05:17,962 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:17,962 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:05:18,092 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1000)
+2024-12-14 14:05:18,132 - INFO - Mixing result successfully computed.
+2024-12-14 14:05:18,142 - INFO - Performing inverse RFFT.
+2024-12-14 14:05:18,898 - INFO - Inverse RFFT computation completed.
+2024-12-14 14:16:36,568 - INFO - Mixer class initialized.
+2024-12-14 14:17:02,985 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:17:02,985 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:17:37,786 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:17:37,786 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1080
+2024-12-14 14:17:37,786 - DEBUG - Image 0 padded to (1535, 1080).
+2024-12-14 14:17:37,796 - DEBUG - Image 1 padded to (1535, 1080).
+2024-12-14 14:17:37,806 - DEBUG - Image 2 padded to (1535, 1080).
+2024-12-14 14:17:37,806 - DEBUG - Image 3 padded to (1535, 1080).
+2024-12-14 14:17:37,806 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 14:17:37,886 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1080)
+2024-12-14 14:17:37,896 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.5
+2024-12-14 14:17:37,986 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1080)
+2024-12-14 14:17:37,986 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 14:17:38,076 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1080)
+2024-12-14 14:17:38,076 - INFO - Processing image 3 - Mode: real, Gain: 0.6
+2024-12-14 14:17:38,106 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1080)
+2024-12-14 14:17:38,136 - INFO - Mixing result successfully computed.
+2024-12-14 14:17:38,166 - INFO - Performing inverse RFFT.
+2024-12-14 14:17:38,835 - INFO - Inverse RFFT computation completed.
+2024-12-14 14:24:06,721 - INFO - Mixer class initialized.
+2024-12-14 14:24:38,241 - INFO - Mixer class initialized.
+2024-12-14 14:25:02,299 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:25:02,299 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:28:11,971 - INFO - Mixer class initialized.
+2024-12-14 14:28:23,269 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:28:23,269 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:57:28,910 - INFO - Mixer class initialized.
+2024-12-14 14:57:42,275 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:57:42,275 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:57:52,756 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:57:52,756 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 14:58:50,425 - INFO - Mixer class initialized.
+2024-12-14 14:59:00,185 - INFO - Processing mixing result with 4 image components.
+2024-12-14 14:59:00,195 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 15:01:22,664 - INFO - Mixer class initialized.
+2024-12-14 15:01:32,920 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:01:32,920 - INFO - Image components received: [['magnitude', array([[2107.        , 1601.11856866,  423.20370235, ...,  541.64245525,
+         423.20370235, 1601.11856866],
+       [ 871.18635764,  173.64554406,  618.4212346 , ...,  367.73575523,
+        1184.18110711, 1777.55970248],
+       [ 387.13437611,  282.00769795, 1242.28775819, ...,  208.79421336,
+         745.02500859,  836.393166  ],
+       ...,
+       [2191.39660149,  682.9645344 , 1242.16877347, ..., 1175.34261163,
+         232.42490495, 1242.56625719],
+       [ 387.13437611,  836.393166  ,  745.02500859, ..., 2387.66031447,
+        1242.28775819,  282.00769795],
+       [ 871.18635764, 1777.55970248, 1184.18110711, ...,  471.09955058,
+         618.4212346 ,  173.64554406]]), array([[-9.71221205e-16,  2.77408277e+00, -7.72214981e-01, ...,
+        -7.70270948e-01,  7.72214981e-01, -2.77408277e+00],
+       [-2.15117262e+00, -4.58019217e-01,  1.47596305e+00, ...,
+        -1.12342226e+00, -2.14864114e+00,  1.37472335e+00],
+       [-1.07804725e+00,  2.02148477e+00,  2.41445225e+00, ...,
+         2.47796754e+00,  1.89898376e+00, -8.26111936e-01],
+       ...,
+       [-2.88168800e+00,  5.85002968e-02,  9.16800125e-01, ...,
+        -2.25602448e+00, -8.98154496e-01,  2.00541710e-01],
+       [ 1.07804725e+00,  8.26111936e-01, -1.89898376e+00, ...,
+         1.06192118e+00, -2.41445225e+00, -2.02148477e+00],
+       [ 2.15117262e+00, -1.37472335e+00,  2.14864114e+00, ...,
+         7.26256214e-01, -1.47596305e+00,  4.58019217e-01]]), 1], [None, None, None, 1], [None, None, None, 1], [None, None, None, 1]]
+2024-12-14 15:01:32,920 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 15:01:32,920 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 15:01:32,920 - ERROR - Component 1 has None as list1 or list2.
+2024-12-14 15:01:32,920 - ERROR - Component 2 has None as list1 or list2.
+2024-12-14 15:01:32,920 - ERROR - Component 3 has None as list1 or list2.
+2024-12-14 15:01:32,920 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 15:01:32,998 - DEBUG - Complex result for image 0 calculated. Shape: (1500, 1000)
+2024-12-14 15:01:33,008 - INFO - Mixing result successfully computed.
+2024-12-14 15:02:57,454 - INFO - Mixer class initialized.
+2024-12-14 15:03:04,959 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:03:04,959 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 15:05:53,988 - INFO - Mixer class initialized.
+2024-12-14 15:06:04,569 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:06:04,569 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 15:08:14,945 - INFO - Mixer class initialized.
+2024-12-14 15:08:24,895 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:08:24,895 - ERROR - Error in set_mixing_result: 'NoneType' object has no attribute 'shape'
+2024-12-14 15:11:45,914 - INFO - Mixer class initialized.
+2024-12-14 15:11:56,527 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:11:56,527 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 15:11:56,537 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 15:11:56,537 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-14 15:11:56,537 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 15:11:56,537 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 15:11:56,548 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 15:11:56,548 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 15:11:56,557 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 15:11:56,557 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 15:11:56,657 - DEBUG - Complex result for image 0 calculated. Shape: (1500, 1000)
+2024-12-14 15:11:56,657 - INFO - Processing image 1 - Mode: None, Gain: 1
+2024-12-14 15:11:56,657 - ERROR - Invalid mode 'None' at index 1.
+2024-12-14 15:11:56,657 - ERROR - Error in set_mixing_result: Invalid mode 'None' at index 1. Must be 'real', 'imaginary', 'magnitude', or 'phase'.
+2024-12-14 15:14:48,778 - INFO - Mixer class initialized.
+2024-12-14 15:14:59,009 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:14:59,019 - DEBUG - Maximum dimensions calculated: max_height=675, max_width=1080
+2024-12-14 15:14:59,019 - DEBUG - Image 0 padded to (675, 1080).
+2024-12-14 15:14:59,019 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-14 15:14:59,019 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-14 15:14:59,039 - DEBUG - Image 1 padded to (675, 1080).
+2024-12-14 15:14:59,039 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 15:14:59,039 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 15:14:59,049 - DEBUG - Image 2 padded to (675, 1080).
+2024-12-14 15:14:59,049 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 15:14:59,049 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 15:14:59,049 - DEBUG - Image 3 padded to (675, 1080).
+2024-12-14 15:14:59,049 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 15:14:59,089 - DEBUG - Complex result for image 0 calculated. Shape: (675, 1080)
+2024-12-14 15:14:59,089 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 15:14:59,109 - DEBUG - Complex result for image 1 calculated. Shape: (675, 1080)
+2024-12-14 15:14:59,109 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 15:14:59,119 - DEBUG - Complex result for image 2 calculated. Shape: (675, 1080)
+2024-12-14 15:14:59,119 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 15:14:59,139 - DEBUG - Complex result for image 3 calculated. Shape: (675, 1080)
+2024-12-14 15:14:59,183 - INFO - Mixing result successfully computed.
+2024-12-14 15:14:59,199 - INFO - Performing inverse RFFT.
+2024-12-14 15:14:59,394 - INFO - Inverse RFFT computation completed.
+2024-12-14 15:15:21,214 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:15:21,214 - DEBUG - Maximum dimensions calculated: max_height=1069, max_width=1080
+2024-12-14 15:15:21,224 - DEBUG - Image 0 padded to (1069, 1080).
+2024-12-14 15:15:21,224 - DEBUG - Image 1 padded to (1069, 1080).
+2024-12-14 15:15:21,234 - DEBUG - Image 2 padded to (1069, 1080).
+2024-12-14 15:15:21,234 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 15:15:21,234 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 15:15:21,234 - DEBUG - Image 3 padded to (1069, 1080).
+2024-12-14 15:15:21,234 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 15:15:21,294 - DEBUG - Complex result for image 0 calculated. Shape: (1069, 1080)
+2024-12-14 15:15:21,294 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 15:15:21,344 - DEBUG - Complex result for image 1 calculated. Shape: (1069, 1080)
+2024-12-14 15:15:21,344 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 15:15:21,412 - DEBUG - Complex result for image 2 calculated. Shape: (1069, 1080)
+2024-12-14 15:15:21,412 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 15:15:21,432 - DEBUG - Complex result for image 3 calculated. Shape: (1069, 1080)
+2024-12-14 15:15:21,452 - INFO - Mixing result successfully computed.
+2024-12-14 15:15:21,462 - INFO - Performing inverse RFFT.
+2024-12-14 15:15:22,012 - INFO - Inverse RFFT computation completed.
+2024-12-14 15:23:17,672 - INFO - Mixer class initialized.
+2024-12-14 15:23:47,786 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:23:47,786 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 15:23:47,796 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 15:23:47,807 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 15:23:47,813 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 15:23:47,817 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 15:23:47,817 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 15:23:47,906 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1000)
+2024-12-14 15:23:47,906 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 15:23:47,997 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1000)
+2024-12-14 15:23:47,997 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 15:23:48,088 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1000)
+2024-12-14 15:23:48,088 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 15:23:48,187 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1000)
+2024-12-14 15:23:48,207 - INFO - Mixing result successfully computed.
+2024-12-14 15:23:48,227 - INFO - Performing inverse RFFT.
+2024-12-14 15:23:48,787 - INFO - Inverse RFFT computation completed.
+2024-12-14 15:24:05,081 - INFO - Processing mixing result with 4 image components.
+2024-12-14 15:24:05,081 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 15:24:05,081 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 15:24:05,091 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 15:24:05,091 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 15:24:05,104 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 15:24:05,104 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 15:24:05,231 - DEBUG - Complex result for image 0 calculated. Shape: (1535, 1000)
+2024-12-14 15:24:05,231 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 15:24:05,331 - DEBUG - Complex result for image 1 calculated. Shape: (1535, 1000)
+2024-12-14 15:24:05,331 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 15:24:05,411 - DEBUG - Complex result for image 2 calculated. Shape: (1535, 1000)
+2024-12-14 15:24:05,421 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 15:24:05,509 - DEBUG - Complex result for image 3 calculated. Shape: (1535, 1000)
+2024-12-14 15:24:05,549 - INFO - Mixing result successfully computed.
+2024-12-14 15:24:05,569 - INFO - Performing inverse RFFT.
+2024-12-14 15:24:06,169 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:35:14,842 - INFO - Mixer class initialized.
+2024-12-14 19:35:27,196 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:35:27,196 - DEBUG - Maximum dimensions calculated: max_height=675, max_width=1080
+2024-12-14 19:35:27,206 - DEBUG - Image 0 padded to (675, 1080).
+2024-12-14 19:35:27,206 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-14 19:35:27,206 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-14 19:35:27,216 - DEBUG - Image 1 padded to (675, 1080).
+2024-12-14 19:35:27,216 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:35:27,216 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:35:27,226 - DEBUG - Image 2 padded to (675, 1080).
+2024-12-14 19:35:27,226 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:35:27,226 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:35:27,236 - DEBUG - Image 3 padded to (675, 1080).
+2024-12-14 19:35:27,236 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:35:27,276 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 19:35:27,276 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:35:27,276 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:35:27,296 - INFO - Mixing result successfully computed.
+2024-12-14 19:35:27,306 - INFO - Performing inverse RFFT.
+2024-12-14 19:35:27,374 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:35:46,307 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:35:46,317 - DEBUG - Maximum dimensions calculated: max_height=675, max_width=1080
+2024-12-14 19:35:46,317 - DEBUG - Image 0 padded to (675, 1080).
+2024-12-14 19:35:46,337 - DEBUG - Image 1 padded to (675, 1080).
+2024-12-14 19:35:46,337 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:35:46,337 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:35:46,337 - DEBUG - Image 2 padded to (675, 1080).
+2024-12-14 19:35:46,337 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:35:46,337 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:35:46,347 - DEBUG - Image 3 padded to (675, 1080).
+2024-12-14 19:35:46,347 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:35:46,377 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:35:46,397 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:35:46,407 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:35:46,427 - INFO - Mixing result successfully computed.
+2024-12-14 19:35:46,427 - INFO - Performing inverse RFFT.
+2024-12-14 19:35:46,512 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:41:19,297 - INFO - Mixer class initialized.
+2024-12-14 19:41:29,948 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:41:29,948 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:41:29,958 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:41:29,968 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-14 19:41:29,968 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-14 19:41:29,998 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:41:30,008 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:41:30,008 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:41:30,019 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:41:30,019 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:41:30,019 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:41:30,043 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:41:30,045 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:41:30,140 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 19:41:30,156 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:41:30,167 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:41:30,217 - INFO - Mixing result successfully computed.
+2024-12-14 19:41:30,240 - INFO - Performing inverse RFFT.
+2024-12-14 19:41:30,347 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:41:52,192 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:41:52,192 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:41:52,202 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:41:52,222 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:41:52,222 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:41:52,222 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:41:52,242 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:41:52,242 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:41:52,242 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:41:52,252 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:41:52,262 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:41:52,322 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:41:52,369 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:41:52,379 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:41:52,409 - INFO - Mixing result successfully computed.
+2024-12-14 19:41:52,419 - INFO - Performing inverse RFFT.
+2024-12-14 19:41:52,529 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:41:55,841 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:41:55,841 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:41:55,851 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:41:55,861 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:41:55,861 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:41:55,861 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:41:55,871 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:41:55,881 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:41:55,881 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:41:55,891 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:41:55,891 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:41:55,952 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:41:55,992 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:41:56,002 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:41:56,022 - INFO - Mixing result successfully computed.
+2024-12-14 19:41:56,032 - INFO - Performing inverse RFFT.
+2024-12-14 19:41:56,152 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:42:05,329 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:42:05,329 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:42:05,339 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:42:05,349 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:42:05,349 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:42:05,349 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:42:05,359 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:42:05,369 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:42:05,369 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:05,477 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:05,517 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:42:05,527 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:05,637 - INFO - Mixing result successfully computed.
+2024-12-14 19:42:05,637 - INFO - Performing inverse RFFT.
+2024-12-14 19:42:05,753 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:42:17,489 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:42:17,489 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:42:17,499 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:42:17,521 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:42:17,533 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:42:17,536 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:42:17,536 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:17,646 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:17,686 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:17,736 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:17,836 - INFO - Mixing result successfully computed.
+2024-12-14 19:42:17,846 - INFO - Performing inverse RFFT.
+2024-12-14 19:42:17,946 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:42:25,512 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:42:25,512 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:42:25,522 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:42:25,542 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:42:25,552 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:42:25,562 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:42:25,562 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:42:25,619 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:25,659 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:25,699 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:25,799 - INFO - Mixing result successfully computed.
+2024-12-14 19:42:25,809 - INFO - Performing inverse RFFT.
+2024-12-14 19:42:25,939 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:42:43,355 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:42:43,355 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:42:43,365 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:42:43,385 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:42:43,385 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:42:43,395 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:42:43,395 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:42:43,485 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 19:42:43,495 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 19:42:43,535 - INFO - Processing image 3 - Mode: imaginary, Gain: 0.0
+2024-12-14 19:42:43,580 - INFO - Mixing result successfully computed.
+2024-12-14 19:42:43,594 - INFO - Performing inverse RFFT.
+2024-12-14 19:42:43,694 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:42:56,477 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:42:56,477 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-14 19:42:56,487 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-14 19:42:56,507 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-14 19:42:56,517 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-14 19:42:56,527 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-14 19:42:56,527 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:42:56,587 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 19:42:56,597 - INFO - Processing image 2 - Mode: real, Gain: 0.48
+2024-12-14 19:42:56,607 - INFO - Processing image 3 - Mode: imaginary, Gain: 0.0
+2024-12-14 19:42:56,657 - INFO - Mixing result successfully computed.
+2024-12-14 19:42:56,667 - INFO - Performing inverse RFFT.
+2024-12-14 19:42:56,787 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:43:05,597 - INFO - Mixer class initialized.
+2024-12-14 19:43:30,894 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:43:30,894 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:43:30,914 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:43:30,924 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:43:30,938 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:43:30,944 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:43:30,944 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:43:31,033 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-14 19:43:31,084 - INFO - Processing image 2 - Mode: magnitude, Gain: 1
+2024-12-14 19:43:31,161 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:43:31,261 - INFO - Mixing result successfully computed.
+2024-12-14 19:43:31,271 - INFO - Performing inverse RFFT.
+2024-12-14 19:43:31,471 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:43:48,390 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:43:48,390 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:43:48,400 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:43:48,420 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:43:48,430 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:43:48,440 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:43:48,440 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:43:48,510 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.46
+2024-12-14 19:43:48,550 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.36
+2024-12-14 19:43:48,620 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.65
+2024-12-14 19:43:48,720 - INFO - Mixing result successfully computed.
+2024-12-14 19:43:48,730 - INFO - Performing inverse RFFT.
+2024-12-14 19:43:48,910 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:43:59,310 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:43:59,310 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:43:59,328 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:43:59,338 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:43:59,348 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:43:59,348 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:43:59,348 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:43:59,418 - INFO - Processing image 1 - Mode: imaginary, Gain: 0.46
+2024-12-14 19:43:59,428 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.36
+2024-12-14 19:43:59,488 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.65
+2024-12-14 19:43:59,598 - INFO - Mixing result successfully computed.
+2024-12-14 19:43:59,608 - INFO - Performing inverse RFFT.
+2024-12-14 19:43:59,808 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:44:12,871 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:44:12,871 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:44:12,881 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:44:12,901 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:44:12,921 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:44:12,921 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:44:12,921 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.54
+2024-12-14 19:44:12,991 - INFO - Processing image 1 - Mode: real, Gain: 0.46
+2024-12-14 19:44:12,991 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.36
+2024-12-14 19:44:13,051 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:13,141 - INFO - Mixing result successfully computed.
+2024-12-14 19:44:13,151 - INFO - Performing inverse RFFT.
+2024-12-14 19:44:13,351 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:44:20,826 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:44:20,826 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:44:20,836 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:44:20,846 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:44:20,846 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:44:20,856 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:44:20,856 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.1
+2024-12-14 19:44:20,926 - INFO - Processing image 1 - Mode: real, Gain: 0.46
+2024-12-14 19:44:20,936 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.36
+2024-12-14 19:44:20,996 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:21,076 - INFO - Mixing result successfully computed.
+2024-12-14 19:44:21,086 - INFO - Performing inverse RFFT.
+2024-12-14 19:44:21,267 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:44:31,463 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:44:31,463 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:44:31,480 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:44:31,499 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:44:31,506 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:44:31,510 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:44:31,513 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:31,570 - INFO - Processing image 1 - Mode: real, Gain: 0.0
+2024-12-14 19:44:31,580 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.36
+2024-12-14 19:44:31,640 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:31,751 - INFO - Mixing result successfully computed.
+2024-12-14 19:44:31,761 - INFO - Performing inverse RFFT.
+2024-12-14 19:44:31,942 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:44:35,750 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:44:35,750 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:44:35,770 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:44:35,780 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:44:35,790 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:44:35,800 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:44:35,800 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:35,872 - INFO - Processing image 1 - Mode: real, Gain: 0.0
+2024-12-14 19:44:35,881 - INFO - Processing image 2 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:44:35,939 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:36,039 - INFO - Mixing result successfully computed.
+2024-12-14 19:44:36,050 - INFO - Performing inverse RFFT.
+2024-12-14 19:44:36,230 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:44:53,236 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:44:53,236 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:44:53,246 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:44:53,256 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:44:53,256 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:44:53,266 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:44:53,266 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:53,356 - INFO - Processing image 1 - Mode: real, Gain: 0.0
+2024-12-14 19:44:53,366 - INFO - Processing image 2 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:44:53,429 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:44:53,516 - INFO - Mixing result successfully computed.
+2024-12-14 19:44:53,526 - INFO - Performing inverse RFFT.
+2024-12-14 19:44:53,696 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:45:00,166 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:45:00,166 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:45:00,186 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:45:00,196 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:45:00,206 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:45:00,216 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:45:00,216 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:45:00,277 - INFO - Processing image 1 - Mode: real, Gain: 0.0
+2024-12-14 19:45:00,297 - INFO - Processing image 2 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:45:00,357 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:45:00,438 - INFO - Mixing result successfully computed.
+2024-12-14 19:45:00,448 - INFO - Performing inverse RFFT.
+2024-12-14 19:45:00,618 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:45:12,347 - INFO - Mixer class initialized.
+2024-12-14 19:46:01,374 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:46:01,374 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:46:01,384 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:46:01,394 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:46:01,404 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:46:01,434 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:46:01,434 - INFO - Processing image 0 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:46:01,504 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:46:01,579 - INFO - Processing image 2 - Mode: real, Gain: 0.05
+2024-12-14 19:46:01,605 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.21
+2024-12-14 19:46:01,715 - INFO - Mixing result successfully computed.
+2024-12-14 19:46:01,725 - INFO - Performing inverse RFFT.
+2024-12-14 19:46:01,905 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:46:20,729 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:46:20,729 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:46:20,739 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:46:20,749 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:46:20,759 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:46:20,769 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:46:20,769 - INFO - Processing image 0 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:46:20,849 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:46:20,939 - INFO - Processing image 2 - Mode: real, Gain: 0.05
+2024-12-14 19:46:20,949 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.21
+2024-12-14 19:46:21,039 - INFO - Mixing result successfully computed.
+2024-12-14 19:46:21,039 - INFO - Performing inverse RFFT.
+2024-12-14 19:46:21,199 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:46:33,858 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:46:33,858 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:46:33,868 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:46:33,878 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:46:33,888 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:46:33,898 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:46:33,898 - INFO - Processing image 0 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:46:33,988 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:46:34,058 - INFO - Processing image 2 - Mode: real, Gain: 0.0
+2024-12-14 19:46:34,068 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.21
+2024-12-14 19:46:34,178 - INFO - Mixing result successfully computed.
+2024-12-14 19:46:34,188 - INFO - Performing inverse RFFT.
+2024-12-14 19:46:34,338 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:46:47,333 - INFO - Mixer class initialized.
+2024-12-14 19:47:14,732 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:47:14,732 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:47:14,742 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:47:14,752 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:47:14,762 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:47:14,772 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:47:14,772 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:14,849 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:14,909 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:14,969 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:47:15,019 - INFO - Mixing result successfully computed.
+2024-12-14 19:47:15,029 - INFO - Performing inverse RFFT.
+2024-12-14 19:47:15,192 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:47:24,141 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:47:24,141 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:47:24,151 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:47:24,161 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:47:24,171 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:47:24,181 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:47:24,181 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:24,241 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:24,291 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:24,351 - INFO - Processing image 3 - Mode: magnitude, Gain: 1
+2024-12-14 19:47:24,431 - INFO - Mixing result successfully computed.
+2024-12-14 19:47:24,441 - INFO - Performing inverse RFFT.
+2024-12-14 19:47:24,601 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:47:39,919 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:47:39,919 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:47:39,929 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:47:39,929 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:47:39,939 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:47:39,950 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:47:39,950 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:40,046 - INFO - Processing image 1 - Mode: magnitude, Gain: 1.0
+2024-12-14 19:47:40,106 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:40,188 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:47:40,266 - INFO - Mixing result successfully computed.
+2024-12-14 19:47:40,276 - INFO - Performing inverse RFFT.
+2024-12-14 19:47:40,436 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:47:51,657 - INFO - Mixer class initialized.
+2024-12-14 19:48:03,292 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:48:03,292 - DEBUG - Maximum dimensions calculated: max_height=1069, max_width=735
+2024-12-14 19:48:03,302 - DEBUG - Image 0 padded to (1069, 735).
+2024-12-14 19:48:03,302 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-14 19:48:03,302 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-14 19:48:03,312 - DEBUG - Image 1 padded to (1069, 735).
+2024-12-14 19:48:03,312 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-14 19:48:03,312 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-14 19:48:03,322 - DEBUG - Image 2 padded to (1069, 735).
+2024-12-14 19:48:03,322 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-14 19:48:03,322 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-14 19:48:03,322 - DEBUG - Image 3 padded to (1069, 735).
+2024-12-14 19:48:03,322 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-14 19:48:03,382 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-14 19:48:03,382 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-14 19:48:03,392 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-14 19:48:03,402 - INFO - Mixing result successfully computed.
+2024-12-14 19:48:03,402 - INFO - Performing inverse RFFT.
+2024-12-14 19:48:03,569 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:54:37,593 - INFO - Mixer class initialized.
+2024-12-14 19:55:14,937 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:55:14,937 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:55:14,957 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:55:15,027 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:55:15,037 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:55:15,037 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:55:15,037 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.03
+2024-12-14 19:55:15,218 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.01
+2024-12-14 19:55:15,269 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:55:15,337 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.01
+2024-12-14 19:55:15,417 - INFO - Mixing result successfully computed.
+2024-12-14 19:55:15,427 - INFO - Performing inverse RFFT.
+2024-12-14 19:55:15,613 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:55:25,834 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:55:25,834 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:55:25,844 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:55:25,854 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:55:25,864 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:55:25,864 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:55:25,864 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.03
+2024-12-14 19:55:25,935 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.01
+2024-12-14 19:55:25,985 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:55:26,055 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.07
+2024-12-14 19:55:26,146 - INFO - Mixing result successfully computed.
+2024-12-14 19:55:26,157 - INFO - Performing inverse RFFT.
+2024-12-14 19:55:26,345 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:55:32,620 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:55:32,620 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:55:32,637 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:55:32,654 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:55:32,660 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:55:32,667 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:55:32,667 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.1
+2024-12-14 19:55:32,727 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.01
+2024-12-14 19:55:32,777 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:55:32,838 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.07
+2024-12-14 19:55:32,927 - INFO - Mixing result successfully computed.
+2024-12-14 19:55:32,937 - INFO - Performing inverse RFFT.
+2024-12-14 19:55:33,127 - INFO - Inverse RFFT computation completed.
+2024-12-14 19:55:38,819 - INFO - Processing mixing result with 4 image components.
+2024-12-14 19:55:38,819 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-14 19:55:38,829 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-14 19:55:38,849 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-14 19:55:38,859 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-14 19:55:38,859 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-14 19:55:38,859 - INFO - Processing image 0 - Mode: magnitude, Gain: 0.65
+2024-12-14 19:55:38,929 - INFO - Processing image 1 - Mode: magnitude, Gain: 0.01
+2024-12-14 19:55:38,979 - INFO - Processing image 2 - Mode: magnitude, Gain: 0.0
+2024-12-14 19:55:39,069 - INFO - Processing image 3 - Mode: magnitude, Gain: 0.07
+2024-12-14 19:55:39,149 - INFO - Mixing result successfully computed.
+2024-12-14 19:55:39,159 - INFO - Performing inverse RFFT.
+2024-12-14 19:55:39,359 - INFO - Inverse RFFT computation completed.

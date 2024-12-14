@@ -256,11 +256,11 @@ class InputViewer:
 
 
             elif not self.isInner and not self.useFullRegion:
-                mask1 = np.ones_like(fft_component[index][1])
+                mask1 = np.ones_like(fft_component[index][1],dtype=np.uint8)
                 mask1[y:y + height, x:x + width] = 0
                 fft_component[1] *= mask2
 
-                mask2 = np.ones_like(fft_component[index][2])
+                mask2 = np.ones_like(fft_component[index][2],dtype=np.uint8)
                 mask2[y:y + height, x:x + width] = 0
                 fft_component[2] *= mask2
  
