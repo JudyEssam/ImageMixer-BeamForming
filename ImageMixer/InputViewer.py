@@ -5,6 +5,7 @@ from Image import Image
 from ImageComponents import ImageComponents
 import numpy as np
 import cv2
+from copy import deepcopy
 
 
 class SelectableLabel(QLabel):
@@ -35,7 +36,7 @@ class SelectableLabel(QLabel):
                 pass
     
 
-        def mousePressEvent(self, event):
+    def mousePressEvent(self, event):
             if event.button() == Qt.LeftButton:
                 self.start_pos = event.pos()
                 self.shared_rect.setTopLeft(self.start_pos)
@@ -46,7 +47,7 @@ class SelectableLabel(QLabel):
                 self.prev_y = event.pos().y()
                 self.prev_x=event.pos().x()    
 
-        def mouseMoveEvent(self, event):
+    def mouseMoveEvent(self, event):
             if event.buttons() & Qt.LeftButton:
                 self.shared_rect.setBottomRight(event.pos())
                 self.update_callback()
@@ -67,14 +68,14 @@ class SelectableLabel(QLabel):
                 self.input_viewer.update_displayed_image(self.image_num,updated_image)
 
 
-        def mouseReleaseEvent(self, event):
+    def mouseReleaseEvent(self, event):
             if event.button() == Qt.LeftButton:
                 self.shared_rect.setBottomRight(event.pos())
                 self.start_pos = None
                 self.update_callback()
                 self.is_mouse_pressed=False
 
-        def paintEvent(self, event):
+    def paintEvent(self, event):
                 super().paintEvent(event)  # Call the base class paint event
                 if self.mode == "fft_widget" and not self.shared_rect.isNull() and self.pixmap() is not None :
                     if self.shared_rect.isValid():
@@ -230,51 +231,62 @@ class InputViewer:
         self.updateAllLabels()
            
     def setRegion(self):
-        if not self.fft_components:
+        scaled_fft_components = deepcopy(self.fft_components)
+        if not scaled_fft_components:
             raise ValueError("FFT components are not set")
-        for index, fft_component in enumerate(self.fft_components):
-            if self.fft_labels[index] is None or self.images[index] is None or fft_component is None:
-                fft_component[1]=None
-                fft_component[2]=None
+
+        for index, fft_component in enumerate(scaled_fft_components):
+            if (
+                self.fft_labels[index] is None
+                or self.images[index] is None
+                or fft_component is None
+                or fft_component[2] is None
+            ):
+                fft_component[1] = None
+                fft_component[2] = None
                 continue
+
+            if not hasattr(fft_component[2], 'shape'):
+                raise ValueError(f"FFT component at index {index}[2] is invalid.")
+
             label = self.fft_labels[index]
             pixmap = label.pixmap()
             if pixmap is None:
-                fft_component[1]=None
-                fft_component[2]=None
+                fft_component[1] = None
+                fft_component[2] = None
                 continue
-
 
             pixmap_width, pixmap_height = pixmap.width(), pixmap.height()
             label_width, label_height = label.width(), label.height()
+
+            # Ensure label dimensions are non-zero
+            if label_width == 0 or label_height == 0:
+                raise ValueError("Label dimensions are zero, cannot calculate scaling factors.")
+
             scale_x = fft_component[2].shape[1] / label_width
             scale_y = fft_component[2].shape[0] / label_height
 
+            x = max(0, int(self.shared_rect.x() * scale_x))
+            y = max(0, int(self.shared_rect.y() * scale_y))
+            width = min(fft_component[2].shape[1] - x, int(self.shared_rect.width() * scale_x))
+            height = min(fft_component[2].shape[0] - y, int(self.shared_rect.height() * scale_y))
 
-            x = int(self.shared_rect.x() * scale_x)
-            y = int(self.shared_rect.y() * scale_y)
-            width = int(self.shared_rect.width() * scale_x)
-            height = int(self.shared_rect.height() * scale_y)
-
-            
 
             if self.isInner and not self.useFullRegion:
-                fft_component[1]=fft_component[1][y:y + height, x:x + width]
-                fft_component[2] = fft_component[2][y:y + height, x:x + width]
-
-
+                scaled_fft_components[index][1] = fft_component[1][y:y + height, x:x + width]
+                scaled_fft_components[index][2] = fft_component[2][y:y + height, x:x + width]
             elif not self.isInner and not self.useFullRegion:
-                mask1 = np.ones_like(fft_component[index][1])
+                mask1 = np.ones_like(fft_component[1], dtype=np.uint8)
                 mask1[y:y + height, x:x + width] = 0
-                fft_component[1] *= mask2
+                scaled_fft_components[index][1] *= mask1
 
-                mask2 = np.ones_like(fft_component[index][2])
+                mask2 = np.ones_like(fft_component[2], dtype=np.uint8)
                 mask2[y:y + height, x:x + width] = 0
-                fft_component[2] *= mask2
- 
-                
+                scaled_fft_components[index][2] *= mask2
 
-        return self.fft_components 
+        return scaled_fft_components
+
+
     
     def set_components(self,image1_comp,image2_comp,image3_com,image4_com):
         self.__images_comps=[image1_comp,image2_comp,image3_com,image4_com]   

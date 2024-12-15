@@ -48,7 +48,7 @@ font-size: 16px;
 border-radius: 10px;     </string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="iconSize">
           <size>
@@ -1151,6 +1151,9 @@ font-size: 18px;</string>
                       <property name="text">
                        <string>Output 1</string>
                       </property>
+                      <property name="autoExclusive">
+                       <bool>true</bool>
+                      </property>
                      </widget>
                     </item>
                     <item>
@@ -1171,6 +1174,9 @@ font-size: 18px;</string>
                       </property>
                       <property name="text">
                        <string>Output 2</string>
+                      </property>
+                      <property name="autoExclusive">
+                       <bool>true</bool>
                       </property>
                      </widget>
                     </item>
@@ -1401,6 +1407,9 @@ border: None;</string>
                        <layout class="QVBoxLayout" name="verticalLayout_77">
                         <item>
                          <widget class="QRadioButton" name="radioButton_In_3">
+                          <property name="enabled">
+                           <bool>true</bool>
+                          </property>
                           <property name="font">
                            <font>
                             <pointsize>-1</pointsize>
@@ -1418,10 +1427,13 @@ font-weight:10000px;
                            <string>Inside Region</string>
                           </property>
                           <property name="checkable">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="checked">
                            <bool>false</bool>
+                          </property>
+                          <property name="autoExclusive">
+                           <bool>true</bool>
                           </property>
                          </widget>
                         </item>
