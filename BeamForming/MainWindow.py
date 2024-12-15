@@ -8,21 +8,27 @@ from PhasedArray import PhasedArray
 from Antenna import Antenna
 from Signal import Signal
 
-class MainWindow(QMainWindow):
+class MainWindow1(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(MainWindow1, self).__init__()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        loadUi("beammm.ui", self)
+        loadUi("../MainWindow.ui", self)
+
+        self.label = self.findChild(QLabel, "label")
+        self.label.setVisible(False)
+        self.spinbox = self.findChild(QSpinBox, "spinBox")
+        self.spinbox.setVisible(False)
+        # Multi arrays check
+        self.multi_array = self.findChild(QRadioButton, 'radioButton1_3')
+        self.multi_array.toggled.connect(self.toggleBeamAngleMode)
 
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
         self.mode_combox.currentIndexChanged.connect(self.selectMode)
         
-        self.form_array_button= self.findChild(QPushButton, 'apply_array')
-        self.form_array_button.clicked.connect(self.formArray)
-        self.form_antenna_button= self.findChild(QPushButton, 'apply_element')
-        self.form_antenna_button.clicked.connect(self.formAntenna)
-        self.form_signal_button= self.findChild(QPushButton, 'apply_signal')
+        self.form_signal_button= self.findChild(QPushButton, 'apply')
         self.form_signal_button.clicked.connect(self.formSignal)
+        self.form_signal_button.clicked.connect(self.formArray)
+        self.form_signal_button.clicked.connect(self.formAntenna)
         
         #for array parameters
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
@@ -33,8 +39,8 @@ class MainWindow(QMainWindow):
        #for element parameters
         self.isotropic_checkbox= self.findChild(QCheckBox, 'Isotropic_checkbox')
         self.isotropic_checkbox.clicked.connect(self.check_isotropic) 
-        self.phase_widget= self.findChild(QListWidget, 'componList_2')
-        self.gain_widget= self.findChild(QListWidget, 'componList_3')
+        self.phase_widget= self.findChild(QWidget, 'componList_2')
+        self.gain_widget= self.findChild(QWidget, 'componList_3')
 
         #for signal parameters
         self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
@@ -44,13 +50,27 @@ class MainWindow(QMainWindow):
         self.add_freq_button.clicked.connect(lambda : self.signal.add_freq(self.freq_spinbox.value()))
 
         #BEAM widgets
-        self.beam_pattern_widget= self.findChild(QListWidget, 'componList_9')
-        self.interference_map_widget= self.findChild(QListWidget, 'componList_10')
+        self.beam_pattern_widget= self.findChild(QWidget, 'widget1')
+        self.interference_map_widget= self.findChild(QWidget, 'widget2')
         
         self.mode=None
         self.array=None
         self.signal= Signal()
 
+    def toggleBeamAngleMode(self, checked):
+        """Toggle between Beam Angle and Location input."""
+        if checked:
+            # Change label text
+            self.beam_label.setText("Location_x: ")
+            self.label.setText("Location_y")
+            self.label.setVisible(True)
+            self.spinbox.setVisible(True)
+
+        else:
+            # Revert to Beam Angle mode
+            self.beam_label.setText("Beam Angle: ")
+            self.label.setVisible(False)
+            self.spinbox.setVisible(False)
 
     def selectMode(self, index):
         if index==0:
@@ -96,7 +116,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = MainWindow1()
     window.show()
     window.showMaximized()
     sys.exit(app.exec_())

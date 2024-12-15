@@ -1,6 +1,6 @@
 from PyQt5.QtGui import QPixmap, QPainter, QPen, QBrush,QImage
 from PyQt5.QtCore import Qt, QRect, pyqtSignal
-from PyQt5.QtWidgets import QLabel
+from PyQt5.QtWidgets import QLabel, QFileDialog
 from Image import Image 
 from ImageComponents import ImageComponents
 import numpy as np
@@ -10,6 +10,7 @@ import cv2
 class SelectableLabel(QLabel):
     def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
         super().__init__(parent)
+        self.setStyleSheet("border: none;")
         self.shared_rect = shared_rect
         self.update_callback = update_callback
         self.images_array = images
@@ -20,56 +21,68 @@ class SelectableLabel(QLabel):
         self.mode=mode
         self.original_copy= None
         
-        
-
-    def mousePressEvent(self, event):
+    def mouseDoubleClickEvent(self, event):
+        """ Handle double-click event """
         if event.button() == Qt.LeftButton:
-            self.start_pos = event.pos()
-            self.shared_rect.setTopLeft(self.start_pos)
-            self.shared_rect.setBottomRight(self.start_pos)
-            self.update_callback()
-        elif event.button() == Qt.RightButton:
-            self.is_mouse_pressed=True
-            self.prev_y = event.pos().y()
-            self.prev_x=event.pos().x()    
+            if self.mode == "image_widget":
+                file_path, _ = QFileDialog.getOpenFileName(
+                    self, "Select Image", "", "Image Files (*.png *.jpg *.jpeg *.bmp *.tif *.tiff)"
+                )
+                if file_path:
+                    print(f"Double-click: Loading new image for slot {self.image_num}...")
+                    self.input_viewer.displayImage(file_path, self.image_num, False, 0)
+            elif self.mode == "fft_widget":
+                pass
+    
 
-    def mouseMoveEvent(self, event):
-        if event.buttons() & Qt.LeftButton:
-            self.shared_rect.setBottomRight(event.pos())
-            self.update_callback()
+        def mousePressEvent(self, event):
+            if event.button() == Qt.LeftButton:
+                self.start_pos = event.pos()
+                self.shared_rect.setTopLeft(self.start_pos)
+                self.shared_rect.setBottomRight(self.start_pos)
+                self.update_callback()
+            elif event.button() == Qt.RightButton:
+                self.is_mouse_pressed=True
+                self.prev_y = event.pos().y()
+                self.prev_x=event.pos().x()    
 
-        elif event.buttons() & Qt.RightButton and self.prev_y is not None and self.is_mouse_pressed:
-            delta_y = event.pos().y()-self.prev_y
-            # self.prev_y = event.pos().y() 
-            brightness_value = delta_y
-            self.images_array[self.image_num].change_brightness(brightness_value)
-            updated_image = self.images_array[self.image_num].get_current_image()
-            self.input_viewer.update_displayed_image(self.image_num,updated_image)
+        def mouseMoveEvent(self, event):
+            if event.buttons() & Qt.LeftButton:
+                self.shared_rect.setBottomRight(event.pos())
+                self.update_callback()
 
-        elif  event.buttons() & Qt.RightButton and self.prev_x is not None and self.is_mouse_pressed:   
-            delta_x = event.pos().x() - self.prev_x
-            contrast_value=delta_x
-            self.images_array[self.image_num].change_contrast(contrast_value)
-            updated_image = self.images_array[self.image_num].get_current_image()
-            self.input_viewer.update_displayed_image(self.image_num,updated_image)
+            elif event.buttons() & Qt.RightButton and self.prev_y is not None and self.is_mouse_pressed:
+                delta_y = event.pos().y()-self.prev_y
+                # self.prev_y = event.pos().y() 
+                brightness_value = delta_y
+                self.images_array[self.image_num].change_brightness(brightness_value)
+                updated_image = self.images_array[self.image_num].get_current_image()
+                self.input_viewer.update_displayed_image(self.image_num,updated_image)
+
+            elif  event.buttons() & Qt.RightButton and self.prev_x is not None and self.is_mouse_pressed:   
+                delta_x = event.pos().x() - self.prev_x
+                contrast_value=delta_x
+                self.images_array[self.image_num].change_contrast(contrast_value)
+                updated_image = self.images_array[self.image_num].get_current_image()
+                self.input_viewer.update_displayed_image(self.image_num,updated_image)
 
 
-    def mouseReleaseEvent(self, event):
-        if event.button() == Qt.LeftButton:
-            self.shared_rect.setBottomRight(event.pos())
-            self.start_pos = None
-            self.update_callback()
-            self.is_mouse_pressed=False
+        def mouseReleaseEvent(self, event):
+            if event.button() == Qt.LeftButton:
+                self.shared_rect.setBottomRight(event.pos())
+                self.start_pos = None
+                self.update_callback()
+                self.is_mouse_pressed=False
 
-    def paintEvent(self, event):
-            super().paintEvent(event)  # Call the base class paint event
-            if self.mode == "fft_widget" and not self.shared_rect.isNull() and self.pixmap() is not None :
-                if self.shared_rect.isValid():
-                    painter = QPainter(self)
-                    pen = QPen(Qt.blue, 2, Qt.SolidLine)
-                    painter.setPen(pen)
-                    painter.setBrush(QBrush(Qt.blue, Qt.BDiagPattern))
-                    painter.drawRect(self.shared_rect)
+        def paintEvent(self, event):
+                super().paintEvent(event)  # Call the base class paint event
+                if self.mode == "fft_widget" and not self.shared_rect.isNull() and self.pixmap() is not None :
+                    if self.shared_rect.isValid():
+                        painter = QPainter(self)
+                        pen = QPen(Qt.blue, 2, Qt.SolidLine)
+                        painter.setPen(pen)
+                        painter.setBrush(QBrush(Qt.blue, Qt.BDiagPattern))
+                        painter.drawRect(self.shared_rect)
 
 
 
@@ -210,17 +223,12 @@ class InputViewer:
         pixmap = QPixmap.fromImage(q_image)
         self.image_labels[image_num].setPixmap(pixmap)
         
-
-
-
     def clearRectangle(self):
-        self.shared_rect = QRect()   
-        self.updateAllLabels()   
-        print("Rectangle cleared!")
+        self.shared_rect = QRect()  
+        for label in self.fft_labels:
+            label.shared_rect = self.shared_rect
+        self.updateAllLabels()
            
-
-
-
     def setRegion(self):
         if not self.fft_components:
             raise ValueError("FFT components are not set")

@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QProgressBar, QLabel, QWidget, QRadioButton
 from PyQt5.QtGui import QPixmap, QImage
 import cv2
 import numpy as np
+
 class OutputViewer:
     def __init__(self, output1_widget, output2_widget, radio_button1, radio_button2, progress_bar):
         """
@@ -28,6 +29,7 @@ class OutputViewer:
 
         self.output2_label = QLabel(self.output2_widget)
         self.output2_label.setGeometry(0, 0, self.output2_widget.width(), self.output2_widget.height())
+        self.output1_label.setStyleSheet("border:None")
         self.output2_label.setScaledContents(True)
 
     def whichOutput(self):

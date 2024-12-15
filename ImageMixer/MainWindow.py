@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow, QProgressBar ,QMessageBox, QApplication,QPushButton,QListWidget, QDoubleSpinBox ,QSpinBox, QWidget, QLabel ,  QSlider, QRadioButton, QComboBox, QTableWidget, QTableWidgetItem, QCheckBox,QMenu,QTextEdit, QDialog, QFileDialog, QInputDialog, QSizePolicy,QScrollArea,QVBoxLayout,QHBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QButtonGroup, QProgressBar ,QMessageBox, QApplication,QPushButton,QListWidget, QDoubleSpinBox ,QSpinBox, QWidget, QLabel ,  QSlider, QRadioButton, QComboBox, QTableWidget, QTableWidgetItem, QCheckBox,QMenu,QTextEdit, QDialog, QFileDialog, QInputDialog, QSizePolicy,QScrollArea,QVBoxLayout,QHBoxLayout
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import QTimer
 
@@ -10,11 +10,11 @@ from InputViewer import InputViewer
 import logging
 from Mixer import Mixer
 from MixingWorker import MixingWorker
-class MainWindow(QMainWindow):
+class MainWindow2(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(MainWindow2, self).__init__()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        loadUi("MainWindow.ui", self)
+        loadUi("../MainWindow.ui", self)
 
         logging.basicConfig(
             filename='app.log',           # Log file name
@@ -24,42 +24,55 @@ class MainWindow(QMainWindow):
         
         
         self.mixer=Mixer()
-        self.progressbar= self.findChild(QProgressBar, "progressBar_3" )
-        self.output1 = self.findChild(QWidget, "output_1")
-        self.output2 = self.findChild(QWidget, "output_2")
-        self.mixButton = self.findChild(QPushButton, "mixxer_3")        
+        self.progressbar= self.findChild(QProgressBar, "progressBar" )
+        self.output1 = self.findChild(QWidget, "output1")
+        self.output2 = self.findChild(QWidget, "output2")
+        self.mixButton = self.findChild(QPushButton, "mixer")        
         self.RadioButton1 = self.findChild(QRadioButton, "radioButton1")
         self.RadioButton2 = self.findChild(QRadioButton, "radioButton2")
-        self.image1 = self.findChild(QWidget, "original_1")
-        self.image2 = self.findChild(QWidget, "original_2")
-        self.image3 = self.findChild(QWidget, "original_3")
-        self.image4 = self.findChild(QWidget, "original_4")
+        self.isInner_radiobutton=self.findChild(QRadioButton,"insideRegion")
+        self.isOuter_radiobutton=self.findChild(QRadioButton,"outsideRegion")
+        self.image1 = self.findChild(QWidget, "image1")
+        self.image2 = self.findChild(QWidget, "image2")
+        self.image3 = self.findChild(QWidget, "image3")
+        self.image4 = self.findChild(QWidget, "image4")
         self.RadioButton1.setChecked(True)
+
+        # Create Button Groups
+        self.group1 = QButtonGroup(self)  
+        self.group2 = QButtonGroup(self)  
+        
+        # Add Buttons to Groups
+        self.group1.addButton(self.RadioButton1)
+        self.group1.addButton(self.RadioButton2)
+        
+        self.group2.addButton(self.isInner_radiobutton)
+        self.group2.addButton(self.isOuter_radiobutton)
 
         self.images_widgets=[self.image1,self.image2,self.image3,self.image4]
         
-        self.fft_widget2 = self.findChild(QWidget, "component_image_2")
-        self.fft_widget1 = self.findChild(QWidget, "component_image_1")
-        self.fft_widget3 = self.findChild(QWidget, "component_image_3")
-        self.fft_widget4 = self.findChild(QWidget, "component_image_4")
+        self.fft_widget1 = self.findChild(QWidget, "component_image1")
+        self.fft_widget2 = self.findChild(QWidget, "component_image2")
+        self.fft_widget3 = self.findChild(QWidget, "component_image3")
+        self.fft_widget4 = self.findChild(QWidget, "component_image4")
 
         self.fft_widgets=[self.fft_widget1,self.fft_widget2,self.fft_widget3,self.fft_widget4]
 
-        self.image1_combobox=self.findChild(QComboBox, "combo1_6")
-        self.image2_combobox=self.findChild(QComboBox, "combo1_7")
-        self.image3_combobox=self.findChild(QComboBox, "combo1_8")
-        self.image4_combobox=self.findChild(QComboBox, "combo1_9")
+        self.image1_combobox=self.findChild(QComboBox, "combo1")
+        self.image2_combobox=self.findChild(QComboBox, "combo2")
+        self.image3_combobox=self.findChild(QComboBox, "combo3")
+        self.image4_combobox=self.findChild(QComboBox, "combo4")
 
 
-        self.isInner_radiobutton=self.findChild(QRadioButton,"radioButton_In_3")
-        self.isOuter_radiobutton=self.findChild(QRadioButton,"radioButton_Out_3")
-        self.deselect_region= self.findChild(QPushButton,"Deselect_3")
+        self.deselect_region= self.findChild(QPushButton,"Deselect")
+
         self.isInner_radiobutton.clicked.connect(self.trigger_mixing)
         self.isOuter_radiobutton.clicked.connect(self.trigger_mixing)
-        self.image1_slider=self.findChild(QSlider,"Slider_weight3_5")
-        self.image2_slider=self.findChild(QSlider,"Slider_weight3_6")
-        self.image3_slider=self.findChild(QSlider,"Slider_weight3_7")
-        self.image4_slider=self.findChild(QSlider,"Slider_weight3_8")
+
+        self.image1_slider=self.findChild(QSlider,"Slider_weight1")
+        self.image2_slider=self.findChild(QSlider,"Slider_weight2")
+        self.image3_slider=self.findChild(QSlider,"Slider_weight3")
+        self.image4_slider=self.findChild(QSlider,"Slider_weight4")
 
         self.image1_slider.setRange(0,100)
         self.image1_slider.setSingleStep(10)
@@ -128,6 +141,7 @@ class MainWindow(QMainWindow):
 
         self.worker = None
         self.mixButton.clicked.connect(self.start_mixing)
+
     def clear_region(self):
         self.input_viewer.clearRectangle()
         self.trigger_mixing()
@@ -180,7 +194,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = MainWindow2()
     window.show()
     window.showMaximized()
     sys.exit(app.exec_())        

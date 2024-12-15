@@ -2,6 +2,7 @@ from PyQt5.QtCore import QThread, pyqtSignal, QObject
 import numpy as np
 from Mixer import Mixer
 from InputViewer import InputViewer
+
 class MixingWorker(QThread):
     progress = pyqtSignal(int)
     finished = pyqtSignal(np.ndarray)
