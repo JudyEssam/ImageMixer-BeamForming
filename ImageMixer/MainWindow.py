@@ -6,7 +6,7 @@ import sys
 import os
 from Browse import Browse
 from OutputViewer import OutputViewer
-from InputViewer import InputViewer 
+from InputViewer import InputViewer , SelectableLabel
 import logging
 from Mixer import Mixer
 from MixingWorker import MixingWorker
@@ -21,8 +21,7 @@ class MainWindow2(QMainWindow):
             level=logging.DEBUG,          # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
             format='%(asctime)s - %(levelname)s - %(message)s'  # Log message format
                 )
-        
-        
+
         self.mixer=Mixer()
         self.progressbar= self.findChild(QProgressBar, "progressBar" )
         self.output1 = self.findChild(QWidget, "output1")
@@ -92,6 +91,7 @@ class MainWindow2(QMainWindow):
         self.input_viewer = InputViewer()
         self.input_viewer.set_image_fft_widgets(self.images_widgets,self.fft_widgets) 
         self.deselect_region.clicked.connect(self.clear_region) 
+        
         # self.input_viewer.selectRegion(self.input_viewer.images,self.input_viewer.labels)
         self.isInner_radiobutton.clicked.connect(self.inner_region_state)
         self.isOuter_radiobutton.clicked.connect(self.outer_region_state)
@@ -144,8 +144,9 @@ class MainWindow2(QMainWindow):
 
     def clear_region(self):
         self.input_viewer.clearRectangle()
+        self.isInner_radiobutton.setChecked(False)
+        self.isOuter_radiobutton.setChecked(False)
         self.trigger_mixing()
-
     def trigger_mixing(self):
         """Trigger the mixing process with debouncing."""
         self.mixing_timer.start(10) 
@@ -157,27 +158,32 @@ class MainWindow2(QMainWindow):
     def update_componant1_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image1_slider.value())
         print(self.input_viewer.fft_components[image_num][1].shape)
+        self.trigger_mixing() 
 
     def update_componant2_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image2_slider.value())
-
+        self.trigger_mixing() 
     def update_componant3_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image3_slider.value())
-
+        self.trigger_mixing() 
     def update_componant4_weight(self,image_num):
         self.input_viewer.set_components_weights(image_num,self.image4_slider.value())
-            
+        self.trigger_mixing() 
 
 
     def inner_region_state(self):
         self.input_viewer.isInner=True
         self.input_viewer.useFullRegion=False
+        self.trigger_mixing()
     def outer_region_state(self):
         self.input_viewer.isInner=False
         self.input_viewer.useFullRegion=False
+        self.trigger_mixing()
     def full_region_state(self):
-        self.input_viewer.useFullRegion=True        
-
+        self.input_viewer.useFullRegion=True    
+        self.isInner_radiobutton.setChecked(False)
+        self.isOuter_radiobutton.setChecked(False)    
+        self.trigger_mixing()
     def start_mixing(self):
         if self.worker is not None:
             self.worker.stop()
