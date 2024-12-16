@@ -31,16 +31,16 @@ class ImageComponents:
         self.__phase = np.angle(self.__rfft_result)
         self.__real = np.real(self.__rfft_result)
         self.__imaginary = np.imag(self.__rfft_result)
-
-    def compute_inverse_rfft(self,mix_result):
+    @staticmethod
+    def compute_inverse_rfft(mix_result):
         
         if mix_result is None:
             raise ValueError("RFFT has not been computed.")
         
         # Shift back and perform inverse RFFT
-        ifft_shifted = ifftshift(mix_result)
-        self.__inverse_image = np.real(irfft2(ifft_shifted))
-        return self.__inverse_image
+        ifft_shifted = np.fft.ifftshift(mix_result)
+        inverse_image = np.fft.irfft2(ifft_shifted).real
+        return inverse_image
 
     # Setter methods to update the components with copies
     def set_magnitude(self, magnitude):

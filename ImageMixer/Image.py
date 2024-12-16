@@ -29,7 +29,8 @@ class Image:
 
     def change_contrast(self, value):
         self.result_image = self.image.copy() 
-        self.result_image = cv2.convertScaleAbs(self.result_image, alpha=value, beta=0)
+        alpha = 1.0 + value / 100.0
+        self.result_image = cv2.convertScaleAbs(self.result_image, alpha, beta=0)
 
     def get_current_image(self):
         # Return the current version of the image after modifications
