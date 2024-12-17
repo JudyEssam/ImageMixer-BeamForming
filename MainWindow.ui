@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1505</width>
+    <width>1672</width>
     <height>973</height>
    </rect>
   </property>
@@ -67,7 +67,7 @@ QTabBar::tab:selected {
 }</string>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <property name="iconSize">
             <size>
@@ -2281,82 +2281,61 @@ margin-left:8px;
                          </widget>
                         </item>
                         <item>
-                         <spacer name="verticalSpacer_14">
-                          <property name="orientation">
-                           <enum>Qt::Vertical</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>20</width>
-                            <height>10</height>
-                           </size>
-                          </property>
-                         </spacer>
-                        </item>
-                        <item>
-                         <spacer name="verticalSpacer_12">
-                          <property name="orientation">
-                           <enum>Qt::Vertical</enum>
-                          </property>
-                          <property name="sizeType">
-                           <enum>QSizePolicy::Maximum</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>208</width>
-                            <height>13</height>
-                           </size>
-                          </property>
-                         </spacer>
-                        </item>
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_32" stretch="0,0,0,0,0">
+                         <layout class="QHBoxLayout" name="horizontalLayout_32" stretch="0,0,0">
                           <item>
-                           <widget class="QLabel" name="Frequency_6">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
+                           <layout class="QHBoxLayout" name="horizontalLayout_53">
+                            <property name="spacing">
+                             <number>6</number>
                             </property>
-                            <property name="font">
-                             <font>
-                              <family>Overpass SemiBold</family>
-                              <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                              <kerning>true</kerning>
-                             </font>
+                            <property name="sizeConstraint">
+                             <enum>QLayout::SetMaximumSize</enum>
                             </property>
-                            <property name="styleSheet">
-                             <string notr="true">color: #ffffff;
+                            <item>
+                             <widget class="QLabel" name="Frequency_6">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <family>Overpass SemiBold</family>
+                                <pointsize>-1</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                                <kerning>true</kerning>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">color: #ffffff;
 font-weight:Bold;
 font-size: 15px;
 border:none;
 </string>
-                            </property>
-                            <property name="text">
-                             <string>Shape :</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QComboBox" name="Shape_comboBox">
-                            <property name="maximumSize">
-                             <size>
-                              <width>100</width>
-                              <height>16777215</height>
-                             </size>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QComboBox {
+                              </property>
+                              <property name="text">
+                               <string>Shape :</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="Shape_comboBox">
+                              <property name="maximumSize">
+                               <size>
+                                <width>100</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QComboBox {
     font-family: &quot;Arial&quot;;
     font-weight: 1000; /* Semibold */
 
-    font-size: 12px; /* Adjust the font size as needed */
+    font-size: 15px; /* Adjust the font size as needed */
  	color: rgb(26, 70, 91);
     border: 1px solid  rgb(26, 70, 91);; /* Set the border to 1px solid white */
 	margin-bottom: 5px;
@@ -2379,18 +2358,20 @@ color: #ffffff;
 font-weight:bold;
 
 }</string>
-                            </property>
-                            <item>
-                             <property name="text">
-                              <string>Linear</string>
-                             </property>
+                              </property>
+                              <item>
+                               <property name="text">
+                                <string>Linear</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>Circular</string>
+                               </property>
+                              </item>
+                             </widget>
                             </item>
-                            <item>
-                             <property name="text">
-                              <string>Circular</string>
-                             </property>
-                            </item>
-                           </widget>
+                           </layout>
                           </item>
                           <item>
                            <layout class="QHBoxLayout" name="horizontalLayout_29">
@@ -2430,7 +2411,7 @@ font-size: 15px;
 border:none;</string>
                               </property>
                               <property name="text">
-                               <string>No. of elements :</string>
+                               <string>Elements no.</string>
                               </property>
                              </widget>
                             </item>
@@ -2601,8 +2582,18 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                             </item>
                            </layout>
                           </item>
+                         </layout>
+                        </item>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_33" stretch="0,0,0">
                           <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_15">
+                           <layout class="QHBoxLayout" name="horizontalLayout_55">
+                            <property name="spacing">
+                             <number>6</number>
+                            </property>
+                            <property name="sizeConstraint">
+                             <enum>QLayout::SetMaximumSize</enum>
+                            </property>
                             <item>
                              <widget class="QLabel" name="beam_label">
                               <property name="sizePolicy">
@@ -2610,6 +2601,12 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                                 <horstretch>0</horstretch>
                                 <verstretch>0</verstretch>
                                </sizepolicy>
+                              </property>
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
                               </property>
                               <property name="font">
                                <font>
@@ -2627,7 +2624,7 @@ font-size: 15px;
 border:none;</string>
                               </property>
                               <property name="text">
-                               <string>Beam Angle :</string>
+                               <string>Direction of Arrival: </string>
                               </property>
                              </widget>
                             </item>
@@ -2679,21 +2676,25 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                               </property>
                              </widget>
                             </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_30">
                             <item>
-                             <spacer name="horizontalSpacer_9">
+                             <spacer name="horizontalSpacer_26">
                               <property name="orientation">
                                <enum>Qt::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
-                                <width>14</width>
-                                <height>20</height>
+                                <width>34</width>
+                                <height>10</height>
                                </size>
                               </property>
                              </spacer>
                             </item>
                             <item>
-                             <widget class="QLabel" name="label">
+                             <widget class="QLabel" name="locX">
                               <property name="styleSheet">
                                <string notr="true">color: #ffffff;
 font-weight:Bold;
@@ -2702,12 +2703,12 @@ font-size: 15px;
 border:none;</string>
                               </property>
                               <property name="text">
-                               <string>TextLabel</string>
+                               <string>Location x: </string>
                               </property>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QSpinBox" name="spinBox">
+                             <widget class="QSpinBox" name="spinBox_X">
                               <property name="styleSheet">
                                <string notr="true">QSpinBox {
     background-color: #f0f0f0; /* Light background color */
@@ -2745,9 +2746,222 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                               </property>
                              </widget>
                             </item>
+                            <item>
+                             <spacer name="horizontalSpacer_9">
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>34</width>
+                                <height>10</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_16">
+                            <item>
+                             <widget class="QLabel" name="locY">
+                              <property name="styleSheet">
+                               <string notr="true">color: #ffffff;
+font-weight:Bold;
+font-size: 15px;
+
+border:none;</string>
+                              </property>
+                              <property name="text">
+                               <string>Location y: </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QSpinBox" name="spinBox_Y">
+                              <property name="styleSheet">
+                               <string notr="true">QSpinBox {
+    background-color: #f0f0f0; /* Light background color */
+    color: #1b495f;/* Dark text color */
+    border: 2px solid #1b495f; /* Add a border for a modern look */
+    border-radius: 10px; /* Slightly rounder corners */
+    padding: 3px 8px; /* Increase padding for spacing */
+    padding-left: 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 14px; /* Adjust font size */
+    text-align: center;
+    height: 20px;
+    width: 50px;
+}
+
+/* QSpinBox Up Button (on the right) */
+QSpinBox::up-button {
+    width: 25px;
+    height: 25px;
+    subcontrol-position: right; /* Place the up-button on the right */
+}
+
+/* QSpinBox Down Button (on the left) */
+QSpinBox::down-button {
+    width: 25px;
+    height: 25px;
+    subcontrol-position: left; /* Place the down-button on the left */
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: transparent; /* Make hover background transparent */
+    border-radius: 10px;
+}</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <spacer name="horizontalSpacer_14">
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>14</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
                            </layout>
                           </item>
                          </layout>
+                        </item>
+                        <item>
+                         <spacer name="verticalSpacer_15">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>20</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_5">
+                          <item>
+                           <spacer name="horizontalSpacer">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>40</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="add_array">
+                            <property name="minimumSize">
+                             <size>
+                              <width>150</width>
+                              <height>35</height>
+                             </size>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton{
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #1b495f;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+font-weight:bold;
+  font-family: -apple-system,system-ui,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Ubuntu,sans-serif;
+  font-size: 17px;
+  height: 35px;
+  line-height: 1.15;
+ margin: 0px 10px;
+ margin-top:5px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 5px;
+  padding-right:1px;
+
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  touch-action: manipulation;
+  width:100px;
+}
+QPushButton:hover {
+    background-color: #23607c;    /* Slightly lighter blue when hovering */
+color: #ffffff;
+}
+
+
+QPushButton:pressed {
+    background-color: #133746;    /* Darker blue when pressed */
+}
+</string>
+                            </property>
+                            <property name="text">
+                             <string>Add an Array</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer_5">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>40</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                        <item>
+                         <spacer name="verticalSpacer_14">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>20</width>
+                            <height>10</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <spacer name="verticalSpacer_12">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeType">
+                           <enum>QSizePolicy::Maximum</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>208</width>
+                            <height>13</height>
+                           </size>
+                          </property>
+                         </spacer>
                         </item>
                         <item>
                          <spacer name="verticalSpacer_16">
@@ -2931,7 +3145,7 @@ margin-left:8px;
                                <item>
                                 <layout class="QHBoxLayout" name="horizontalLayout_21">
                                  <item>
-                                  <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,0,0,0,0,0,0,0,0,0,0,0">
+                                  <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,0,0,0,0,0,0,0,0,0,0">
                                    <item>
                                     <widget class="QLabel" name="Frequency_4">
                                      <property name="sizePolicy">
@@ -3112,72 +3326,6 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                                      </property>
                                      <property name="singleStep">
                                       <double>0.100000000000000</double>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item>
-                                    <widget class="QPushButton" name="add_amplitude">
-                                     <property name="cursor">
-                                      <cursorShape>PointingHandCursor</cursorShape>
-                                     </property>
-                                     <property name="toolTip">
-                                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;for broadband signal: add another frequency&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                     </property>
-                                     <property name="styleSheet">
-                                      <string notr="true">QPushButton{
-  appearance: button;
-  backface-visibility: hidden;
-  background-color: #1b495f;
-  border-radius: 6px;
-font-weight:bold;
-  border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-
-  font-family: -apple-system,system-ui,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Ubuntu,sans-serif;
-  font-size: 15px;
-
-  height: 35px;
-  line-height: 1.15;
- margin: 0px 10px;
- margin-top:5px;
-  outline: none;
-  overflow: hidden;
-  padding: 0 5px;
-  padding-right:1px;
-
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transform: translateZ(0);
-  transition: all .2s,box-shadow .08s ease-in;
-  touch-action: manipulation;
-  width: 27px;
-  height: 30px;
-}
-QPushButton:hover {
-    background-color: #2e6d8e;    /* Slightly lighter blue when hovering */
-}
-
-QPushButton:pressed {
-    background-color: #1b4b61;    /* Darker blue when pressed */
-}
-</string>
-                                     </property>
-                                     <property name="text">
-                                      <string/>
-                                     </property>
-                                     <property name="icon">
-                                      <iconset>
-                                       <normaloff>C:/Users/DELL/Downloads/true.png</normaloff>C:/Users/DELL/Downloads/true.png</iconset>
-                                     </property>
-                                     <property name="iconSize">
-                                      <size>
-                                       <width>25</width>
-                                       <height>25</height>
-                                      </size>
                                      </property>
                                     </widget>
                                    </item>
@@ -3379,7 +3527,7 @@ QPushButton:pressed {
                             </layout>
                            </item>
                            <item row="5" column="0">
-                            <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="0,0">
+                            <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="0,0,0">
                              <item>
                               <widget class="QCheckBox" name="Isotropic_checkbox">
                                <property name="cursor">
@@ -3405,6 +3553,31 @@ QPushButton:pressed {
                                </property>
                                <property name="text">
                                 <string>Isotropic</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QCheckBox" name="checkBox">
+                               <property name="styleSheet">
+                                <string notr="true">QCheckBox {
+    font-family: &quot;Arial&quot;;
+    font-weight: 600; /* Semibold */
+    font-size: 11pt; /* Adjust the font size as needed */
+ 	color: rgb(26, 70, 91);
+    border: 1px solid  rgb(26, 70, 91);; /* Set the border to 1px solid white */
+	margin-bottom: 5px;
+	background-color: #1b495f;   /* Background color for the combo box */
+    border: 1px solid #ffffff;   /* Border around the combo box */
+    border-radius: 10px;         /* Rounded corners */
+    padding: 6px 10px;           /* Padding around the text */
+    color: white;               
+}
+
+
+</string>
+                               </property>
+                               <property name="text">
+                                <string>Uniform Phase Shift</string>
                                </property>
                               </widget>
                              </item>
@@ -3449,7 +3622,7 @@ margin-right: 0px;
 border:none;</string>
                                </property>
                                <property name="text">
-                                <string>Gain : </string>
+                                <string>Gain :   </string>
                                </property>
                               </widget>
                              </item>
@@ -3688,7 +3861,7 @@ border-radius:15px</string>
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>20</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="cursor">
