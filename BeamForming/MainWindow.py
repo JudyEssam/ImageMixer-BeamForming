@@ -16,6 +16,10 @@ class MainWindow1(QMainWindow):
 
         self.phase_label = self.findChild(QLabel, "Phase_2")
 
+        #add array button
+        self.addArray = self.findChild(QPushButton, "add_array")
+        self.addArray.setVisible(False)
+
         #for x and y location
         self.loc_x = self.findChild(QLabel, "locX")
         self.loc_x.setVisible(False)
@@ -73,7 +77,7 @@ class MainWindow1(QMainWindow):
         self.mode=None
         self.array=None
         self.signal= Signal()
-        
+
 
     def updateLabelForShape(self, index):
         if index == 1:  # "Circular" is the second item (index 1)
@@ -85,6 +89,7 @@ class MainWindow1(QMainWindow):
         """Toggle between Beam Angle and Location input."""
         if checked:
             # Change label text
+            self.addArray.setVisible(True)
             self.loc_x.setVisible(True)
             self.loc_y.setVisible(True)
             self.spinbox_x.setVisible(True)
@@ -142,6 +147,7 @@ class MainWindow1(QMainWindow):
 
 
 if __name__ == '__main__':
+
     app = QApplication(sys.argv)
     window = MainWindow1()
     window.show()
