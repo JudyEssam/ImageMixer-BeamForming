@@ -16,11 +16,23 @@ class MainWindow1(QMainWindow):
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
         loadUi("../MainWindow.ui", self)
 
-        self.label = self.findChild(QLabel, "label")
-        self.label.setVisible(False)
-        self.spinbox = self.findChild(QSpinBox, "spinBox")
-        self.spinbox.setVisible(False)
-       
+        self.phase_label = self.findChild(QLabel, "Phase_2")
+
+        #for x and y location
+        self.loc_x = self.findChild(QLabel, "locX")
+        self.loc_x.setVisible(False)
+        self.spinbox_x = self.findChild(QSpinBox, "spinBox_X")
+        self.spinbox_x.setVisible(False)
+
+        self.loc_y = self.findChild(QLabel, "locY")
+        self.loc_y.setVisible(False)
+        self.spinbox_y = self.findChild(QSpinBox, "spinBox_Y")
+        self.spinbox_y.setVisible(False)
+
+        # Multi arrays check
+        self.multi_array = self.findChild(QRadioButton, 'radioButton1_3')
+        self.multi_array.toggled.connect(self.toggleBeamAngleMode)
+
         # Multi arrays check
         self.multi_array = self.findChild(QRadioButton, 'radioButton1_3')
         self.multi_array.toggled.connect(self.toggleBeamAngleMode)
@@ -35,7 +47,11 @@ class MainWindow1(QMainWindow):
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
         self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
         self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
+        self.beam_angle_spinbox.setVisible(False)
+        self.beamLabel = self.findChild(QLabel, "beam_label")
+        self.beamLabel.setVisible(False)
         self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
+        self.shape_combox.currentIndexChanged.connect(self.updateLabelForShape)
 
         self.elements_num_spinbox.valueChanged.connect(self.showSliders)
 
@@ -61,27 +77,95 @@ class MainWindow1(QMainWindow):
         self.mode= TransmissionMode(self)
         self.array=None
         self.signal= Signal()
+        
+
+    def updateLabelForShape(self, index):
+        if index == 1:  # "Circular" is the second item (index 1)
+            self.phase_label.setText("Radius: ")
+        else:  # Default to "Linear" (index 0)
+            self.phase_label.setText("Element Spacing: ")     
 
     def toggleBeamAngleMode(self, checked):
         """Toggle between Beam Angle and Location input."""
         if checked:
             # Change label text
-            self.beam_label.setText("Location_x: ")
-            self.label.setText("Location_y")
-            self.label.setVisible(True)
-            self.spinbox.setVisible(True)
+            self.loc_x.setVisible(True)
+            self.loc_y.setVisible(True)
+            self.spinbox_x.setVisible(True)
+            self.spinbox_y.setVisible(True)
 
         else:
             # Revert to Beam Angle mode
-            self.beam_label.setText("Beam Angle: ")
-            self.label.setVisible(False)
-            self.spinbox.setVisible(False)
+            self.loc_x.setVisible(False)
+            self.loc_y.setVisible(False)
+            self.spinbox_x.setVisible(False)
+            self.spinbox_y.setVisible(False)
 
     def selectMode(self, index):
         if index==0:
             self.mode= TransmissionMode(self)
         elif index==1:
+            self.beamLabel.setVisible(True)
+            self.beam_angle_spinbox.setVisible(True)
             self.mode= RecievingMode()
+
+    def show_sliders_phase(self, sliders_widget, value):
+        self.sliders_phase=[]
+        phase_limits= (0,360)
+        if sliders_widget.layout() is None:
+            layout = QVBoxLayout(sliders_widget)
+            sliders_widget.setLayout(layout)
+        else:
+            layout = sliders_widget.layout()
+        for _ in range(value):
+            slider = QSlider(Qt.Vertical) 
+            slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
+            slider.setValue(180)
+            layout.addWidget(slider)
+            self.sliders_phase.append(slider)
+        layout.setSpacing(30)
+
+    def show_sliders_gain(self, sliders_widget):
+        self.sliders_gain=[]
+        gain_limits= (0,10)
+        if sliders_widget.layout() is None:
+            layout = QVBoxLayout(sliders_widget)
+            sliders_widget.setLayout(layout)
+        else:
+            layout = sliders_widget.layout()
+        for _ in range(len(self.sliders_phase)):
+            slider = QSlider(Qt.Vertical) 
+            slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
+            slider.setValue(5)
+            layout.addWidget(slider)
+            self.sliders_gain.append(slider)
+        layout.setSpacing(30)
+    
+    def clear_sliders(self, sliders_widget):
+        layout = sliders_widget.layout()
+        if layout is not None:
+            while layout.count():
+                child = layout.takeAt(0)
+                if child.widget():
+                    child.widget().deleteLater()
+    
+    def showSliders(self, value):
+        self.clear_sliders(self.phase_widget)
+        self.show_sliders_phase(self.phase_widget, value)
+        self.check_isotropic()
+
+    def check_isotropic(self):
+        self.clear_sliders(self.gain_widget)
+        if self.isotropic_checkbox.isChecked() == False: #not checked (tapered gain)
+            self.show_sliders_gain(self.gain_widget)
+
+    def get_gain_sliders_vals(self):
+         self.sliders_gain_values= [slider.value()/10 for slider in self.sliders_gain]
+         return self.sliders_gain_values
+    
+    def get_phase_sliders_vals(self):
+         self.sliders_phase_values= [np.radians(slider.value()) for slider in self.sliders_phase]
+         return self.sliders_phase_values
 
     def show_sliders_phase(self, sliders_widget, value):
         self.sliders_phase=[]

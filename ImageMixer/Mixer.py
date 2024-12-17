@@ -91,10 +91,7 @@ class Mixer:
 
             # Convert to complex form based on the mode
             if "magnitude" in [component[0] for component in padded_components] or "phase" in [component[0] for component in padded_components]:
-               
-
                 complex_result = real_array * np.exp(1j * imaginary_array)
-
             else:
                 # If only real and imaginary parts are used, combine them directly
                 complex_result = real_array + 1j * imaginary_array
@@ -106,6 +103,14 @@ class Mixer:
             # Store the combined complex result
             self.combined_complex_result = complex_result
             logging.info("Mixing result successfully computed.")
+
+            # Reset real_array and imaginary_array to zeros after computation
+            real_array.fill(0)
+            imaginary_array.fill(0)
+
+            # Log that the arrays have been reset
+            logging.info("Real and Imaginary arrays have been reset.")
+
             return self.combined_complex_result
 
         except Exception as e:
@@ -122,6 +127,7 @@ class Mixer:
 
             logging.info("Performing inverse RFFT.")
             inverse_result = ImageComponents.compute_inverse_rfft(combined_result)
+            
             logging.info("Inverse RFFT computation completed.")
             return inverse_result
         except Exception as e:
