@@ -34,138 +34,215 @@ class BeamForming:
         steer_vector_fft_dB -= np.max(steer_vector_fft_dB) # normalize to 0 dB at peak
 
         # Map the FFT bins to angles in radians
-        theta_bins = np.arcsin(np.linspace(-1, 1, N_fft)) # in radians
+        theta_bins = np.linspace(-1*np.pi/2, np.pi/2, N_fft) # in radians
 
         # find max so we can add it to plot
         theta_max = theta_bins[np.argmax(steer_vector_fft_dB)]
 
-        fig = Figure()
+        fig = Figure(figsize=(5, 5))
         ax = fig.add_subplot(111, projection='polar')
         ax.plot(theta_bins, steer_vector_fft_dB)  # Plot beam pattern
         ax.plot([theta_max], [np.max(steer_vector_fft_dB)], 'ro')  # Mark peak
-        ax.text(theta_max - 0.1, np.max(steer_vector_fft_dB) - 4, 
+        ax.text(theta_max, np.max(steer_vector_fft_dB) - 4, 
                 f"{np.round(theta_max * 180 / np.pi)}°")  # Annotate peak in degrees
-        ax.set_theta_zero_location('N')  # Set 0 degrees pointing up
-        ax.set_theta_direction(-1)  # Clockwise angle increase
-        ax.set_rlabel_position(55)  # Adjust radial grid labels
-        ax.set_thetamin(-90)  # Show only top half
+        
+        ax.set_theta_zero_location('N') # make 0 degrees point up
+        ax.set_theta_direction(-1) # increase anticlockwise
+        # ax.set_rlabel_position(55)  # Move grid labels away from other labels
+        ax.set_thetamin(-90) # only show top half
         ax.set_thetamax(90)
-        ax.set_ylim([-30, 1])  # Limit radial axis to -30 dB minimum
+        ax.set_ylim([-50, 1])
+        ax.set_title("Beam Pattern", va='bottom')
 
         # Embed plot into the PyQt widget
         canvas = FigureCanvas(fig)
-        layout = QVBoxLayout(parent_widget)  # Use the provided parent widget
+        if parent_widget.layout() is None:
+            layout = QVBoxLayout(parent_widget)  # Use the provided parent widget
+            parent_widget.setLayout(layout)
+        else:
+            layout=parent_widget.layout()
+            # Remove all existing widgets from the layout
+            while layout.count() > 0:
+                item = layout.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.deleteLater()
         layout.addWidget(canvas)
-        parent_widget.setLayout(layout)
 
-    def find_DOA(self): #for Receiving mode only- Get Direction of arrival (we don't know the beam angle)
-        recieved_signal= self.apply_signal_to_array('R')
-        elements_num,spacing,_= self._array.get_array_factor()
-        theta_scan = np.linspace(-1*np.pi, np.pi, 1000) # 1000 different thetas between -180 and +180 degrees
-        results = []
-        #These weights align the phases of incoming signals from different directions.
-        for theta_i in theta_scan:
-            weights = np.exp(-2j * np.pi * spacing * np.arange(elements_num) * np.sin(theta_i)) # Conventional, aka delay-and-sum, beamformer
-            X_weighted = weights.conj().T @ recieved_signal # apply our weights. (i.e., perform the beamforming)
-            results.append(10*np.log10(np.var(X_weighted))) # power in signal, in dB so its easier to see small and large lobes at the same time
-        results -= np.max(results) # normalize (optional)
 
-        # print angle that gave us the max value
-        print(theta_scan[np.argmax(results)] * 180 / np.pi) 
-       
-        #Graphing DOA
-        # plt.plot(theta_scan*180/np.pi, results) # lets plot angle in degrees
-        # plt.xlabel("Theta [Degrees]")
-        # plt.ylabel("DOA Metric")
-        # plt.grid()
-        # plt.show()
-    
-    def find_interference_map(self, parent_widget):
-        k= self._signal.get_wavenumber()
-        print(k)
+    # def find_interference_map(self, parent_widget):
+    #     k= self._signal.get_wavenumber()
+    #     print(k)
+    #     elements_phase, elements_gain = self._array.get_elements_phases_gains()
         
-        azimuth_points = 500  # Number of azimuth points
-        range_points = 500  # Number of radial distance points
-        azimuth = np.linspace(0, 2*np.pi, azimuth_points)
-        distances = np.linspace(0.1, 10, range_points)  # Distance range (0.1 to 10 meters)
+    #     azimuth_points = 200  # Number of azimuth points
+    #     range_points = 200  # Number of radial distance points
+    #     azimuth = np.linspace(-1*np.pi/2, np.pi/2, azimuth_points)
+    #     distances = np.linspace(0.1, 50, range_points)  # Distance range (0.1 to 10 meters)
 
 
-        #Get array properties
+    #     #Get array properties
+    #     antennas_num, spacing, _ = self._array.get_array_factor()
+    #     positions = spacing * np.arange(antennas_num)  # Antenna positions along the array
+    #     shift= (positions[-1]-positions[0])/2
+    #     positions= shift- positions
+        
+    #     # Precompute polar coordinates
+    #     azimuth_grid, radius_grid = np.meshgrid(azimuth, distances, indexing='ij')
+
+    #     # Cartesian coordinates of grid points
+    #     x_grid = radius_grid * np.cos(azimuth_grid)
+    #     y_grid = radius_grid * np.sin(azimuth_grid)
+
+    #     # Compute distances from all antennas to all grid points
+    #     field_map = np.zeros((azimuth_points, range_points), dtype=complex)
+
+    #     for i, element_pos in enumerate(positions):
+    #         dx = x_grid - element_pos
+    #         dy = y_grid
+    #         distance_to_point = np.sqrt(dx**2 + dy**2)
+            
+    #         # Compute field contribution
+    #         phase_shift = -1j * k * distance_to_point + elements_phase[i]  # Phase due to propagation (intrinsic and extrinsic)
+    #         amplitude = elements_gain[i]   # Gain and distance-based attenuation
+    #         field_map += amplitude * np.exp(phase_shift)            
+            
+
+    #     # Compute normalized intensity (magnitude squared)
+    #     intensity_map = np.abs(field_map) ** 2
+    #     intensity_map = intensity_map/ np.max(intensity_map)
+        
+    #     # Create polar plot
+    #     fig = Figure(figsize=(5, 5))
+    #     ax = fig.add_subplot(111, polar=True)
+
+    #     # Plot the interference map
+    #     im = ax.pcolormesh(azimuth, distances, intensity_map.T, shading='auto', cmap='viridis')
+    #     r = np.abs(positions)  
+    #     theta = np.where(positions >= 0, np.pi/-2, np.pi/2)  
+
+    #     # Plot the antenna positions on the polar plot
+    #     ax.plot(theta, r, 'bo')  
+    #     ax.set_theta_zero_location('N') # make 0 degrees point up
+    #     ax.set_theta_direction(-1) # increase clockwise
+    #     ax.set_thetamin(-90) # only show top half
+    #     ax.set_thetamax(90)
+        
+    #     ax.set_title("Interference Map", va='bottom')
+
+    #     # Add colorbar
+    #     fig.colorbar(im, ax=ax, label="Intensity")
+
+    #     # Embed plot into the PyQt widget
+    #     canvas = FigureCanvas(fig)
+    #     if parent_widget.layout() is None:
+    #         layout = QVBoxLayout(parent_widget)  # Use the provided parent widget
+    #         parent_widget.setLayout(layout)
+    #     else:
+    #         layout=parent_widget.layout()
+    #         # Remove all existing widgets from the layout
+    #         while layout.count() > 0:
+    #             item = layout.takeAt(0)
+    #             widget = item.widget()
+    #             if widget is not None:
+    #                 widget.deleteLater()
+    #     layout.addWidget(canvas)
+    
+
+    def find_interference_map(self, parent_widget):
+        k = self._signal.get_wavenumber()
+        print(k)
+        elements_phase, elements_gain = self._array.get_elements_phases_gains()
+        
+        azimuth_points = 100  # Number of azimuth points
+        range_points = 100  # Number of radial distance points
+
+
+        # Get array properties
         antennas_num, spacing, _ = self._array.get_array_factor()
         positions = spacing * np.arange(antennas_num)  # Antenna positions along the array
-        shift= (positions[-1]-positions[0])/2
-        positions= shift- positions
-        
-        # Precompute polar coordinates
-        azimuth_grid, radius_grid = np.meshgrid(azimuth, distances, indexing='ij')
+        shift = (positions[-1] - positions[0]) / 2
+        positions = shift - positions
 
-        # Cartesian coordinates of grid points
-        x_grid = radius_grid * np.cos(azimuth_grid)
-        y_grid = radius_grid * np.sin(azimuth_grid)
+        # Precompute Cartesian coordinates
+        x_coords = np.linspace(-5, 5, range_points)  # X axis range
+        y_coords = np.linspace(-5, 5, azimuth_points)  # Y axis range
+        x_grid, y_grid = np.meshgrid(x_coords, y_coords, indexing='xy')
 
         # Compute distances from all antennas to all grid points
-        field_map = np.zeros((azimuth_points, range_points), dtype=complex)
+        field_map = np.zeros((y_coords.size, x_coords.size), dtype=complex)
 
-        for element_pos in positions:
+        for i, element_pos in enumerate(positions):
             dx = x_grid - element_pos
             dy = y_grid
             distance_to_point = np.sqrt(dx**2 + dy**2)
-            
+
             # Compute field contribution
-            phase_shift = -1j * k * distance_to_point  # Phase due to propagation
-            amplitude = 1   # Gain and distance-based attenuation
-            field_map += amplitude * np.exp(phase_shift)            
-            
+            phase_shift = -1j * k * distance_to_point + elements_phase[i]  # Phase due to propagation
+            amplitude = elements_gain[i]  # Gain and distance-based attenuation
+            field_map += amplitude * np.exp(phase_shift)
 
         # Compute normalized intensity (magnitude squared)
         intensity_map = np.abs(field_map) ** 2
-        #intensity_map /= np.max(intensity_map)  # Normalize
+        intensity_map = intensity_map / np.max(intensity_map)
 
-            # Create polar plot
-        fig = Figure(figsize=(8, 8))
-        ax = fig.add_subplot(111, polar=True)
-
+        # Create Cartesian plot
+        fig = Figure(figsize=(6, 5))
+        ax = fig.add_subplot(111)
         # Plot the interference map
-        im = ax.pcolormesh(azimuth, distances, intensity_map, shading='auto', cmap='viridis')
-        r = np.abs(positions)  
-        theta = np.where(positions >= 0, 0, np.pi)  
+        im = ax.pcolormesh(x_grid, y_grid, intensity_map, shading='auto', cmap='viridis')
 
-        # Plot the antenna positions on the polar plot
-        ax.plot(theta, r, 'bo')  
-        ax.set_theta_zero_location("E")  # Set the top as 0 degrees
-        ax.set_theta_direction(1)  # antiClockwise azimuth
-        ax.set_title("Interference Map", va='bottom')
+        # Plot antenna positions
+        ax.scatter(positions, np.zeros_like(positions), color='red', marker='o', label='Antennas')
+
+        # Label and format the plot
+        ax.set_title("Interference Map in Cartesian Coordinates")
+        ax.set_xlabel("X Position (m)")
+        ax.set_ylabel("Y Position (m)")
+        ax.set_aspect('equal', adjustable='box')  # Keep correct proportions
+        ax.legend()
 
         # Add colorbar
-        fig.colorbar(im, ax=ax, label="Intensity")
+        fig.colorbar(im, ax=ax, label="Normalized Intensity")
 
-        # Embed plot into the PyQt widget
+        # Embed the plot into the parent widget
         canvas = FigureCanvas(fig)
-        layout = QVBoxLayout(parent_widget)  # Use the provided parent widget
+        if parent_widget.layout() is None:
+            layout = QVBoxLayout(parent_widget)
+            parent_widget.setLayout(layout)
+        else:
+            layout = parent_widget.layout()
+            # Clear the layout
+            while layout.count() > 0:
+                item = layout.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.deleteLater()
+
         layout.addWidget(canvas)
-        parent_widget.setLayout(layout)
-    
 
+    def plot_recieved_signal(self, parent_widget): #after delays and sum (conventional beamforming)
+        fig = Figure(figsize=(6, 5))
+        ax = fig.add_subplot(111)
+        recieved_signal= self.apply_signal_to_array('R')
+        for element_num in range(recieved_signal.shape[0]):
+            ax.plot(np.asarray(recieved_signal[element_num,:]).squeeze().real[0:200])
+        ax.legend()
+        ax.set_title("Plot of first 200 samples of the signal recieved by each antenna")
+        ax.set_xlabel("time")
+        ax.set_ylabel("amplitude")
+        # Embed the plot into the parent widget
+        canvas = FigureCanvas(fig)
+        if parent_widget.layout() is None:
+            layout = QVBoxLayout(parent_widget)
+            parent_widget.setLayout(layout)
+        else:
+            layout = parent_widget.layout()
+            # Clear the layout
+            while layout.count() > 0:
+                item = layout.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.deleteLater()
 
-# if __name__ =='__main__':
-#     array = PhasedArray(
-#     antennas_num=8,
-#     antennas_spacing=0.5,
-#     beam_angle=30,
-#     shape='linear',
-#     signal_wavelength=0.03
-#     )
-#     array.form_steer_vector()
-#     signal_frequency = 1468  # 1 GHz
-#     signal= Signal(signal_frequency)
-
-#     # Parameters
-#     grid_size = (500, 500)  # Resolution of the grid
-#     grid_range = ((-np.pi / 2, np.pi / 2), (0, 10))  # Azimuth (-90 to +90 degrees), distance (0 to 10 meters)
-    
-#     beamformer= BeamForming(array,signal)
-#     #beamformer.find_beam_pattern()
-#     # Compute and plot the interference map
-#     beamformer.find_interference_map()
-#     result= beamformer.apply_signal_to_array('T')
-#     #plt.plot(result)
+        layout.addWidget(canvas)

@@ -6,7 +6,7 @@ import numpy as np
 class PhasedArray:
     def __init__(self, antennas_num, antennas_spacing, shape, beam_angle, radius=None):
         self._antennas_num= antennas_num
-        self._antennas_spacing= antennas_spacing
+        self._antennas_spacing= antennas_spacing #the normalized spacing (dm/lamda)
         self._shape=shape
         self._beam_angle= np.radians(beam_angle) #azimuth
         self._steer_vector=None
@@ -16,25 +16,58 @@ class PhasedArray:
         self._elements_gain=[]
         self.sliders_gain=[]
         self.sliders_phase=[]
+        self.phase_shift= None #for uniform phase shift, in radians
+        self.is_uniform_phase=True
 
 
     def add_antenna(self, antenna):
         self._antennas.append(antenna)
 
-    def form_steer_vector(self, signal_wavelength): #we simulate the array using a steering vector
+    def form_steer_vector(self, signal_wavelength, mode,): #we simulate the array using a steering vector
+        antennas_indices= np.arange(self._antennas_num)
         if self._shape == 'linear':
             # intrinsic phase shifts (due to element spacing) 
-                geometry_phases = -2j * np.pi * self._antennas_spacing * np.arange(self._antennas_num) * np.sin(self._beam_angle)       
-        if self._shape == 'circular':
-            # Compute the angular positions of each element on the circle
-                element_angles = np.linspace(0, 2 * np.pi, self._antennas_num, endpoint=False)
+            
+            if mode=='R': #for recieving mode, we know the direction of arrival (i.e. the beam angle)
+                geometry_phases = -2j * np.pi * self._antennas_spacing * antennas_indices * np.sin(self._beam_angle)  
+                # Add individual phase offsets, account for individual gains 
+                self._steer_vector = np.array(self._elements_gain)* np.exp(geometry_phases + 1j * np.array(self._elements_phase))
+           
+            elif mode=='T': #for transmission mode, we get the direction of transmission (beam angle) using phase shift
+                if self.is_uniform_phase:
+                    sin_angle= (self.phase_shift)/(2*np.pi*self._antennas_spacing)
+                    if 1 < sin_angle < -1: 
+                        print("sine angle", sin_angle)
+                        raise ValueError("Sine cannot exceed 1 or -1")
+                    geometry_phases = -2j * np.pi * self._antennas_spacing * antennas_indices* sin_angle
+                    self._steer_vector = np.array(self._elements_gain)* np.exp(geometry_phases)
+                else:
+                    raise ValueError("This Case is not handled yet")
+
+        elif self._shape == 'circular':
+            # Compute the angular positions of each antenna around the circle
+            element_angles = np.linspace(0, 2 * np.pi, self._antennas_num, endpoint=False)
+
+            if mode == 'R':
+                # Receiving mode: Known direction of arrival (DOA)
                 geometry_phases = -2j * np.pi * (self._radius / signal_wavelength) * np.cos(element_angles - self._beam_angle)
-        # Add individual phase offsets, account for individual gains 
-        self._steer_vector = np.array(self._elements_gain)* np.exp(geometry_phases + 1j * np.array(self._elements_phase))
+                self._steer_vector = np.array(self._elements_gain)* np.exp(geometry_phases + 1j * np.array(self._elements_phase))
+
+            elif mode == 'T':
+                # Transmission mode: Phase shifts determine beam direction
+                if self.is_uniform_phase:
+                    # Use phase shift between adjacent elements to steer the beam
+                    cumulative_phase_shifts = self.phase_shift * np.arange(self._antennas_num)
+                    geometry_phases = -2j * np.pi * (self._radius / signal_wavelength) * np.cos(element_angles) + 1j * cumulative_phase_shifts
+                    
+                    self._steer_vector = np.array(self._elements_gain) * np.exp(geometry_phases)
+                else:
+                    raise ValueError("Non-uniform phase case not yet handled")
+            
+
 
     def get_steer_vector(self):
-         self.form_steer_vector()
-         return self._steer_vector
+        return self._steer_vector
     
     def get_array_factor(self): #parameters of the array
          return self._antennas_num, self._antennas_spacing, self._beam_angle
@@ -44,43 +77,6 @@ class PhasedArray:
     def visualize_array():
          pass
     
-    def show_sliders_gain(self, sliders_widget):
-        gain_limits= (0,10)
-        if sliders_widget.layout() is None:
-            layout = QVBoxLayout(sliders_widget)
-            sliders_widget.setLayout(layout)
-        else:
-            layout = sliders_widget.layout()
-        for _ in range(self._antennas_num):
-            slider = QSlider(Qt.Vertical) 
-            slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
-            slider.setValue(5)
-            layout.addWidget(slider)
-            self.sliders_gain.append(slider)
-        layout.setSpacing(30)
-
-    def show_sliders_phase(self, sliders_widget):
-        phase_limits= (0,360)
-        if sliders_widget.layout() is None:
-            layout = QVBoxLayout(sliders_widget)
-            sliders_widget.setLayout(layout)
-        else:
-            layout = sliders_widget.layout()
-        for _ in range(self._antennas_num):
-            slider = QSlider(Qt.Vertical) 
-            slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
-            slider.setValue(180)
-            layout.addWidget(slider)
-            self.sliders_phase.append(slider)
-        layout.setSpacing(30)
-    
-    def get_gain_sliders_vals(self):
-         self.sliders_gain= [slider.value()/10 for slider in self.sliders_gain]
-         return self.sliders_gain
-    
-    def get_phase_sliders_vals(self):
-         self.sliders_phase= [np.radians(slider.value()) for slider in self.sliders_phase]
-         return self.sliders_phase
     
     def set_elements_phases_and_gains(self, elements_phase, elements_gain):
         self._elements_phase=elements_phase
@@ -90,3 +86,6 @@ class PhasedArray:
         x_array, y_array = array_position
         x_ref, y_ref = reference_position
         return np.arctan2(y_array - y_ref, x_array - x_ref)  # Angle in radians
+
+    def get_elements_phases_gains(self):
+         return self._elements_phase, self._elements_gain

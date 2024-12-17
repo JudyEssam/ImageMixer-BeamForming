@@ -4,19 +4,20 @@ class Signal:
     def __init__(self, propagation_speed =3e8 ,sample_rate =1e4, number_sampling_points= 1e4):
         
         self.signal_frequency= []
+        self.amp=[]
         self.sample_rate= sample_rate
         self.number_sampling_points= number_sampling_points
         self.propagation_speed= propagation_speed
         self.signal_data=None
 
-    def add_freq(self, freq):
+    def add_amp_freq(self, amp, freq):
         self.signal_frequency.append(freq* 10**6 )
+        self.amp.append(amp)
 
-    def create_signal(self, amp=1):
+    def create_signal(self):
         self.calculate_wavenumber_wavelength()
         time = np.arange(self.number_sampling_points)/self.sample_rate 
-        self.signal_data= amp * np.sum(
-        [np.exp(2j * np.pi * freq * time) for freq in self.signal_frequency], axis=0)
+        self.signal_data= np.sum([self.amp[i] *np.exp(2j * np.pi * self.signal_frequency[i] * time) for i in range(len(self.amp))], axis=0)
         
     def calculate_wavenumber_wavelength(self):
         self.wavelength= self.propagation_speed/ np.average(self.signal_frequency)
