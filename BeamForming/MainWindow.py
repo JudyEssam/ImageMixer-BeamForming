@@ -107,7 +107,7 @@ class MainWindow1(QMainWindow):
         elif index==1:
             self.beamLabel.setVisible(True)
             self.beam_angle_spinbox.setVisible(True)
-            self.mode= RecievingMode()
+            self.mode= RecievingMode(self)
 
     def show_sliders_phase(self, sliders_widget, value):
         self.sliders_phase=[]
