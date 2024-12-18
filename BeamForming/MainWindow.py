@@ -70,9 +70,11 @@ class MainWindow1(QMainWindow):
         #for signal parameters
         self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
         self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
+        self.speed_power_spinbox=self.findChild(QSpinBox, 'speedPower')
+        self.freq_power_spinbox=self.findChild(QSpinBox, 'freqPower')
         self.amp_spinbox=self.findChild(QDoubleSpinBox, 'amplitude')
         self.add_component_button=self.findChild(QPushButton, 'add_frequency')
-        self.add_component_button.clicked.connect(lambda : self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()))
+        self.add_component_button.clicked.connect(lambda : self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value()))
 
         #BEAM widgets
         self.beam_pattern_widget= self.findChild(QWidget, 'widget1')
@@ -173,7 +175,7 @@ class MainWindow1(QMainWindow):
          self.sliders_phase_values= [np.radians(slider.value()) for slider in self.sliders_phase]
          return self.sliders_phase_values
 
-    def show_sliders_phase(self, sliders_widget, value):
+    def show_sliders_phase(self, sliders_widget):
         self.sliders_phase=[]
         phase_limits= (0,360)
         if sliders_widget.layout() is None:
@@ -181,7 +183,7 @@ class MainWindow1(QMainWindow):
             sliders_widget.setLayout(layout)
         else:
             layout = sliders_widget.layout()
-        for _ in range(value):
+        for _ in range(self.elements_num_spinbox.value()):
             slider = QSlider(Qt.Vertical) 
             slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
             slider.setValue(180)
@@ -189,7 +191,7 @@ class MainWindow1(QMainWindow):
             self.sliders_phase.append(slider)
         layout.setSpacing(30)
 
-    def show_sliders_gain(self, sliders_widget, sliders_num):
+    def show_sliders_gain(self, sliders_widget):
         self.sliders_gain=[]
         gain_limits= (0,10)
         if sliders_widget.layout() is None:
@@ -197,7 +199,7 @@ class MainWindow1(QMainWindow):
             sliders_widget.setLayout(layout)
         else:
             layout = sliders_widget.layout()
-        for _ in range(sliders_num):
+        for _ in range(self.elements_num_spinbox.value()):
             slider = QSlider(Qt.Vertical) 
             slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
             slider.setValue(5)
@@ -214,19 +216,19 @@ class MainWindow1(QMainWindow):
                     child.widget().deleteLater()
     
     def showSliders(self, value):
-        self.check_uniform_phase(value)
-        self.check_isotropic(value)
+        self.check_uniform_phase()
+        self.check_isotropic()
 
-    def check_uniform_phase(self, value):
+    def check_uniform_phase(self, ):
         self.clear_sliders(self.phase_widget)
         if self.uniform_phase_checkbox.isChecked()==False: 
-            self.show_sliders_phase(self.phase_widget, value)
+            self.show_sliders_phase(self.phase_widget)
        
 
-    def check_isotropic(self, value):
+    def check_isotropic(self,):
         self.clear_sliders(self.gain_widget)
         if self.isotropic_checkbox.isChecked() == False: #not checked (tapered gain)
-            self.show_sliders_gain(self.gain_widget, value)
+            self.show_sliders_gain(self.gain_widget, )
 
     def get_gain_sliders_vals(self):
          self.sliders_gain_values= [slider.value()/10 for slider in self.sliders_gain]
@@ -264,6 +266,9 @@ class MainWindow1(QMainWindow):
         self.array.set_elements_phases_and_gains(phases, gains)
     
     def formSignal(self):
+        speed= self.prop_speed_spinbox.value()
+        if speed>0:
+            self.signal.set_speed(speed*10**self.speed_power_spinbox)
         self.signal.create_signal()
         
     def applyChanges(self):

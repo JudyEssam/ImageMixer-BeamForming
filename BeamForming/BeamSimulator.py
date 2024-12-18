@@ -35,8 +35,7 @@ class BeamForming:
         steer_vector_fft_dB -= np.max(steer_vector_fft_dB) # normalize to 0 dB at peak
 
         # Map the FFT bins to angles in radians
-        theta_bins = np.linspace(-1*np.pi/2, np.pi/2, N_fft) # in radians
-
+        theta_bins = np.arcsin(np.linspace(-1, 1, N_fft)) # in radians
         # find max so we can add it to plot
         theta_max = theta_bins[np.argmax(steer_vector_fft_dB)]
 
@@ -75,6 +74,7 @@ class BeamForming:
     def find_interference_map(self, parent_widget):
         k = self._signal.get_wavenumber()
         elements_phase, elements_gain = self._array.get_elements_phases_gains()
+        geometrical_phases= self._array.get_geometrical_phases()
 
         azimuth_points = 100  # Number of azimuth points
         range_points = 100  # Number of radial distance points
@@ -103,7 +103,7 @@ class BeamForming:
                 distance_to_point = np.sqrt(dx**2 + dy**2)
 
                 # Compute field contribution
-                phase_shift = -1j * k * distance_to_point + elements_phase[i]
+                phase_shift = -1j * k * distance_to_point + elements_phase[i] + geometrical_phases[0]
                 amplitude = elements_gain[i]
                 field_map += amplitude * np.exp(phase_shift)
 
