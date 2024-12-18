@@ -8,9 +8,9 @@ class RecievingMode:
         self.signal=None
 
 
-    def use_array_and_signal(self):
-        self.array = self.parent.array  # Always access the updated parent attributes
-        self.signal = self.parent.signal
+    def use_array_and_signal(self, array, signal):
+        self.array = array  # Always access the updated parent attributes
+        self.signal = signal
 
     def run_mode(self):
         wavelength= self.signal.get_wavelength()

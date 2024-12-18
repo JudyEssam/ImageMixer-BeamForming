@@ -16,7 +16,7 @@ class TransmissionMode:
     def run_mode(self):
         wavelength= self.signal.get_wavelength()
         #form steer_vector
-        self.array.form_steer_vector(wavelength, 'T')
+        self.array.form_steer_vector(wavelength)
         #apply signal to array (steer vector)
         self.beamforming= BeamForming(self.array, self.signal)
         #draw beam pattern

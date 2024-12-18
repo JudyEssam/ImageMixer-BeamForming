@@ -37,13 +37,11 @@ class MainWindow1(QMainWindow):
         self.multi_array = self.findChild(QRadioButton, 'radioButton1_3')
         self.multi_array.toggled.connect(self.toggleBeamAngleMode)
 
-        # Multi arrays check
-        self.multi_array = self.findChild(QRadioButton, 'radioButton1_3')
-        self.multi_array.toggled.connect(self.toggleBeamAngleMode)
-
+        #Mode
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
         self.mode_combox.currentIndexChanged.connect(self.selectMode)
         
+        #apply changes
         self.apply_button= self.findChild(QPushButton, 'apply')
         self.apply_button.clicked.connect(self.applyChanges)
        
@@ -51,9 +49,8 @@ class MainWindow1(QMainWindow):
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
         self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
         self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
-        self.beam_angle_spinbox.setVisible(False)
         self.beamLabel = self.findChild(QLabel, "beam_label")
-        self.beamLabel.setVisible(False)
+        self.beamLabel.setText("Steering Angle: ")
         self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
         self.shape_combox.currentIndexChanged.connect(self.updateLabelForShape)
 
@@ -61,12 +58,15 @@ class MainWindow1(QMainWindow):
 
        #for element parameters
         self.isotropic_checkbox= self.findChild(QCheckBox, 'Isotropic_checkbox')
-        self.isotropic_checkbox.clicked.connect(self.check_isotropic) 
+        self.isotropic_checkbox.clicked.connect(self.check_isotropic)
+        self.uniform_phase_checkbox= self.findChild(QCheckBox, 'checkBox')
+        self.uniform_phase_checkbox.clicked.connect(self.check_uniform_phase) 
         self.phase_widget= self.findChild(QWidget, 'slidersWidget_phase')
         self.gain_widget= self.findChild(QWidget, 'slidersWidget_gain')
 
         self.sliders_phase=[]
         self.sliders_gain=[]
+        
         #for signal parameters
         self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
         self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
@@ -101,6 +101,7 @@ class MainWindow1(QMainWindow):
 
         else:
             # Revert to Beam Angle mode
+            self.addArray.setVisible(False)
             self.loc_x.setVisible(False)
             self.loc_y.setVisible(False)
             self.spinbox_x.setVisible(False)
@@ -109,10 +110,10 @@ class MainWindow1(QMainWindow):
     def selectMode(self, index):
         if index==0:
             self.mode= TransmissionMode(self)
+            self.beamLabel.setText("Steering Angle: ")
         elif index==1:
-            self.beamLabel.setVisible(True)
-            self.beam_angle_spinbox.setVisible(True)
             self.mode= RecievingMode(self)
+            self.beamLabel.setText("Direction of Arrival: ")
 
     def show_sliders_phase(self, sliders_widget, value):
         self.sliders_phase=[]
@@ -188,7 +189,7 @@ class MainWindow1(QMainWindow):
             self.sliders_phase.append(slider)
         layout.setSpacing(30)
 
-    def show_sliders_gain(self, sliders_widget):
+    def show_sliders_gain(self, sliders_widget, sliders_num):
         self.sliders_gain=[]
         gain_limits= (0,10)
         if sliders_widget.layout() is None:
@@ -196,7 +197,7 @@ class MainWindow1(QMainWindow):
             sliders_widget.setLayout(layout)
         else:
             layout = sliders_widget.layout()
-        for _ in range(len(self.sliders_phase)):
+        for _ in range(sliders_num):
             slider = QSlider(Qt.Vertical) 
             slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
             slider.setValue(5)
@@ -213,14 +214,19 @@ class MainWindow1(QMainWindow):
                     child.widget().deleteLater()
     
     def showSliders(self, value):
-        self.clear_sliders(self.phase_widget)
-        self.show_sliders_phase(self.phase_widget, value)
-        self.check_isotropic()
+        self.check_uniform_phase(value)
+        self.check_isotropic(value)
 
-    def check_isotropic(self):
+    def check_uniform_phase(self, value):
+        self.clear_sliders(self.phase_widget)
+        if self.uniform_phase_checkbox.isChecked()==False: 
+            self.show_sliders_phase(self.phase_widget, value)
+       
+
+    def check_isotropic(self, value):
         self.clear_sliders(self.gain_widget)
         if self.isotropic_checkbox.isChecked() == False: #not checked (tapered gain)
-            self.show_sliders_gain(self.gain_widget)
+            self.show_sliders_gain(self.gain_widget, value)
 
     def get_gain_sliders_vals(self):
          self.sliders_gain_values= [slider.value()/10 for slider in self.sliders_gain]
@@ -232,9 +238,8 @@ class MainWindow1(QMainWindow):
 
     def formArray(self):
         antennas_num= self.elements_num_spinbox.value()
-        antennas_spacing=self.spacing_spinbox.value()
+        antennas_spacing=self.spacing_spinbox.value() #acts as radius for circular array
         beam_angle=self.beam_angle_spinbox.value()
-        print("beam angle", type(beam_angle), beam_angle)
         shape= 'linear' if self.shape_combox.currentIndex()==0 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)    
 
@@ -246,7 +251,12 @@ class MainWindow1(QMainWindow):
         else:
             is_isotropic= False
             gains= self.get_gain_sliders_vals() 
-        phases= self.get_phase_sliders_vals() 
+        if self.uniform_phase_checkbox.isChecked():
+            phases= [0] * antennas_num
+            self.array.set_uniform_phase(True)
+        else:
+            phases=self.get_phase_sliders_vals()
+            self.array.set_uniform_phase(False)
         
         for idx in range(antennas_num):
             antenna=Antenna(is_isotropic=is_isotropic, phase= phases[idx], gain= gains[idx])
