@@ -26,33 +26,58 @@ class BeamForming:
         return self._resulted_signal
     
 
-    def find_beam_pattern(self, parent_widget):
-        N_fft= 512 #number of points used in the fft
-        elements_num=self._array.get_antennas_num()
-        steer_vector = np.conj(self._array.get_steer_vector()) # or else our answer will be negative/inverted
-        steer_vector_padded = np.concatenate((steer_vector, np.zeros(N_fft - elements_num ))) # zero pad to N_fft elements to get more resolution in the FFT
-        steer_vector_fft_dB = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft(steer_vector_padded)))**2) # magnitude of fft in dB
-        steer_vector_fft_dB -= np.max(steer_vector_fft_dB) # normalize to 0 dB at peak
+    def find_beam_pattern(self, parent_widget, shape):
+        if shape =='linear':
+            N_fft= 512 #number of points used in the fft
+            elements_num=self._array.get_antennas_num()
+            steer_vector = np.conj(self._array.get_steer_vector()) # or else our answer will be negative/inverted
+            steer_vector_padded = np.concatenate((steer_vector, np.zeros(N_fft - elements_num ))) # zero pad to N_fft elements to get more resolution in the FFT
+            steer_vector_fft_dB = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft(steer_vector_padded)))**2) # magnitude of fft in dB
+            steer_vector_fft_dB -= np.max(steer_vector_fft_dB) # normalize to 0 dB at peak
 
-        # Map the FFT bins to angles in radians
-        theta_bins = np.arcsin(np.linspace(-1, 1, N_fft)) # in radians
-        # find max so we can add it to plot
-        theta_max = theta_bins[np.argmax(steer_vector_fft_dB)]
-
-        fig = Figure(figsize=(5, 5))
-        ax = fig.add_subplot(111, projection='polar')
-        ax.plot(theta_bins, steer_vector_fft_dB)  # Plot beam pattern
-        ax.plot([theta_max], [np.max(steer_vector_fft_dB)], 'ro')  # Mark peak
-        ax.text(theta_max, np.max(steer_vector_fft_dB) - 4, 
-                f"{np.round(theta_max * 180 / np.pi)}°")  # Annotate peak in degrees
+            # Map the FFT bins to angles in radians
+            theta_bins = np.arcsin(np.linspace(-1, 1, N_fft)) # in radians
+            # find max so we can add it to plot
+            theta_max = theta_bins[np.argmax(steer_vector_fft_dB)]
+            fig = Figure(figsize=(5, 5))
+            ax = fig.add_subplot(111, projection='polar')
+            ax.plot(theta_bins, steer_vector_fft_dB)  # Plot beam pattern
+            ax.plot([theta_max], [np.max(steer_vector_fft_dB)], 'ro')  # Mark peak
+            ax.text(theta_max, np.max(steer_vector_fft_dB) - 4, 
+                    f"{np.round(theta_max * 180 / np.pi)}°")  # Annotate peak in degrees
+            
+            ax.set_theta_zero_location('N') # make 0 degrees point up
+            ax.set_theta_direction(-1) # increase anticlockwise
+            # ax.set_rlabel_position(55)  # Move grid labels away from other labels
+            ax.set_thetamin(-90) # only show top half
+            ax.set_thetamax(90)
+            ax.set_ylim([-50, 1])
         
-        ax.set_theta_zero_location('N') # make 0 degrees point up
-        ax.set_theta_direction(-1) # increase anticlockwise
-        # ax.set_rlabel_position(55)  # Move grid labels away from other labels
-        ax.set_thetamin(-90) # only show top half
-        ax.set_thetamax(90)
-        ax.set_ylim([-50, 1])
-        ax.set_title("Beam Pattern", va='bottom')
+        elif shape =='circular':
+            # Beam pattern calculation
+            steer_vector= self._array.get_steer_vector()
+            antennas_num,radius,beam_angle= self._array.get_array_factor()
+            elements_angular_spacing= self._array.get_elements_angles()
+            k = self._signal.get_wavenumber()
+            phi = np.linspace(0, 2 * np.pi, 360)  # 360 points
+
+            # Compute the beam pattern for all azimuthal angles
+            beam_pattern = np.zeros_like(phi)  # Initialize the pattern array
+
+            for i, angle in enumerate(phi):
+                # Calculate the pattern for each azimuthal angle
+                beam_pattern[i] = np.abs(np.sum([
+                    steer_vector[n] * np.exp(1j * k * radius * np.cos(angle - elements_angular_spacing[n]))
+                    for n in range(antennas_num)
+                ]))
+
+            # Normalize the beam pattern
+            beam_pattern /= np.max(beam_pattern)
+
+            # Create a polar plot
+            fig = Figure(figsize=(5, 5))
+            ax = fig.add_subplot(111, projection='polar')
+            ax.plot(phi, beam_pattern)  # 
 
         # Embed plot into the PyQt widget
         canvas = FigureCanvas(fig)
@@ -103,7 +128,7 @@ class BeamForming:
                 distance_to_point = np.sqrt(dx**2 + dy**2)
 
                 # Compute field contribution
-                phase_shift = -1j * k * distance_to_point + elements_phase[i] + geometrical_phases[0]
+                phase_shift = 1j * k * distance_to_point + geometrical_phases[i] + 1j* elements_phase[i] 
                 amplitude = elements_gain[i]
                 field_map += amplitude * np.exp(phase_shift)
 
@@ -120,7 +145,7 @@ class BeamForming:
                 distance_to_point = np.sqrt(dx**2 + dy**2)
 
                 # Compute field contribution
-                phase_shift = -1j * k * distance_to_point + elements_phase[i]
+                phase_shift = -1j * k * distance_to_point + 1j*elements_phase[i] +  geometrical_phases[i]
                 amplitude = elements_gain[i]
                 field_map += amplitude * np.exp(phase_shift)
 

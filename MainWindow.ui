@@ -3878,7 +3878,7 @@ QPushButton:pressed {
                                      </property>
                                      <property name="icon">
                                       <iconset>
-                                       <normaloff>C:/Users/DELL/Downloads/true.png</normaloff>C:/Users/DELL/Downloads/true.png</iconset>
+                                       <normaloff>BeamForming/Icons/true.png</normaloff>BeamForming/Icons/true.png</iconset>
                                      </property>
                                      <property name="iconSize">
                                       <size>

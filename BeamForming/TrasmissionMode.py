@@ -20,7 +20,7 @@ class TransmissionMode:
         #apply signal to array (steer vector)
         self.beamforming= BeamForming(self.array, self.signal)
         #draw beam pattern
-        self.beamforming.find_beam_pattern( self.parent.beam_pattern_widget)
+        self.beamforming.find_beam_pattern( self.parent.beam_pattern_widget, self.array.get_array_shape())
         #draw interference map
         self.beamforming.find_interference_map(self.parent.interference_map_widget)   
         

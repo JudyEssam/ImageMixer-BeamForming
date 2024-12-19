@@ -9,6 +9,7 @@ from PhasedArray import PhasedArray
 from Antenna import Antenna
 from Signal import Signal
 import numpy as np
+from Scenarios import Scenarios
 
 class MainWindow1(QMainWindow):
     def __init__(self):
@@ -21,6 +22,10 @@ class MainWindow1(QMainWindow):
         #add array button
         self.addArray = self.findChild(QPushButton, "add_array")
         self.addArray.setVisible(False)
+
+        #scenarios
+        self.scenarios_comboBox= self.findChild(QComboBox, 'scenarios_comboBox')
+        self.scenarios_comboBox.currentIndexChanged.connect(self.choose_scenario)
 
         #for x and y location
         self.loc_x = self.findChild(QLabel, "locX")
@@ -39,7 +44,7 @@ class MainWindow1(QMainWindow):
 
         #Mode
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
-        self.mode_combox.currentIndexChanged.connect(self.selectMode)
+        self.mode_combox.activated.connect(self.selectMode)
         
         #apply changes
         self.apply_button= self.findChild(QPushButton, 'apply')
@@ -83,6 +88,15 @@ class MainWindow1(QMainWindow):
         self.mode= TransmissionMode(self)
         self.array=None
         self.signal= Signal()
+        self.scenario= Scenarios(self)
+
+    def choose_scenario(self, index):
+        if index == 0:
+            self.scenario.ultrasonic()
+        elif index==1:
+            self.scenario.beamforming_5G()
+        elif index==2:
+            self.scenario.ablation()
 
 
     def updateLabelForShape(self, index):
@@ -270,7 +284,7 @@ class MainWindow1(QMainWindow):
         if speed>0:
             self.signal.set_speed(speed*10**self.speed_power_spinbox)
         self.signal.create_signal()
-        
+
     def applyChanges(self):
         self.formArray()
         self.formAntenna()

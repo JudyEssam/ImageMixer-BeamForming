@@ -19,6 +19,6 @@ class RecievingMode:
         #apply signal to array (steer vector)
         self.beamforming= BeamForming(self.array, self.signal)
         #draw beam pattern
-        self.beamforming.find_beam_pattern( self.parent.beam_pattern_widget)
+        self.beamforming.find_beam_pattern( self.parent.beam_pattern_widget, self.array.get_array_shape())
         #get DOA
         self.beamforming.plot_recieved_signal(self.parent.interference_map_widget)

@@ -67,4 +67,5 @@ class PhasedArray:
     def get_geometrical_phases(self):
          return self.geometry_phases
     
-
+    def get_elements_angles(self):
+         return self.element_angles
