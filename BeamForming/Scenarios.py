@@ -14,6 +14,8 @@ class Scenarios:
         
 
     def ultrasonic(self):
+        self.parent.mode_combox.setCurrentIndex(0)
+        self.parent.selectMode(0)
         self.parent.elements_num_spinbox.setValue(8)
         self.parent.spacing_spinbox.setValue(0.5)
         self.parent.beam_angle.setValue(20)
@@ -39,9 +41,12 @@ class Scenarios:
         self.parent.check_isotropic()
         self.parent.check_uniform_phase()
         self.parent.mode_combox.setCurrentIndex(1)
+        self.parent.selectMode(1)
         self.parent.shape_combox.setCurrentIndex(0)
     
     def ablation(self):
+        self.parent.mode_combox.setCurrentIndex(0)
+        self.parent.selectMode(0)
         self.parent.elements_num_spinbox.setValue(8)
         self.parent.spacing_spinbox.setValue(2)
         self.parent.beam_angle.setValue(20)

@@ -44,15 +44,15 @@ class BeamForming:
             ax.plot(theta_bins, steer_vector_fft_dB)  # Plot beam pattern
             ax.plot([theta_max], [np.max(steer_vector_fft_dB)], 'ro')  # Mark peak
             ax.text(theta_max, np.max(steer_vector_fft_dB) - 4, 
-                    f"{np.round(theta_max * 180 / np.pi)}°")  # Annotate peak in degrees
+                    f"{np.round(theta_max * 180 / np.pi)}°", color= 'white')  # Annotate peak in degrees
             
             ax.set_theta_zero_location('N') # make 0 degrees point up
             ax.set_theta_direction(-1) # increase anticlockwise
             # ax.set_rlabel_position(55)  # Move grid labels away from other labels
             ax.set_thetamin(-90) # only show top half
             ax.set_thetamax(90)
-            ax.tick_params(axis='x', colors='blue')  # Change x-tick color
-            ax.tick_params(axis='y', colors='blue')  # Change x-tick color
+            ax.tick_params(axis='x', colors='white')  # Change x-tick color
+            ax.tick_params(axis='y', colors='white')  # Change x-tick color
             ax.set_ylim([-50, 1])
             fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
@@ -82,8 +82,8 @@ class BeamForming:
             fig = Figure(figsize=(5, 5),  facecolor='none')
             ax = fig.add_subplot(111, projection='polar', frame_on=False)
             fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
-            ax.tick_params(axis='x', colors='blue')  # Change x-tick color
-            ax.tick_params(axis='y', colors='blue')  # Change x-tick color
+            ax.tick_params(axis='x', colors='white')  # Change x-tick color
+            ax.tick_params(axis='y', colors='white')  # Change x-tick color
             ax.plot(phi, beam_pattern)
 
         # Embed plot into the PyQt widget
@@ -164,17 +164,13 @@ class BeamForming:
         intensity_map = intensity_map / np.max(intensity_map)
 
         # Create Cartesian plot
-        fig = Figure(figsize=(8, 6), facecolor='none')
-        ax = fig.add_subplot(111, frame_on=False)
-        fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
-        ax.tick_params(axis='x', colors='blue')  # Change x-tick color
-        ax.tick_params(axis='y', colors='blue')  # Change x-tick color
+        fig = Figure(figsize=(7, 5), facecolor='none')
+        ax = fig.add_subplot(111)
         # Plot the interference map
-        im = ax.pcolormesh(x_grid, y_grid, intensity_map, shading='auto', cmap='viridis',)
-        cbar = fig.colorbar(im, ax=ax)
-
-        # Change color of the colorbar tick labels to blue
-        cbar.ax.tick_params(colors='blue')
+        im = ax.pcolormesh(x_grid, y_grid, intensity_map, shading='auto', cmap='viridis',) 
+        ax.tick_params(axis='x', colors='white')  # Change x-tick color
+        ax.tick_params(axis='y', colors='white')  # Change x-tick color
+        
 
         # Plot antenna positions
         if array_shape == 'linear':
@@ -183,14 +179,16 @@ class BeamForming:
             ax.scatter(positions_x, positions_y, color='red', marker='o', label='Antennas')
 
         # Label and format the plot
-        ax.set_title("Interference Map")
-        ax.set_xlabel("X Position (m)", color='blue')
-        ax.set_ylabel("Y Position (m)",  color='blue')
-        ax.set_aspect('equal', adjustable='box')  # Keep correct proportions
+        ax.set_xlabel("X Position (m)", color='white')
+        ax.set_ylabel("Y Position (m)",  color='white')
+        #ax.set_aspect('equal', adjustable='box')  # Keep correct proportions
         ax.legend()
 
         # Add colorbar
-        fig.colorbar(im, ax=ax, label="Normalized Intensity")
+        cbar= fig.colorbar(im, ax=ax, label="Normalized Intensity")
+        cbar.ax.tick_params(colors='white')
+        cbar.ax.yaxis.label.set_color('white')
+
 
         # Embed the plot into the parent widget
         canvas = FigureCanvas(fig)
@@ -211,8 +209,7 @@ class BeamForming:
 
     def plot_recieved_signal(self, parent_widget): #after delays and sum (conventional beamforming)
         fig = Figure(figsize=(8, 6), facecolor='none')
-        ax = fig.add_subplot(111, frame_on=False)
-        fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+        ax = fig.add_subplot(111)
         recieved_signal= self.apply_signal_to_array('R')
         for element_num in range(recieved_signal.shape[0]):
             ax.plot(np.asarray(recieved_signal[element_num,:]).squeeze().real[0:200], label=f'Antenna{element_num}')
@@ -220,8 +217,8 @@ class BeamForming:
         ax.set_title("Plot of first 200 samples of the signal recieved by each antenna")
         ax.set_xlabel("time")
         ax.set_ylabel("amplitude")
-        ax.tick_params(axis='x', colors='blue')  # Change x-tick color
-        ax.tick_params(axis='y', colors='blue')  # Change x-tick color
+        ax.tick_params(axis='x', colors='white')  # Change x-tick color
+        ax.tick_params(axis='y', colors='white')  # Change x-tick color
         # Embed the plot into the parent widget
         canvas = FigureCanvas(fig)
         if parent_widget.layout() is None:
