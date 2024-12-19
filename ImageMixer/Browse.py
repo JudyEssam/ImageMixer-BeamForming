@@ -4,12 +4,13 @@ from InputViewer import InputViewer
 from PyQt5.QtGui import QImage
 
 class Browse:
-    def __init__(self, widget,image_num,input_viewer):
+    def __init__(self, widget,image_num,input_viewer,main_window):
         self._widget = widget
         self._is_grey = False
         self.image_num=image_num
         self.input_viewer=input_viewer
         self._image_path = None  # To store the selected image path
+        self.main_window = main_window 
         self.setup_double_click_event()
         
 
@@ -49,7 +50,7 @@ class Browse:
 
        
         self.input_viewer.displayImage(self._image_path, self.image_num,self._is_grey,0)
-
+        self.main_window.trigger_mixing() 
 
 
             

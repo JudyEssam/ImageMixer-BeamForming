@@ -10,6 +10,7 @@ from copy import deepcopy
 
 class SelectableLabel(QLabel):
     def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
+        
         super().__init__(parent)
         self.setStyleSheet("border: none;")
         self.shared_rect = shared_rect
