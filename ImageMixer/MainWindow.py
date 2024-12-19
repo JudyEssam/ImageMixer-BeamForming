@@ -36,6 +36,7 @@ class MainWindow2(QMainWindow):
         self.image3 = self.findChild(QWidget, "image3")
         self.image4 = self.findChild(QWidget, "image4")
         self.RadioButton1.setChecked(True)
+        
 
         # Create Button Groups
         self.group1 = QButtonGroup(self)  
@@ -102,10 +103,10 @@ class MainWindow2(QMainWindow):
         self.image3_slider.valueChanged.connect(lambda: self.update_componant3_weight(2))
         self.image4_slider.valueChanged.connect(lambda: self.update_componant4_weight(3))
 
-        self.input_image1 = Browse(self.image1,0,self.input_viewer)
-        self.input_image2 = Browse(self.image2,1,self.input_viewer)
-        self.input_image3 = Browse(self.image3,2,self.input_viewer)
-        self.input_image4 = Browse(self.image4,3,self.input_viewer)
+        self.input_image1 = Browse(self.image1,0,self.input_viewer,self)
+        self.input_image2 = Browse(self.image2,1,self.input_viewer,self)
+        self.input_image3 = Browse(self.image3,2,self.input_viewer,self)
+        self.input_image4 = Browse(self.image4,3,self.input_viewer,self)
         self.input_image1.set_image()
         self.input_image2.set_image()
         self.input_image3.set_image()
@@ -116,24 +117,21 @@ class MainWindow2(QMainWindow):
         self.image4_combobox.currentIndexChanged.connect(self.trigger_mixing)
 
         self.image1_combobox.currentIndexChanged.connect(
-            lambda index: self.input_viewer.displayImage(self.input_image1._image_path, 0, self.input_image1._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_image1._image_path, 0, self.input_image1._is_grey, index)
         )
 
         self.image2_combobox.currentIndexChanged.connect(
-            lambda index: self.input_viewer.displayImage(self.input_image2._image_path, 1, self.input_image2._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_image2._image_path, 1, self.input_image2._is_grey, index)
         )
         self.image3_combobox.currentIndexChanged.connect(
-            lambda index: self.input_viewer.displayImage(self.input_image3._image_path, 2, self.input_image3._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_image3._image_path, 2, self.input_image3._is_grey, index)
         )
         self.image4_combobox.currentIndexChanged.connect(
-            lambda index: self.input_viewer.displayImage(self.input_image4._image_path, 3, self.input_image4._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_image4._image_path, 3, self.input_image4._is_grey, index)
         )
-
-
-        self.output_viewer = OutputViewer(self.output1, self.output2, self.RadioButton1, self.RadioButton2, self.progressbar)
-                
         self.mixing_timer = QTimer()
         self.mixing_timer.setSingleShot(True)
+        self.output_viewer = OutputViewer(self.output1, self.output2, self.RadioButton1, self.RadioButton2, self.progressbar)
         self.mixing_timer.timeout.connect(self.start_mixing)
         self.mixButton.clicked.connect(self.start_mixing)
         self.RadioButton1.clicked.connect(self.trigger_mixing)
@@ -141,6 +139,10 @@ class MainWindow2(QMainWindow):
 
         self.worker = None
         self.mixButton.clicked.connect(self.start_mixing)
+    def on_combobox_change(self, input_image, image_num,is_grey, index):
+     """Handle combo box changes efficiently."""
+     self.input_viewer.displayImage(input_image, image_num, is_grey, index)
+     self.trigger_mixing()  # Trigger mixing only after updating the displayed image
 
     def clear_region(self):
         self.input_viewer.clearRectangle()
@@ -149,7 +151,8 @@ class MainWindow2(QMainWindow):
         self.trigger_mixing()
     def trigger_mixing(self):
         """Trigger the mixing process with debouncing."""
-        self.mixing_timer.start(10) 
+        if not self.mixing_timer.isActive():
+         self.mixing_timer.start(10) 
     def closeEvent(self, event):
         if self.worker is not None:
             self.worker.stop()
