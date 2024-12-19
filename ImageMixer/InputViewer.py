@@ -6,9 +6,11 @@ from ImageComponents import ImageComponents
 import numpy as np
 import cv2
 from copy import deepcopy
+from PyQt5.QtCore import QObject, pyqtSignal
 
-
+from SignalEmitter import SignalEmitter,global_signal_emitter
 class SelectableLabel(QLabel):
+   
     def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
         
         super().__init__(parent)
@@ -22,7 +24,11 @@ class SelectableLabel(QLabel):
         self.input_viewer=input_viewer
         self.mode=mode
         self.original_copy= None
-        
+
+        self.global_signal_emitter=global_signal_emitter
+
+    
+    
     def mouseDoubleClickEvent(self, event):
         """ Handle double-click event """
         if event.button() == Qt.LeftButton:
@@ -43,6 +49,7 @@ class SelectableLabel(QLabel):
                 self.shared_rect.setTopLeft(self.start_pos)
                 self.shared_rect.setBottomRight(self.start_pos)
                 self.update_callback()
+
             elif event.button() == Qt.RightButton:
                 self.is_mouse_pressed=True
                 self.prev_y = event.pos().y()
@@ -59,21 +66,23 @@ class SelectableLabel(QLabel):
                 brightness_value = delta_y
                 self.images_array[self.image_num].change_brightness(brightness_value)
                 updated_image = self.images_array[self.image_num].get_current_image()
-                self.input_viewer.update_displayed_image(self.image_num,updated_image)
-
+                self.input_viewer.update_displayed_image(
+                    self.image_num,updated_image)
+                self.global_signal_emitter.function_done.emit(True)
             elif  event.buttons() & Qt.RightButton and self.prev_x is not None and self.is_mouse_pressed:   
                 delta_x = event.pos().x() - self.prev_x
                 contrast_value=delta_x
                 self.images_array[self.image_num].change_contrast(contrast_value)
                 updated_image = self.images_array[self.image_num].get_current_image()
                 self.input_viewer.update_displayed_image(self.image_num,updated_image)
-
+                self.global_signal_emitter.function_done.emit(True)
 
     def mouseReleaseEvent(self, event):
             if event.button() == Qt.LeftButton:
                 self.shared_rect.setBottomRight(event.pos())
                 self.start_pos = None
                 self.update_callback()
+                self.global_signal_emitter.function_done.emit(True)
                 self.is_mouse_pressed=False
 
     def paintEvent(self, event):
@@ -89,7 +98,7 @@ class SelectableLabel(QLabel):
 
 
 class InputViewer:
-    def __init__(self):
+    def __init__(self,main_window):
         self.shared_rect = QRect()
         self.input1_widget = None
         self.input2_widget = None
@@ -105,7 +114,7 @@ class InputViewer:
         self.fft_labels=[]
         self.fft_components = [[None, None,None,1] for _ in range(4)]
         self.image_component=None
-
+        self.main_window=main_window
     def displayImage(self, image_path, image_num, is_grey,component_index):
         if not (0 <= image_num < len(self.image_labels)):
             print(f"Invalid image number: {image_num}")
@@ -187,7 +196,7 @@ class InputViewer:
         )
         self.image_labels[image_num].setScaledContents(True)
         print(f"Image {image_num} displayed successfully.")
-
+        self.main_window.trigger_mixing
 
 
     def set_image_fft_widgets(self,image_widgets,fft_widgets):
