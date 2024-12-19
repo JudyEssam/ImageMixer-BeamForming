@@ -19,13 +19,16 @@ class MainWindow1(QMainWindow):
 
         self.phase_label = self.findChild(QLabel, "Phase_2")
 
+        #interference map label
+        self.interfere_label = self.findChild(QLabel ,"label_4")
+
         #add array button
         self.addArray = self.findChild(QPushButton, "add_array")
         self.addArray.setVisible(False)
 
         #scenarios
         self.scenarios_comboBox= self.findChild(QComboBox, 'scenarios_comboBox')
-        self.scenarios_comboBox.currentIndexChanged.connect(self.choose_scenario)
+        self.scenarios_comboBox.activated.connect(self.choose_scenario)
 
         #for x and y location
         self.loc_x = self.findChild(QLabel, "locX")
@@ -89,6 +92,7 @@ class MainWindow1(QMainWindow):
         self.array=None
         self.signal= Signal()
         self.scenario= Scenarios(self)
+        self.scenario.ultrasonic()
 
     def choose_scenario(self, index):
         if index == 0:
@@ -127,7 +131,9 @@ class MainWindow1(QMainWindow):
         if index==0:
             self.mode= TransmissionMode(self)
             self.beamLabel.setText("Steering Angle: ")
+            self.interfere_label.setText("Interference Map")
         elif index==1:
+            self.interfere_label.setText("Delays of Antennas (Conventional BeamForming)")
             self.mode= RecievingMode(self)
             self.beamLabel.setText("Direction of Arrival: ")
 
@@ -140,7 +146,7 @@ class MainWindow1(QMainWindow):
         else:
             layout = sliders_widget.layout()
         for _ in range(value):
-            slider = QSlider(Qt.Vertical) 
+            slider = QSlider(Qt.Vertical)
             slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
             slider.setValue(180)
             layout.addWidget(slider)
@@ -281,6 +287,7 @@ class MainWindow1(QMainWindow):
     
     def formSignal(self):
         speed= self.prop_speed_spinbox.value()
+        self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value())
         if speed>0:
             self.signal.set_speed(speed*10**self.speed_power_spinbox.value())
         self.signal.create_signal()
