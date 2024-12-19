@@ -40,6 +40,7 @@ class MainWindow2(QMainWindow):
         self.image2 = self.findChild(QWidget, "image2")
         self.image3 = self.findChild(QWidget, "image3")
         self.image4 = self.findChild(QWidget, "image4")
+
         self.RadioButton1.setChecked(True)
 
 
@@ -70,6 +71,7 @@ class MainWindow2(QMainWindow):
         self.image3_combobox=self.findChild(QComboBox, "combo3")
         self.image4_combobox=self.findChild(QComboBox, "combo4")
 
+        self.isInner_radiobutton.setChecked(True)
 
         self.deselect_region= self.findChild(QPushButton,"Deselect")
 
