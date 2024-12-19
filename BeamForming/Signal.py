@@ -45,3 +45,7 @@ class Signal:
 
     def get_signal_data(self):
         return self.signal_data
+
+    def renew_amp_freq(self, amp, freq):
+        self.signal_frequency = [freq]
+        self.amp= [amp]

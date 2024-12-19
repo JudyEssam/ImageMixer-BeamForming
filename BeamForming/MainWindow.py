@@ -287,7 +287,7 @@ class MainWindow1(QMainWindow):
     
     def formSignal(self):
         speed= self.prop_speed_spinbox.value()
-        self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value())
+        self.signal.renew_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value())
         if speed>0:
             self.signal.set_speed(speed*10**self.speed_power_spinbox.value())
         self.signal.create_signal()
