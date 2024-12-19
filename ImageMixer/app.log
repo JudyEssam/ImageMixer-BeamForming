@@ -31330,3 +31330,183 @@
 2024-12-19 13:34:41,171 - INFO - Real and Imaginary arrays have been reset.
 2024-12-19 13:34:41,181 - INFO - Performing inverse RFFT.
 2024-12-19 13:34:41,258 - INFO - Inverse RFFT computation completed.
+2024-12-19 13:48:44,457 - INFO - Mixer class initialized.
+2024-12-19 13:48:51,224 - INFO - Processing mixing result with 4 image components.
+2024-12-19 13:48:51,224 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-19 13:48:51,234 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-19 13:48:51,234 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 13:48:51,234 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 13:48:51,244 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-19 13:48:51,244 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 13:48:51,244 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 13:48:51,254 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-19 13:48:51,254 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 13:48:51,254 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 13:48:51,264 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-19 13:48:51,264 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 13:48:51,274 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 13:48:51,279 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 13:48:51,284 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 13:48:51,334 - INFO - Mixing result successfully computed.
+2024-12-19 13:48:51,334 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 13:48:51,344 - INFO - Performing inverse RFFT.
+2024-12-19 13:48:51,434 - INFO - Inverse RFFT computation completed.
+2024-12-19 13:48:53,883 - INFO - Processing mixing result with 4 image components.
+2024-12-19 13:48:53,883 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-19 13:48:53,886 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-19 13:48:53,886 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 13:48:53,886 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 13:48:53,886 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-19 13:48:53,886 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 13:48:53,886 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 13:48:53,906 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-19 13:48:53,906 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 13:48:53,906 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 13:48:53,906 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-19 13:48:53,916 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 13:48:53,916 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 13:48:53,926 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 13:48:53,926 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 13:48:53,986 - INFO - Mixing result successfully computed.
+2024-12-19 13:48:53,986 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 13:48:53,996 - INFO - Performing inverse RFFT.
+2024-12-19 13:48:54,084 - INFO - Inverse RFFT computation completed.
+2024-12-19 13:48:57,120 - INFO - Processing mixing result with 4 image components.
+2024-12-19 13:48:57,120 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-19 13:48:57,120 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-19 13:48:57,120 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 13:48:57,120 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 13:48:57,130 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-19 13:48:57,130 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 13:48:57,130 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 13:48:57,140 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-19 13:48:57,140 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 13:48:57,140 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 13:48:57,140 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-19 13:48:57,140 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 13:48:57,150 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 13:48:57,150 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 13:48:57,163 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 13:48:57,215 - INFO - Mixing result successfully computed.
+2024-12-19 13:48:57,215 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 13:48:57,215 - INFO - Performing inverse RFFT.
+2024-12-19 13:48:57,295 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:27:50,302 - INFO - Mixer class initialized.
+2024-12-19 14:27:57,218 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:27:57,218 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-19 14:27:57,219 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-19 14:27:57,219 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 14:27:57,219 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 14:27:57,238 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-19 14:27:57,238 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:27:57,238 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:27:57,249 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-19 14:27:57,249 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:27:57,249 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:27:57,318 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-19 14:27:57,328 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:27:57,342 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 14:27:57,350 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:27:57,359 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:27:57,532 - INFO - Mixing result successfully computed.
+2024-12-19 14:27:57,532 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:27:57,546 - INFO - Performing inverse RFFT.
+2024-12-19 14:27:57,675 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:27:58,960 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:27:58,960 - DEBUG - Maximum dimensions calculated: max_height=1500, max_width=1000
+2024-12-19 14:27:58,965 - DEBUG - Image 0 padded to (1500, 1000).
+2024-12-19 14:27:58,965 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 14:27:58,965 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 14:27:58,975 - DEBUG - Image 1 padded to (1500, 1000).
+2024-12-19 14:27:58,983 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:27:58,983 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:27:58,985 - DEBUG - Image 2 padded to (1500, 1000).
+2024-12-19 14:27:58,995 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:27:58,995 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:27:59,006 - DEBUG - Image 3 padded to (1500, 1000).
+2024-12-19 14:27:59,006 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:27:59,016 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 14:27:59,031 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:27:59,036 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:27:59,158 - INFO - Mixing result successfully computed.
+2024-12-19 14:27:59,158 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:27:59,178 - INFO - Performing inverse RFFT.
+2024-12-19 14:27:59,299 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:28:00,817 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:28:00,817 - DEBUG - Maximum dimensions calculated: max_height=675, max_width=1080
+2024-12-19 14:28:00,817 - DEBUG - Image 0 padded to (675, 1080).
+2024-12-19 14:28:00,817 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 14:28:00,817 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 14:28:00,827 - DEBUG - Image 1 padded to (675, 1080).
+2024-12-19 14:28:00,834 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:28:00,834 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:28:00,837 - DEBUG - Image 2 padded to (675, 1080).
+2024-12-19 14:28:00,837 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:28:00,837 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:28:00,847 - DEBUG - Image 3 padded to (675, 1080).
+2024-12-19 14:28:00,847 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:28:00,847 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 14:28:00,857 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:28:00,857 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:28:00,899 - INFO - Mixing result successfully computed.
+2024-12-19 14:28:00,900 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:28:00,903 - INFO - Performing inverse RFFT.
+2024-12-19 14:28:00,976 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:28:05,618 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:28:05,618 - DEBUG - Maximum dimensions calculated: max_height=675, max_width=1080
+2024-12-19 14:28:05,618 - DEBUG - Image 0 padded to (675, 1080).
+2024-12-19 14:28:05,618 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 14:28:05,618 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 14:28:05,626 - DEBUG - Image 1 padded to (675, 1080).
+2024-12-19 14:28:05,626 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:28:05,626 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:28:05,636 - DEBUG - Image 2 padded to (675, 1080).
+2024-12-19 14:28:05,636 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:28:05,636 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:28:05,636 - DEBUG - Image 3 padded to (675, 1080).
+2024-12-19 14:28:05,644 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:28:05,646 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 14:28:05,646 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:28:05,646 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:28:05,707 - INFO - Mixing result successfully computed.
+2024-12-19 14:28:05,707 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:28:05,707 - INFO - Performing inverse RFFT.
+2024-12-19 14:28:05,786 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:28:07,704 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:28:07,704 - DEBUG - Maximum dimensions calculated: max_height=339, max_width=236
+2024-12-19 14:28:07,704 - DEBUG - Image 0 padded to (339, 236).
+2024-12-19 14:28:07,704 - ERROR - Invalid mode 'None' at index 1. Defaulting to 'real'.
+2024-12-19 14:28:07,704 - WARNING - One of the lists for component 1 is None, initializing with zeros.
+2024-12-19 14:28:07,704 - DEBUG - Image 1 padded to (339, 236).
+2024-12-19 14:28:07,704 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:28:07,704 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:28:07,715 - DEBUG - Image 2 padded to (339, 236).
+2024-12-19 14:28:07,715 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:28:07,715 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:28:07,716 - DEBUG - Image 3 padded to (339, 236).
+2024-12-19 14:28:07,717 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:28:07,717 - INFO - Processing image 1 - Mode: real, Gain: 1
+2024-12-19 14:28:07,717 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:28:07,718 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:28:07,724 - INFO - Mixing result successfully computed.
+2024-12-19 14:28:07,725 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:28:07,726 - INFO - Performing inverse RFFT.
+2024-12-19 14:28:07,736 - INFO - Inverse RFFT computation completed.
+2024-12-19 14:28:12,777 - INFO - Processing mixing result with 4 image components.
+2024-12-19 14:28:12,777 - DEBUG - Maximum dimensions calculated: max_height=1535, max_width=1000
+2024-12-19 14:28:12,797 - DEBUG - Image 0 padded to (1535, 1000).
+2024-12-19 14:28:12,807 - DEBUG - Image 1 padded to (1535, 1000).
+2024-12-19 14:28:12,807 - ERROR - Invalid mode 'None' at index 2. Defaulting to 'real'.
+2024-12-19 14:28:12,807 - WARNING - One of the lists for component 2 is None, initializing with zeros.
+2024-12-19 14:28:12,817 - DEBUG - Image 2 padded to (1535, 1000).
+2024-12-19 14:28:12,817 - ERROR - Invalid mode 'None' at index 3. Defaulting to 'real'.
+2024-12-19 14:28:12,817 - WARNING - One of the lists for component 3 is None, initializing with zeros.
+2024-12-19 14:28:12,827 - DEBUG - Image 3 padded to (1535, 1000).
+2024-12-19 14:28:12,827 - INFO - Processing image 0 - Mode: magnitude, Gain: 1
+2024-12-19 14:28:12,837 - INFO - Processing image 1 - Mode: magnitude, Gain: 1
+2024-12-19 14:28:12,837 - INFO - Processing image 2 - Mode: real, Gain: 1
+2024-12-19 14:28:12,847 - INFO - Processing image 3 - Mode: real, Gain: 1
+2024-12-19 14:28:12,937 - INFO - Mixing result successfully computed.
+2024-12-19 14:28:12,937 - INFO - Real and Imaginary arrays have been reset.
+2024-12-19 14:28:12,947 - INFO - Performing inverse RFFT.
+2024-12-19 14:28:13,139 - INFO - Inverse RFFT computation completed.

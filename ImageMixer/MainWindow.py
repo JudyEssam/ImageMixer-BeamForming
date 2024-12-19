@@ -12,6 +12,8 @@ from Mixer import Mixer
 from MixingWorker import MixingWorker
 from SignalEmitter import SignalEmitter
 from SignalEmitter import global_signal_emitter
+from SignalEmitter import global_signal_emitter_2
+
 
 class MainWindow2(QMainWindow):
     def __init__(self):
@@ -45,6 +47,8 @@ class MainWindow2(QMainWindow):
         self.group1 = QButtonGroup(self)  
         self.group2 = QButtonGroup(self)  
         self.signal_emit=global_signal_emitter
+        self.signal_emit_2=global_signal_emitter_2
+
         # Add Buttons to Groups
         self.group1.addButton(self.RadioButton1)
         self.group1.addButton(self.RadioButton2)
@@ -72,6 +76,8 @@ class MainWindow2(QMainWindow):
         self.isInner_radiobutton.clicked.connect(self.trigger_mixing)
         self.isOuter_radiobutton.clicked.connect(self.trigger_mixing)
         self.signal_emit.function_done.connect(self.trigger_mixing)
+        self.signal_emit_2.function_done.connect(self.trigger_mixing)
+
 
         self.image1_slider=self.findChild(QSlider,"Slider_weight1")
         self.image2_slider=self.findChild(QSlider,"Slider_weight2")
@@ -93,7 +99,7 @@ class MainWindow2(QMainWindow):
         self.image4_slider.setSingleStep(10)
         self.image4_slider.valueChanged.connect(self.trigger_mixing)
 
-        self.input_viewer = InputViewer(self)
+        self.input_viewer = InputViewer()
         self.input_viewer.set_image_fft_widgets(self.images_widgets,self.fft_widgets) 
         self.deselect_region.clicked.connect(self.clear_region) 
         

@@ -7,6 +7,7 @@ import numpy as np
 import cv2
 from copy import deepcopy
 from PyQt5.QtCore import QObject, pyqtSignal
+from SignalEmitter import global_signal_emitter_2
 
 from SignalEmitter import SignalEmitter,global_signal_emitter
 class SelectableLabel(QLabel):
@@ -98,7 +99,7 @@ class SelectableLabel(QLabel):
 
 
 class InputViewer:
-    def __init__(self,main_window):
+    def __init__(self):
         self.shared_rect = QRect()
         self.input1_widget = None
         self.input2_widget = None
@@ -114,7 +115,8 @@ class InputViewer:
         self.fft_labels=[]
         self.fft_components = [[None, None,None,1] for _ in range(4)]
         self.image_component=None
-        self.main_window=main_window
+        self.global_signal_emitter_2=global_signal_emitter_2
+
     def displayImage(self, image_path, image_num, is_grey,component_index):
         if not (0 <= image_num < len(self.image_labels)):
             print(f"Invalid image number: {image_num}")
@@ -196,8 +198,8 @@ class InputViewer:
         )
         self.image_labels[image_num].setScaledContents(True)
         print(f"Image {image_num} displayed successfully.")
-        self.main_window.trigger_mixing
 
+        self.global_signal_emitter_2.function_done.emit(True)
 
     def set_image_fft_widgets(self,image_widgets,fft_widgets):
         self.image1_label = SelectableLabel(self.updateAllLabels, self.images,0,"image_widget",image_widgets[0],input_viewer=self)
