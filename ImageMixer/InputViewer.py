@@ -22,10 +22,9 @@ class SelectableLabel(QLabel):
         self.image_num=image_num # This is the Image instance
         self.start_pos = None
         self.prev_y = None
-        self.input_viewer=input_viewer
+        self.input_viewer=input_viewer 
         self.mode=mode
         self.original_copy= None
-
         self.global_signal_emitter=global_signal_emitter
 
     
@@ -55,6 +54,7 @@ class SelectableLabel(QLabel):
                 self.is_mouse_pressed=True
                 self.prev_y = event.pos().y()
                 self.prev_x=event.pos().x()    
+            # self.input_viewer.useFullRegion=False
 
     def mouseMoveEvent(self, event):
             if event.buttons() & Qt.LeftButton:
@@ -113,6 +113,7 @@ class InputViewer:
         self.images = [None] * 4
         self.image_labels = []
         self.fft_labels=[]
+        self.image_paths=[None]*4
         self.fft_components = [[None, None,None,1] for _ in range(4)]
         self.image_component=None
         self.global_signal_emitter_2=global_signal_emitter_2
@@ -121,8 +122,7 @@ class InputViewer:
         if not (0 <= image_num < len(self.image_labels)):
             print(f"Invalid image number: {image_num}")
             return
-
-        # Assuming Image is your custom class for image processing
+        self.image_paths[image_num]=image_path        # Assuming Image is your custom class for image processing
         self.image = Image(image_path, is_grey)
         self.images[image_num]=self.image
         self.qimage_image= self.image.qimage

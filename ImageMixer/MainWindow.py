@@ -88,19 +88,31 @@ class MainWindow2(QMainWindow):
 
         self.image1_slider.setRange(0,100)
         self.image1_slider.setSingleStep(10)
+        self.image1_slider.setValue(100)
+        self.slider1_label = self.findChild(QLabel, 'label_7')
+        self.image1_slider.valueChanged.connect(self. update_slider_val)
         self.image1_slider.valueChanged.connect(self.trigger_mixing)
+
         self.image2_slider.setRange(0,100)
         self.image2_slider.setSingleStep(10)
+        self.image2_slider.setValue(100)
+        self.slider2_label = self.findChild(QLabel, 'label_11')
+        self.image2_slider.valueChanged.connect(self. update_slider_val)
         self.image2_slider.valueChanged.connect(self.trigger_mixing)
 
         self.image3_slider.setRange(0,100)
         self.image3_slider.setSingleStep(10)
+        self.image3_slider.setValue(100)
+        self.slider3_label = self.findChild(QLabel, 'label_9')
+        self.image3_slider.valueChanged.connect(self. update_slider_val)
         self.image3_slider.valueChanged.connect(self.trigger_mixing)
 
         self.image4_slider.setRange(0,100)
         self.image4_slider.setSingleStep(10)
+        self.image4_slider.setValue(100)
+        self.slider4_label = self.findChild(QLabel, 'label_13')
         self.image4_slider.valueChanged.connect(self.trigger_mixing)
-
+        self.image4_slider.valueChanged.connect(self. update_slider_val)
         self.input_viewer = InputViewer()
         self.input_viewer.set_image_fft_widgets(self.images_widgets,self.fft_widgets) 
         self.deselect_region.clicked.connect(self.clear_region) 
@@ -129,17 +141,17 @@ class MainWindow2(QMainWindow):
         self.image4_combobox.currentIndexChanged.connect(self.trigger_mixing)
 
         self.image1_combobox.currentIndexChanged.connect(
-            lambda index: self.on_combobox_change(self.input_image1._image_path, 0, self.input_image1._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_viewer.image_paths[0], 0, self.input_image1._is_grey, index)
         )
 
         self.image2_combobox.currentIndexChanged.connect(
-            lambda index: self.on_combobox_change(self.input_image2._image_path, 1, self.input_image2._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_viewer.image_paths[1], 1, self.input_image2._is_grey, index)
         )
         self.image3_combobox.currentIndexChanged.connect(
-            lambda index: self.on_combobox_change(self.input_image3._image_path, 2, self.input_image3._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_viewer.image_paths[2], 2, self.input_image3._is_grey, index)
         )
         self.image4_combobox.currentIndexChanged.connect(
-            lambda index: self.on_combobox_change(self.input_image4._image_path, 3, self.input_image4._is_grey, index)
+            lambda index: self.on_combobox_change(self.input_viewer.image_paths[3], 3, self.input_image4._is_grey, index)
         )
         self.mixing_timer = QTimer()
         self.mixing_timer.setSingleShot(True)
@@ -154,7 +166,17 @@ class MainWindow2(QMainWindow):
 
 
 
-   
+    def update_slider_val(self):
+      value=self.image1_slider.value()
+      self.slider1_label.setText(f"{value}% ")
+      value=self.image2_slider.value()
+      self.slider2_label.setText(f"{value}% ")
+      value=self.image3_slider.value()
+      self.slider3_label.setText(f"{value}% ")
+      value=self.image4_slider.value()
+      self.slider4_label.setText(f"{value}% ")
+
+
     def on_combobox_change(self, input_image, image_num,is_grey, index):
      """Handle combo box changes efficiently."""
      self.input_viewer.displayImage(input_image, image_num, is_grey, index)
