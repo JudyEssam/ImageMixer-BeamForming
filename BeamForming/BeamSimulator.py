@@ -79,12 +79,16 @@ class BeamForming:
             beam_pattern /= np.max(beam_pattern)
 
             # Create a polar plot
-            fig = Figure(figsize=(5, 5),  facecolor='none')
+            fig = Figure(figsize=(7, 5),  facecolor='none')
             ax = fig.add_subplot(111, projection='polar', frame_on=False)
-            fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+            fig.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+            
             ax.tick_params(axis='x', colors='white')  # Change x-tick color
             ax.tick_params(axis='y', colors='white')  # Change x-tick color
-            ax.plot(phi, beam_pattern)
+            ax.set_rmax(5)  # Extend the radial limit to 2 (or adjust as needed)
+            # Adjust gridline properties for larger concentric circles
+            ax.grid(linewidth=0.5) 
+            ax.plot(phi, beam_pattern, linewidth=1)
 
         # Embed plot into the PyQt widget
         canvas = FigureCanvas(fig)
@@ -208,7 +212,7 @@ class BeamForming:
 
 
     def plot_recieved_signal(self, parent_widget): #after delays and sum (conventional beamforming)
-        fig = Figure(figsize=(8, 6), facecolor='none')
+        fig = Figure(figsize=(8, 4), facecolor='none')
         ax = fig.add_subplot(111)
         recieved_signal= self.apply_signal_to_array('R')
         for element_num in range(recieved_signal.shape[0]):
