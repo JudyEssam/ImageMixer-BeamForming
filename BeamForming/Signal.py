@@ -11,9 +11,9 @@ class Signal:
         self.signal_data=None
         self.wave_number=None
 
-    def add_amp_freq(self, amp, freq):
+    def add_freq(self, freq):
         self.signal_frequency.append(freq)
-        self.amp.append(amp)
+    
 
     # def create_signal(self):
     #     self.calculate_wavenumber_wavelength()
@@ -45,7 +45,3 @@ class Signal:
 
     def get_signal_data(self):
         return self.signal_data
-
-    def renew_amp_freq(self, amp, freq):
-        self.signal_frequency = [freq]
-        self.amp= [amp]
