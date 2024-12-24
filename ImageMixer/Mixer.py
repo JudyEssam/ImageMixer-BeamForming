@@ -8,7 +8,7 @@ import logging
 class Mixer:
 
     def __init__(self):
-        __combined_complex_result__ = None   # Store combined complex result
+        _combined_complex_result_ = None   # Store combined complex result
         logging.info("Mixer class initialized.")
 
     def set_mixing_result(self, image_components):
@@ -101,7 +101,7 @@ class Mixer:
             print(f"Imaginary array shape: {imaginary_array.shape}")
 
             # Store the combined complex result
-            __combined_complex_result__= complex_result
+            _combined_complex_result_= complex_result
             logging.info("Mixing result successfully computed.")
 
             # Reset real_array and imaginary_array to zeros after computation
@@ -111,7 +111,7 @@ class Mixer:
             # Log that the arrays have been reset
             logging.info("Real and Imaginary arrays have been reset.")
 
-            return  __combined_complex_result__
+            return  _combined_complex_result_
 
         except Exception as e:
             logging.error(f"Error in set_mixing_result: {e}")

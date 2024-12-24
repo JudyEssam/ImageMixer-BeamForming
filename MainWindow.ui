@@ -42,8 +42,6 @@
            <property name="font">
             <font>
              <pointsize>-1</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
@@ -67,7 +65,7 @@ QTabBar::tab:selected {
 }</string>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <property name="iconSize">
             <size>
@@ -84,7 +82,7 @@ QTabBar::tab:selected {
             </property>
             <attribute name="icon">
              <iconset>
-              <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
+              <normaloff>../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</normaloff>../../../../../DELL/Downloads/Signal-Equalizer/Assets/radio-waves.png</iconset>
             </attribute>
             <attribute name="title">
              <string>Image Mixer</string>
@@ -238,91 +236,58 @@ background-color: #1f1f1f;</string>
                          <enum>QLayout::SetMaximumSize</enum>
                         </property>
                         <item>
-                         <layout class="QVBoxLayout" name="components_layout_2">
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_51">
-                            <property name="spacing">
-                             <number>6</number>
-                            </property>
-                            <property name="sizeConstraint">
-                             <enum>QLayout::SetMaximumSize</enum>
-                            </property>
-                            <item>
-                             <widget class="QLabel" name="label_6">
-                              <property name="styleSheet">
-                               <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-</string>
-                              </property>
-                              <property name="text">
-                               <string>0</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLabel" name="label_7">
-                              <property name="styleSheet">
-                               <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-padding-left: 150px;
-</string>
-                              </property>
-                              <property name="text">
-                               <string>100%</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </item>
-                          <item>
-                           <widget class="QSlider" name="Slider_weight1">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QSlider{
-border: 1px solid #ffffff; /* Border of the track */
-border-radius: 1px; /* Round the corners of the track */
-}
+                         <widget class="QSlider" name="Slider_weight1">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">/* Style for the slider groove (track) */
 QSlider::groove {
-background: #f0f0f0; /* Color of the track */
-border: 0px solid #ffffff; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 1px; /* Round the corners of the track */
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #1b495f; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
- border: 1px solid #e1e1e1;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #123343; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
-                            </property>
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
                         </item>
                         <item>
                          <widget class="QComboBox" name="combo1">
@@ -412,91 +377,58 @@ color: #ffffff;
                        <enum>QLayout::SetMaximumSize</enum>
                       </property>
                       <item>
-                       <layout class="QVBoxLayout" name="components_layout_3">
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_52">
-                          <property name="spacing">
-                           <number>6</number>
-                          </property>
-                          <property name="sizeConstraint">
-                           <enum>QLayout::SetMaximumSize</enum>
-                          </property>
-                          <item>
-                           <widget class="QLabel" name="label_8">
-                            <property name="styleSheet">
-                             <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-</string>
-                            </property>
-                            <property name="text">
-                             <string>0</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_9">
-                            <property name="styleSheet">
-                             <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-padding-left: 150px;
-</string>
-                            </property>
-                            <property name="text">
-                             <string>100%</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="Slider_weight3">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="cursor">
-                           <cursorShape>PointingHandCursor</cursorShape>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QSlider{
-border: 1px solid #ffffff; /* Border of the track */
-border-radius: 1px; /* Round the corners of the track */
-}
+                       <widget class="QSlider" name="Slider_weight3">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">/* Style for the slider groove (track) */
 QSlider::groove {
-background: #f0f0f0; /* Color of the track */
-border: 0px solid #ffffff; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 1px; /* Round the corners of the track */
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #1b495f; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
- border: 1px solid #e1e1e1;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #123343; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
+                        </property>
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                       </widget>
                       </item>
                       <item>
                        <widget class="QComboBox" name="combo3">
@@ -821,91 +753,58 @@ background-color: #1f1f1f;</string>
                          <enum>QLayout::SetMaximumSize</enum>
                         </property>
                         <item>
-                         <layout class="QVBoxLayout" name="components_layout_4">
-                          <item>
-                           <layout class="QHBoxLayout" name="horizontalLayout_54">
-                            <property name="spacing">
-                             <number>6</number>
-                            </property>
-                            <property name="sizeConstraint">
-                             <enum>QLayout::SetMaximumSize</enum>
-                            </property>
-                            <item>
-                             <widget class="QLabel" name="label_10">
-                              <property name="styleSheet">
-                               <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-</string>
-                              </property>
-                              <property name="text">
-                               <string>0</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLabel" name="label_11">
-                              <property name="styleSheet">
-                               <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-padding-left: 150px;
-</string>
-                              </property>
-                              <property name="text">
-                               <string>100%</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </item>
-                          <item>
-                           <widget class="QSlider" name="Slider_weight2">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QSlider{
-border: 1px solid #ffffff; /* Border of the track */
-border-radius: 1px; /* Round the corners of the track */
-}
+                         <widget class="QSlider" name="Slider_weight2">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">/* Style for the slider groove (track) */
 QSlider::groove {
-background: #f0f0f0; /* Color of the track */
-border: 0px solid #ffffff; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 1px; /* Round the corners of the track */
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #1b495f; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
- border: 1px solid #e1e1e1;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #123343; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
-                            </property>
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
                         </item>
                         <item>
                          <widget class="QComboBox" name="combo2">
@@ -995,91 +894,58 @@ color: #ffffff;
                        <enum>QLayout::SetMaximumSize</enum>
                       </property>
                       <item>
-                       <layout class="QVBoxLayout" name="components_layout_5">
-                        <item>
-                         <layout class="QHBoxLayout" name="horizontalLayout_59">
-                          <property name="spacing">
-                           <number>6</number>
-                          </property>
-                          <property name="sizeConstraint">
-                           <enum>QLayout::SetMaximumSize</enum>
-                          </property>
-                          <item>
-                           <widget class="QLabel" name="label_12">
-                            <property name="styleSheet">
-                             <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-</string>
-                            </property>
-                            <property name="text">
-                             <string>0</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_13">
-                            <property name="styleSheet">
-                             <string notr="true">color: #ffffff;
-font-weight:Bold;
-font-size: 10px;
-border:none;
-padding-left: 150px;
-</string>
-                            </property>
-                            <property name="text">
-                             <string>100%</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </item>
-                        <item>
-                         <widget class="QSlider" name="Slider_weight4">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="cursor">
-                           <cursorShape>PointingHandCursor</cursorShape>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QSlider{
-border: 1px solid #ffffff; /* Border of the track */
-border-radius: 1px; /* Round the corners of the track */
-}
+                       <widget class="QSlider" name="Slider_weight4">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">/* Style for the slider groove (track) */
 QSlider::groove {
-background: #f0f0f0; /* Color of the track */
-border: 0px solid #ffffff; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 1px; /* Round the corners of the track */
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #1b495f; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
- border: 1px solid #e1e1e1;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #123343; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
-                          </property>
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
+                        </property>
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                       </widget>
                       </item>
                       <item>
                        <widget class="QComboBox" name="combo4">
@@ -1278,10 +1144,7 @@ background-color: #1f1f1f;</string>
                    <widget class="QLabel" name="mixerOutputTo_4">
                     <property name="font">
                      <font>
-                      <family>Overpass Black</family>
                       <pointsize>-1</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="styleSheet">
@@ -1333,10 +1196,7 @@ border: None;</string>
                        <widget class="QRadioButton" name="radioButton1">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="cursor">
@@ -1357,10 +1217,7 @@ font-size: 18px;</string>
                        <widget class="QRadioButton" name="radioButton2">
                         <property name="font">
                          <font>
-                          <family>Oswald SemiBold</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="cursor">
@@ -1459,10 +1316,8 @@ background-color: #1f1f1f;</string>
                      <widget class="QPushButton" name="mixer">
                       <property name="font">
                        <font>
-                        <family>-apple-system</family>
+                        <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                         <pointsize>-1</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="cursor">
@@ -1514,7 +1369,7 @@ QPushButton:pressed {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>C:/Users/DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
+                        <normaloff>../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</normaloff>../../../../../DELL/Downloads/icons/combine-svgrepo-com.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1590,10 +1445,7 @@ border: None;</string>
                        <widget class="QLabel" name="selectedArea_6">
                         <property name="font">
                          <font>
-                          <family>Overpass Black</family>
                           <pointsize>-1</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
                          </font>
                         </property>
                         <property name="styleSheet">
@@ -1615,10 +1467,7 @@ border: None;</string>
                            <widget class="QRadioButton" name="insideRegion">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="cursor">
@@ -1643,10 +1492,7 @@ padding-left:2px;</string>
                            <widget class="QRadioButton" name="outsideRegion">
                             <property name="font">
                              <font>
-                              <family>Oswald SemiBold</family>
                               <pointsize>-1</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="cursor">
@@ -1673,10 +1519,8 @@ padding-left:2px;</string>
                          <widget class="QPushButton" name="Deselect">
                           <property name="font">
                            <font>
-                            <family>-apple-system</family>
+                            <family>-apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif</family>
                             <pointsize>-1</pointsize>
-                            <weight>75</weight>
-                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="cursor">
@@ -1809,7 +1653,7 @@ QPushButton:pressed {
            <widget class="QWidget" name="Musical_Instruments_Tab">
             <attribute name="icon">
              <iconset>
-              <normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>C:/Users/DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
+              <normaloff>../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</normaloff>../../../../../DELL/Downloads/Signal-Equalizer/Assets/music.png</iconset>
             </attribute>
             <attribute name="title">
              <string>Beamforming</string>
@@ -1841,7 +1685,6 @@ QPushButton:pressed {
                    </property>
                    <property name="font">
                     <font>
-                     <family>Overpass Black</family>
                      <pointsize>-1</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
@@ -1977,7 +1820,6 @@ color: #ffffff;
                    </property>
                    <property name="font">
                     <font>
-                     <family>Overpass Black</family>
                      <pointsize>-1</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
@@ -2112,7 +1954,6 @@ color: #ffffff;
                    </property>
                    <property name="font">
                     <font>
-                     <family>Overpass Black</family>
                      <pointsize>-1</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
@@ -2173,10 +2014,7 @@ margin-left: 0px;
                   <widget class="QRadioButton" name="radioButton1_3">
                    <property name="font">
                     <font>
-                     <family>Oswald SemiBold</family>
                      <pointsize>-1</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="cursor">
@@ -2472,11 +2310,9 @@ margin-left:8px;
                               </property>
                               <property name="font">
                                <font>
-                                <family>Overpass SemiBold</family>
                                 <pointsize>-1</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
-                                <kerning>true</kerning>
                                </font>
                               </property>
                               <property name="styleSheet">
@@ -2583,7 +2419,6 @@ font-weight:bold;
                               </property>
                               <property name="font">
                                <font>
-                                <family>Overpass SemiBold</family>
                                 <pointsize>-1</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
@@ -2686,7 +2521,6 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                               </property>
                               <property name="font">
                                <font>
-                                <family>Overpass SemiBold</family>
                                 <pointsize>-1</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
@@ -2801,7 +2635,6 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                               </property>
                               <property name="font">
                                <font>
-                                <family>Overpass SemiBold</family>
                                 <pointsize>-1</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
@@ -3213,7 +3046,6 @@ QPushButton:pressed {
                                </property>
                                <property name="font">
                                 <font>
-                                 <family>Overpass SemiBold</family>
                                  <pointsize>-1</pointsize>
                                  <weight>75</weight>
                                  <bold>true</bold>
@@ -3292,7 +3124,6 @@ border-radius:15px</string>
                                </property>
                                <property name="font">
                                 <font>
-                                 <family>Overpass SemiBold</family>
                                  <pointsize>-1</pointsize>
                                  <weight>75</weight>
                                  <bold>true</bold>
@@ -3541,11 +3372,9 @@ margin-left:8px;
                                      </property>
                                      <property name="font">
                                       <font>
-                                       <family>Overpass SemiBold</family>
                                        <pointsize>-1</pointsize>
                                        <weight>75</weight>
                                        <bold>true</bold>
-                                       <kerning>true</kerning>
                                       </font>
                                      </property>
                                      <property name="styleSheet">
@@ -3721,11 +3550,9 @@ border:none;</string>
                                      </property>
                                      <property name="font">
                                       <font>
-                                       <family>Overpass SemiBold</family>
                                        <pointsize>-1</pointsize>
                                        <weight>75</weight>
                                        <bold>true</bold>
-                                       <kerning>true</kerning>
                                       </font>
                                      </property>
                                      <property name="styleSheet">
@@ -3831,7 +3658,6 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                                      </property>
                                      <property name="font">
                                       <font>
-                                       <family>Overpass SemiBold</family>
                                        <pointsize>-1</pointsize>
                                        <weight>75</weight>
                                        <bold>true</bold>
@@ -3976,7 +3802,6 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                                      </property>
                                      <property name="font">
                                       <font>
-                                       <family>Overpass SemiBold</family>
                                        <pointsize>-1</pointsize>
                                        <weight>75</weight>
                                        <bold>true</bold>

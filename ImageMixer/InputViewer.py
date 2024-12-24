@@ -7,9 +7,8 @@ import numpy as np
 import cv2
 from copy import deepcopy
 from PyQt5.QtCore import QObject, pyqtSignal
-from SignalEmitter import global_signal_emitter_2
-
-from SignalEmitter import SignalEmitter,global_signal_emitter
+from SignalEmitter import global_signal_emitter_2 
+from SignalEmitter import global_signal_emitter   
 class SelectableLabel(QLabel):
    
     def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
@@ -19,6 +18,7 @@ class SelectableLabel(QLabel):
         self.shared_rect = shared_rect
         self.update_callback = update_callback
         self.images_array = images
+        
         self.image_num=image_num # This is the Image instance
         self.start_pos = None
         self.prev_y = None
@@ -44,6 +44,7 @@ class SelectableLabel(QLabel):
     
 
     def mousePressEvent(self, event):
+            # self.input_viewer.useFullRegion=False 
             if event.button() == Qt.LeftButton:
                 self.start_pos = event.pos()
                 self.shared_rect.setTopLeft(self.start_pos)
@@ -107,10 +108,12 @@ class InputViewer:
         self.input4_widget = None
         self.qimage=None
         self.isInner=True
+        # self.main_window=main_window
         self.useFullRegion=True 
         self.start_pos = None
         self.rect_visible = True
         self.images = [None] * 4
+        self.image_paths=[None]*4
         self.image_labels = []
         self.fft_labels=[]
         self.image_paths=[None]*4

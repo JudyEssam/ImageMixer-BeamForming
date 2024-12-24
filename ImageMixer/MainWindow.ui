@@ -224,28 +224,42 @@ border:None;</string>
                          </sizepolicy>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">QSlider::groove {
-background: rgb(149, 151, 154); /* Color of the track */
-border: 0px solid #999; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 2px; /* Round the corners of the track */
+                         <string notr="true">/* Style for the slider groove (track) */
+QSlider::groove {
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #3388b0; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
-border: none;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #1f536b; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
                         </property>
                         <property name="maximum">
                          <number>100</number>
@@ -359,28 +373,42 @@ QComboBox QAbstractItemView {
                        </sizepolicy>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QSlider::groove {
-background: rgb(149, 151, 154); /* Color of the track */
-border: 0px solid #999; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 2px; /* Round the corners of the track */
+                       <string notr="true">/* Style for the slider groove (track) */
+QSlider::groove {
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #3388b0; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
-border: none;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #1f536b; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
                       </property>
                       <property name="maximum">
                        <number>100</number>
@@ -723,28 +751,42 @@ border:None;</string>
                        </sizepolicy>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QSlider::groove {
-background: rgb(149, 151, 154); /* Color of the track */
-border: 0px solid #999; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 2px; /* Round the corners of the track */
+                       <string notr="true">/* Style for the slider groove (track) */
+QSlider::groove {
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #3388b0; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
-border: none;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #1f536b; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
                       </property>
                       <property name="maximum">
                        <number>100</number>
@@ -853,28 +895,42 @@ QComboBox QAbstractItemView {
                        </sizepolicy>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QSlider::groove {
-background: rgb(149, 151, 154); /* Color of the track */
-border: 0px solid #999; /* Border of the track */
-height: 5px; /* Set the height of the track */
-border-radius: 2px; /* Round the corners of the track */
+                       <string notr="true">/* Style for the slider groove (track) */
+QSlider::groove {
+    background: rgb(180, 180, 180); /* Brighter color for the track */
+    border: 0px solid #999; /* Border of the track */
+    height: 5px; /* Set the height of the track */
+    border-radius: 2px; /* Round the corners of the track */
+}
+
+/* Style for the filled area up to the handle */
+QSlider::sub-page {
+    background: rgb(150, 190, 220); /* Slightly brighter color for the filled area */
+    border-radius: 2px; /* Round the corners of the filled area */
+}
+
+/* Optional: Style for the unfilled area after the handle */
+QSlider::add-page {
+    background: rgb(180, 180, 180); /* Same color as the groove for consistency */
+    border-radius: 2px; /* Round the corners of the unfilled area */
 }
 
 /* Style for the slider handle (thumb) */
 QSlider::handle {
-background: #3388b0; /* Color of the handle */
-width: 20px; /* Width of the handle */
-height: 10px; /* Height of the handle */
-margin: -5px 0; /* Negative margin to center the handle vertically */
-border-radius: 4px;
-border: none;
+    background: rgb(51, 136, 176); /* Darker color for the handle */
+    width: 20px; /* Width of the handle */
+    height: 10px; /* Height of the handle */
+    margin: -5px 0; /* Negative margin to center the handle vertically */
+    border-radius: 4px; /* Round the corners of the handle */
+    border: none;
 }
 
 /* Style for the slider handle when pressed */
 QSlider::handle:pressed {
-background: #1f536b; /* Color of the handle when pressed */
-border: 1px solid #3498db; /* Border of the handle when pressed */
-}</string>
+    background: rgb(31, 83, 107); /* Even darker color for the handle when pressed */
+    border: 1px solid rgb(52, 152, 219); /* Border of the handle when pressed */
+}
+</string>
                       </property>
                       <property name="maximum">
                        <number>100</number>
