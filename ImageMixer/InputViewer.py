@@ -242,7 +242,11 @@ class InputViewer:
             label.shared_rect = self.shared_rect
         self.updateAllLabels()
            
-    def setRegion(self):
+    def setRegion(self): 
+        """
+        Processes FFT components based on the shared rectangle region, ensuring valid handling of middle regions
+        and applying scaling factors to adjust the selected or excluded regions.
+        """
         scaled_fft_components = deepcopy(self.fft_components)
         if not scaled_fft_components:
             raise ValueError("FFT components are not set")
@@ -278,25 +282,50 @@ class InputViewer:
             scale_x = fft_component[2].shape[1] / label_width
             scale_y = fft_component[2].shape[0] / label_height
 
+            # Calculate scaled coordinates
             x = max(0, int(self.shared_rect.x() * scale_x))
             y = max(0, int(self.shared_rect.y() * scale_y))
             width = min(fft_component[2].shape[1] - x, int(self.shared_rect.width() * scale_x))
             height = min(fft_component[2].shape[0] - y, int(self.shared_rect.height() * scale_y))
 
+            # Handle middle region adjustments
+            center_x = fft_component[2].shape[1] // 2
+            center_y = fft_component[2].shape[0] // 2
+            includes_center = (
+                x <= center_x < x + width and y <= center_y < y + height
+            )
 
             if self.isInner and not self.useFullRegion:
-                scaled_fft_components[index][1] = fft_component[1][y:y + height, x:x + width]
-                scaled_fft_components[index][2] = fft_component[2][y:y + height, x:x + width]
-            elif not self.isInner and not self.useFullRegion:
-                mask1 = np.ones_like(fft_component[1], dtype=np.uint8)
-                mask1[y:y + height, x:x + width] = 0
-                scaled_fft_components[index][1] *= mask1
+                mask = np.zeros_like(fft_component[2], dtype=np.float32)
+                mask[y:y + height, x:x + width] = 1
+                
+               
+                fft_component[1] *= mask
+                fft_component[2] *= mask
+                
+                scaled_fft_components[index][1] = fft_component[1]
+                scaled_fft_components[index][2] = fft_component[2]
 
-                mask2 = np.ones_like(fft_component[2], dtype=np.uint8)
-                mask2[y:y + height, x:x + width] = 0
-                scaled_fft_components[index][2] *= mask2
+            elif not self.isInner and not self.useFullRegion:
+                # Create exclusion mask
+                mask = np.ones_like(fft_component[2], dtype=np.float32)
+                mask[y:y + height, x:x + width] = 0
+
+                
+
+                # Apply the mask to both components
+                fft_component[1] *= mask
+                fft_component[2] *= mask
+
+
+                scaled_fft_components[index][1] = fft_component[1]
+                scaled_fft_components[index][2] = fft_component[2]
 
         return scaled_fft_components
+
+
+
+
 
 
     
