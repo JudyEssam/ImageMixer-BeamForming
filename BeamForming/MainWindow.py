@@ -56,7 +56,7 @@ class MainWindow1(QMainWindow):
         #for array parameters
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
         self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
-        self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
+        # self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
         self.beamLabel = self.findChild(QLabel, "beam_label")
         self.beamLabel.setText("Steering Angle: ")
         self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
@@ -76,13 +76,27 @@ class MainWindow1(QMainWindow):
         self.sliders_gain=[]
         
         #for signal parameters
-        self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
-        self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
-        self.speed_power_spinbox=self.findChild(QSpinBox, 'speedPower')
-        self.freq_power_spinbox=self.findChild(QSpinBox, 'freqPower')
-        self.amp_spinbox=self.findChild(QDoubleSpinBox, 'amplitude')
+        # self.prop_speed_spinbox=self.findChild(QComboBox, 'speed_comboBox')
+
+        #frequency
+        self.freq_spinbox = self.findChild(QSpinBox,'freqSpinBox')
+
+        self.freq_comboBox = self.findChild(QComboBox, 'freq_comboBox')
+        self.freq_comboBox.setCurrentIndex(0)
+        self.freq_comboBox.activated.connect(self.get_frequency_multiplier)
+
+        #propagation speed
+        self.speed_comboBox = self.findChild(QComboBox, 'speed_comboBox')
+        self.speed_comboBox.setCurrentIndex(0)
+        self.speed_comboBox.activated.connect(self.update_speed)
+
+        #beam angle slider
+        self.beamAngle = self.findChild(QSlider, "beam_angle")
+        self.beamAngle.valueChanged.connect(self.get_beam_angle_value)
+        self.slider_value = self.findChild(QLabel, "label")
+
         self.add_component_button=self.findChild(QPushButton, 'add_frequency')
-        self.add_component_button.clicked.connect(lambda : self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value()))
+        self.add_component_button.clicked.connect(lambda : self.signal.add_freq( self.freq_spinbox.value() * 10 ** self.get_frequency_multiplier()))
 
         #BEAM widgets
         self.beam_pattern_widget= self.findChild(QWidget, 'widget1')
@@ -93,6 +107,32 @@ class MainWindow1(QMainWindow):
         self.signal= Signal()
         self.scenario= Scenarios(self)
         self.scenario.ultrasonic()
+
+    def get_beam_angle_value(self):
+        value = self.beamAngle.value()
+        self.slider_value.setText(f"Value: {value}")
+        return value
+    
+    
+
+
+
+    def update_speed(self, index):
+        if index == 0:  # light speed
+            return 3 * 10**8
+        elif index == 1:  # ultrasound speed
+            return 1540
+
+    def get_frequency_multiplier(self):
+        index = self.freq_comboBox.currentIndex()
+        if index == 0:  # Hz
+            return 0
+        elif index == 1:  # kHz
+            return 3
+        elif index == 2:  # MHz
+            return 6
+        elif index == 3:  # GHz
+            return 9
 
     def choose_scenario(self, index):
         if index == 0:
@@ -261,7 +301,7 @@ class MainWindow1(QMainWindow):
     def formArray(self):
         antennas_num= self.elements_num_spinbox.value()
         antennas_spacing=self.spacing_spinbox.value() #acts as radius for circular array
-        beam_angle=self.beam_angle_spinbox.value()
+        beam_angle=self.get_beam_angle_value()
         shape= 'linear' if self.shape_combox.currentIndex()==0 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)    
 
@@ -287,9 +327,9 @@ class MainWindow1(QMainWindow):
     
     def formSignal(self):
         speed= self.prop_speed_spinbox.value()
-        self.signal.renew_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value())
+        self.signal.add_freq( self.freq_spinbox.value() * 10 ** self.get_frequency_multiplier())
         if speed>0:
-            self.signal.set_speed(speed*10**self.speed_power_spinbox.value())
+            self.signal.set_speed(self.update_speed())
         self.signal.create_signal()
 
     def applyChanges(self):
