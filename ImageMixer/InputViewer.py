@@ -7,9 +7,8 @@ import numpy as np
 import cv2
 from copy import deepcopy
 from PyQt5.QtCore import QObject, pyqtSignal
-from SignalEmitter import global_signal_emitter_2
-
-from SignalEmitter import SignalEmitter,global_signal_emitter
+from SignalEmitter import global_signal_emitter_2 
+from SignalEmitter import global_signal_emitter   
 class SelectableLabel(QLabel):
    
     def __init__(self,update_callback,images,image_num,mode,parent=None,shared_rect=QRect(),input_viewer=None):
@@ -19,13 +18,13 @@ class SelectableLabel(QLabel):
         self.shared_rect = shared_rect
         self.update_callback = update_callback
         self.images_array = images
+        
         self.image_num=image_num # This is the Image instance
         self.start_pos = None
         self.prev_y = None
-        self.input_viewer=input_viewer
+        self.input_viewer=input_viewer 
         self.mode=mode
         self.original_copy= None
-
         self.global_signal_emitter=global_signal_emitter
 
     
@@ -45,6 +44,7 @@ class SelectableLabel(QLabel):
     
 
     def mousePressEvent(self, event):
+            # self.input_viewer.useFullRegion=False 
             if event.button() == Qt.LeftButton:
                 self.start_pos = event.pos()
                 self.shared_rect.setTopLeft(self.start_pos)
@@ -55,6 +55,7 @@ class SelectableLabel(QLabel):
                 self.is_mouse_pressed=True
                 self.prev_y = event.pos().y()
                 self.prev_x=event.pos().x()    
+            # self.input_viewer.useFullRegion=False
 
     def mouseMoveEvent(self, event):
             if event.buttons() & Qt.LeftButton:
@@ -107,12 +108,15 @@ class InputViewer:
         self.input4_widget = None
         self.qimage=None
         self.isInner=True
+        # self.main_window=main_window
         self.useFullRegion=True 
         self.start_pos = None
         self.rect_visible = True
         self.images = [None] * 4
+        self.image_paths=[None]*4
         self.image_labels = []
         self.fft_labels=[]
+        self.image_paths=[None]*4
         self.fft_components = [[None, None,None,1] for _ in range(4)]
         self.image_component=None
         self.global_signal_emitter_2=global_signal_emitter_2
@@ -121,8 +125,7 @@ class InputViewer:
         if not (0 <= image_num < len(self.image_labels)):
             print(f"Invalid image number: {image_num}")
             return
-
-        # Assuming Image is your custom class for image processing
+        self.image_paths[image_num]=image_path        # Assuming Image is your custom class for image processing
         self.image = Image(image_path, is_grey)
         self.images[image_num]=self.image
         self.qimage_image= self.image.qimage
@@ -242,7 +245,11 @@ class InputViewer:
             label.shared_rect = self.shared_rect
         self.updateAllLabels()
            
-    def setRegion(self):
+    def setRegion(self): 
+        """
+        Processes FFT components based on the shared rectangle region, ensuring valid handling of middle regions
+        and applying scaling factors to adjust the selected or excluded regions.
+        """
         scaled_fft_components = deepcopy(self.fft_components)
         if not scaled_fft_components:
             raise ValueError("FFT components are not set")
@@ -278,25 +285,50 @@ class InputViewer:
             scale_x = fft_component[2].shape[1] / label_width
             scale_y = fft_component[2].shape[0] / label_height
 
+            # Calculate scaled coordinates
             x = max(0, int(self.shared_rect.x() * scale_x))
             y = max(0, int(self.shared_rect.y() * scale_y))
             width = min(fft_component[2].shape[1] - x, int(self.shared_rect.width() * scale_x))
             height = min(fft_component[2].shape[0] - y, int(self.shared_rect.height() * scale_y))
 
+            # Handle middle region adjustments
+            center_x = fft_component[2].shape[1] // 2
+            center_y = fft_component[2].shape[0] // 2
+            includes_center = (
+                x <= center_x < x + width and y <= center_y < y + height
+            )
 
             if self.isInner and not self.useFullRegion:
-                scaled_fft_components[index][1] = fft_component[1][y:y + height, x:x + width]
-                scaled_fft_components[index][2] = fft_component[2][y:y + height, x:x + width]
-            elif not self.isInner and not self.useFullRegion:
-                mask1 = np.ones_like(fft_component[1], dtype=np.uint8)
-                mask1[y:y + height, x:x + width] = 0
-                scaled_fft_components[index][1] *= mask1
+                mask = np.zeros_like(fft_component[2], dtype=np.float32)
+                mask[y:y + height, x:x + width] = 1
+                
+               
+                fft_component[1] *= mask
+                fft_component[2] *= mask
+                
+                scaled_fft_components[index][1] = fft_component[1]
+                scaled_fft_components[index][2] = fft_component[2]
 
-                mask2 = np.ones_like(fft_component[2], dtype=np.uint8)
-                mask2[y:y + height, x:x + width] = 0
-                scaled_fft_components[index][2] *= mask2
+            elif not self.isInner and not self.useFullRegion:
+                # Create exclusion mask
+                mask = np.ones_like(fft_component[2], dtype=np.float32)
+                mask[y:y + height, x:x + width] = 0
+
+                
+
+                # Apply the mask to both components
+                fft_component[1] *= mask
+                fft_component[2] *= mask
+
+
+                scaled_fft_components[index][1] = fft_component[1]
+                scaled_fft_components[index][2] = fft_component[2]
 
         return scaled_fft_components
+
+
+
+
 
 
     

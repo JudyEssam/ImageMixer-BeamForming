@@ -298,7 +298,6 @@ class MainWindow1(QMainWindow):
     def formArray(self):
         antennas_num= self.elements_num_spinbox.value()
         antennas_spacing=self.spacing_spinbox.value() #acts as radius for circular array
-        print(f"antennas_spacing{antennas_spacing}")
         beam_angle=self.get_beam_angle_value()
         shape= 'linear' if self.shape_combox.currentIndex()==0 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)    
