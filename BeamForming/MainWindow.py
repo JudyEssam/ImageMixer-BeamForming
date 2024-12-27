@@ -49,9 +49,6 @@ class MainWindow1(QMainWindow):
         self.mode_combox= self.findChild(QComboBox, 'Mode_comboBox')
         self.mode_combox.activated.connect(self.selectMode)
         
-        #apply changes
-        self.apply_button= self.findChild(QPushButton, 'apply')
-        self.apply_button.clicked.connect(self.applyChanges)
        
         #for array parameters
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
@@ -102,6 +99,22 @@ class MainWindow1(QMainWindow):
         self.signal= Signal()
         self.scenario= Scenarios(self)
         self.scenario.ultrasonic()
+        self.setup_auto_apply()
+
+    def setup_auto_apply(self):
+        """Connect signals to call applyChanges when components are updated."""
+        self.scenarios_comboBox.activated.connect(self.applyChanges)
+        self.mode_combox.activated.connect(self.applyChanges)
+        self.spacing_spinbox.valueChanged.connect(self.applyChanges)
+        self.elements_num_spinbox.valueChanged.connect(self.applyChanges)
+        self.beamAngle.valueChanged.connect(self.applyChanges)
+        self.shape_combox.currentIndexChanged.connect(self.applyChanges)
+        self.isotropic_checkbox.clicked.connect(self.applyChanges)
+        self.uniform_phase_checkbox.clicked.connect(self.applyChanges)
+        self.freq_spinbox.valueChanged.connect(self.applyChanges)
+        self.freq_comboBox.activated.connect(self.applyChanges)
+        self.speed_comboBox.activated.connect(self.applyChanges)
+        self.multi_array.toggled.connect(self.applyChanges)
 
     def get_frequency_multiplier(self):
         index = self.freq_comboBox.currentIndex()
@@ -180,6 +193,7 @@ class MainWindow1(QMainWindow):
             slider = QSlider(Qt.Vertical)
             slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
             slider.setValue(180)
+        
             layout.addWidget(slider)
             self.sliders_phase.append(slider)
         layout.setSpacing(30)
@@ -196,6 +210,7 @@ class MainWindow1(QMainWindow):
             slider = QSlider(Qt.Vertical) 
             slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
             slider.setValue(5)
+            slider.valueChanged.connect(self.applyChanges)
             layout.addWidget(slider)
             self.sliders_gain.append(slider)
         layout.setSpacing(30)
@@ -227,36 +242,40 @@ class MainWindow1(QMainWindow):
          return self.sliders_phase_values
 
     def show_sliders_phase(self, sliders_widget):
-        self.sliders_phase=[]
-        phase_limits= (0,360)
+        self.sliders_phase = []
+        phase_limits = (0, 360)
         if sliders_widget.layout() is None:
             layout = QVBoxLayout(sliders_widget)
             sliders_widget.setLayout(layout)
         else:
             layout = sliders_widget.layout()
         for _ in range(self.elements_num_spinbox.value()):
-            slider = QSlider(Qt.Vertical) 
-            slider.setRange(phase_limits[0],phase_limits[1])  # Set slider range to control gain
+            slider = QSlider(Qt.Vertical)
+            slider.setRange(phase_limits[0], phase_limits[1])  # Set slider range
             slider.setValue(180)
+            slider.valueChanged.connect(self.applyChanges)  # Connect to applyChanges
             layout.addWidget(slider)
             self.sliders_phase.append(slider)
         layout.setSpacing(30)
 
+
     def show_sliders_gain(self, sliders_widget):
-        self.sliders_gain=[]
-        gain_limits= (0,10)
+        self.sliders_gain = []
+        gain_limits = (0, 10)
         if sliders_widget.layout() is None:
             layout = QVBoxLayout(sliders_widget)
             sliders_widget.setLayout(layout)
         else:
             layout = sliders_widget.layout()
         for _ in range(self.elements_num_spinbox.value()):
-            slider = QSlider(Qt.Vertical) 
-            slider.setRange(gain_limits[0],gain_limits[1])  # Set slider range to control gain
+            slider = QSlider(Qt.Vertical)
+            slider.setRange(gain_limits[0], gain_limits[1])  # Set slider range
             slider.setValue(5)
+            slider.valueChanged.connect(self.applyChanges)  # Connect to applyChanges
             layout.addWidget(slider)
             self.sliders_gain.append(slider)
         layout.setSpacing(30)
+
     
     def clear_sliders(self, sliders_widget):
         layout = sliders_widget.layout()

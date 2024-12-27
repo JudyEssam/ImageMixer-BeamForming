@@ -2434,7 +2434,7 @@ QPushButton:pressed {
                                 </property>
                                 <property name="icon">
                                  <iconset>
-                                  <normaloff>../.designer/.designer/backup/BeamForming/Icons/true.png</normaloff>../.designer/.designer/backup/BeamForming/Icons/true.png</iconset>
+                                  <normaloff>BeamForming/Icons/true.png</normaloff>BeamForming/Icons/true.png</iconset>
                                 </property>
                                 <property name="iconSize">
                                  <size>
@@ -2780,97 +2780,6 @@ border:none;</string>
                      </item>
                     </layout>
                    </item>
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_37">
-                     <property name="spacing">
-                      <number>33</number>
-                     </property>
-                     <item>
-                      <spacer name="horizontalSpacer_34">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="apply">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>30</height>
-                        </size>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>PointingHandCursor</cursorShape>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QPushButton{
-  appearance: button;
-  backface-visibility: hidden;
-  background-color: #1b495f;
-  border-radius: 6px;
-  border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-font-weight:bold;
-  font-family: -apple-system,system-ui,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Ubuntu,sans-serif;
-  font-size: 17px;
-  height: 35px;
-  line-height: 1.15;
- margin: 0px 10px;
- margin-top:5px;
-  outline: none;
-  overflow: hidden;
-  padding: 0 5px;
-  padding-right:1px;
-
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transform: translateZ(0);
-  transition: all .2s,box-shadow .08s ease-in;
-  touch-action: manipulation;
-  width:100px;
-}
-QPushButton:hover {
-    background-color: #23607c;    /* Slightly lighter blue when hovering */
-color: #ffffff;
-}
-
-
-QPushButton:pressed {
-    background-color: #133746;    /* Darker blue when pressed */
-}
-</string>
-                       </property>
-                       <property name="text">
-                        <string>Apply</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_35">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>14</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                    </layout>
-                   </item>
                   </layout>
                  </item>
                  <item>
@@ -2985,7 +2894,7 @@ margin-left: 0px;
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="Mode_comboBox_2">
+                <widget class="QComboBox" name="Mode_comboBox">
                  <property name="minimumSize">
                   <size>
                    <width>240</width>
@@ -3122,7 +3031,7 @@ margin-left:6px;
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="scenarios_comboBox_2">
+                <widget class="QComboBox" name="scenarios_comboBox">
                  <property name="maximumSize">
                   <size>
                    <width>300</width>
@@ -3259,7 +3168,7 @@ margin-left: 0px;
                 </widget>
                </item>
                <item>
-                <widget class="QRadioButton" name="radioButton1_4">
+                <widget class="QRadioButton" name="radioButton1_3">
                  <property name="font">
                   <font>
                    <family>Oswald SemiBold</family>
@@ -3329,6 +3238,12 @@ font-size: 18px;</string>
                      <layout class="QVBoxLayout" name="components_layout">
                       <item>
                        <widget class="QLabel" name="mixer_6">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>25</height>
+                         </size>
+                        </property>
                         <property name="font">
                          <font>
                           <pointsize>-1</pointsize>
@@ -3387,6 +3302,19 @@ margin-left:8px;
                          <enum>Qt::Horizontal</enum>
                         </property>
                        </widget>
+                      </item>
+                      <item>
+                       <spacer name="verticalSpacer_10">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_53">
@@ -3506,6 +3434,19 @@ font-weight:bold;
                        </layout>
                       </item>
                       <item>
+                       <spacer name="verticalSpacer_6">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_29">
                         <item>
                          <widget class="QLabel" name="Amplitude_2">
@@ -3609,6 +3550,19 @@ QSpinBox::up-button:hover, QSpinBox::down-button:hover {
                        </layout>
                       </item>
                       <item>
+                       <spacer name="verticalSpacer_5">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_14">
                         <item>
                          <widget class="QLabel" name="Phase_2">
@@ -3697,6 +3651,19 @@ QDoubleSpinBox::up-button:hover, QSpinBox::down-button:hover {
                          </widget>
                         </item>
                        </layout>
+                      </item>
+                      <item>
+                       <spacer name="verticalSpacer_2">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_55">
@@ -3873,22 +3840,6 @@ border: 1px solid #3498db; /* Border of the handle when pressed */
                             </property>
                            </widget>
                           </item>
-                          <item>
-                           <spacer name="verticalSpacer_14">
-                            <property name="orientation">
-                             <enum>Qt::Vertical</enum>
-                            </property>
-                            <property name="sizeType">
-                             <enum>QSizePolicy::Maximum</enum>
-                            </property>
-                            <property name="sizeHint" stdset="0">
-                             <size>
-                              <width>208</width>
-                              <height>13</height>
-                             </size>
-                            </property>
-                           </spacer>
-                          </item>
                          </layout>
                         </item>
                         <item>
@@ -3905,6 +3856,19 @@ border: 1px solid #3498db; /* Border of the handle when pressed */
                          </spacer>
                         </item>
                        </layout>
+                      </item>
+                      <item>
+                       <spacer name="verticalSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>5</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_30">
