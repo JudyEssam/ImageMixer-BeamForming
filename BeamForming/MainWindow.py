@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication,QPushButton,QListWidget, QDoubleSpinBox ,QSpinBox, QWidget, QLabel ,  QSlider, QRadioButton, QComboBox, QTableWidget, QTableWidgetItem, QCheckBox,QMenu,QTextEdit, QDialog, QFileDialog, QInputDialog, QSizePolicy,QScrollArea,QVBoxLayout,QHBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QApplication,QPushButton, QListWidget, QDoubleSpinBox ,QSpinBox, QWidget, QLabel ,  QSlider, QRadioButton, QComboBox, QTableWidget, QTableWidgetItem, QCheckBox,QMenu,QTextEdit, QDialog, QFileDialog, QInputDialog, QSizePolicy,QScrollArea,QVBoxLayout,QHBoxLayout
 from PyQt5.uic import loadUi
 import sys
 import os
@@ -56,7 +56,11 @@ class MainWindow1(QMainWindow):
         #for array parameters
         self.spacing_spinbox=self.findChild(QDoubleSpinBox, 'elements_spacing')
         self.elements_num_spinbox=self.findChild(QSpinBox, 'elements_no')
-        self.beam_angle_spinbox=self.findChild(QSpinBox, 'beam_angle')
+
+        self.beamAngle = self.findChild(QSlider, "beam_angle")
+        self.beamAngle.valueChanged.connect(self.get_beam_angle_value)
+        self.slider_value = self.findChild(QLabel, "label")
+
         self.beamLabel = self.findChild(QLabel, "beam_label")
         self.beamLabel.setText("Steering Angle: ")
         self.shape_combox= self.findChild(QComboBox, 'Shape_comboBox')
@@ -76,13 +80,18 @@ class MainWindow1(QMainWindow):
         self.sliders_gain=[]
         
         #for signal parameters
-        self.prop_speed_spinbox=self.findChild(QSpinBox, 'Speed_spinbox')
         self.freq_spinbox=self.findChild(QSpinBox, 'freqSpinBox')
-        self.speed_power_spinbox=self.findChild(QSpinBox, 'speedPower')
-        self.freq_power_spinbox=self.findChild(QSpinBox, 'freqPower')
-        self.amp_spinbox=self.findChild(QDoubleSpinBox, 'amplitude')
+        self.freq_comboBox = self.findChild(QComboBox, 'freq_comboBox')
+        self.freq_comboBox.setCurrentIndex(0)
+        self.freq_comboBox.activated.connect(self.get_frequency_multiplier)
+
         self.add_component_button=self.findChild(QPushButton, 'add_frequency')
-        self.add_component_button.clicked.connect(lambda : self.signal.add_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value()))
+        self.add_component_button.clicked.connect(lambda : self.signal.add_freq( self.freq_spinbox.value() * 10 ** self.get_frequency_multiplier()))
+
+        #propagation speed
+        self.speed_comboBox = self.findChild(QComboBox, 'speed_comboBox')
+        self.speed_comboBox.setCurrentIndex(0)
+        self.speed_comboBox.activated.connect(self.update_speed)
 
         #BEAM widgets
         self.beam_pattern_widget= self.findChild(QWidget, 'widget1')
@@ -94,6 +103,26 @@ class MainWindow1(QMainWindow):
         self.scenario= Scenarios(self)
         self.scenario.ultrasonic()
 
+    def get_frequency_multiplier(self):
+        index = self.freq_comboBox.currentIndex()
+        if index == 0:  # Hz
+            return 0
+        elif index == 1:  # kHz
+            return 3
+        elif index == 2:  # MHz
+            return 6
+        elif index == 3:  # GHz
+            return 9
+
+    def update_speed(self, index=None):
+        if index is None:
+            index = self.speed_comboBox.currentIndex()  # Use the current index of the combo box
+        if index == 0:  # Light speed
+            return 3 * 10**8
+        elif index == 1:  # Ultrasound speed
+            return 1540
+
+
     def choose_scenario(self, index):
         if index == 0:
             self.scenario.ultrasonic()
@@ -101,6 +130,8 @@ class MainWindow1(QMainWindow):
             self.scenario.beamforming_5G()
         elif index==2:
             self.scenario.ablation()
+        elif index==3:
+            self.scenario.default()
 
 
     def updateLabelForShape(self, index):
@@ -133,7 +164,7 @@ class MainWindow1(QMainWindow):
             self.beamLabel.setText("Steering Angle: ")
             self.interfere_label.setText("Interference Map")
         elif index==1:
-            self.interfere_label.setText("Delays of Antennas (Conventional BeamForming)")
+            self.interfere_label.setText("Tower Transmission Map")
             self.mode= RecievingMode(self)
             self.beamLabel.setText("Direction of Arrival: ")
 
@@ -258,10 +289,17 @@ class MainWindow1(QMainWindow):
          self.sliders_phase_values= [np.radians(slider.value()) for slider in self.sliders_phase]
          return self.sliders_phase_values
 
+
+    def get_beam_angle_value(self):
+        value = self.beamAngle.value()
+        self.slider_value.setText(f"Value: {value}")
+        return value
+
     def formArray(self):
         antennas_num= self.elements_num_spinbox.value()
         antennas_spacing=self.spacing_spinbox.value() #acts as radius for circular array
-        beam_angle=self.beam_angle_spinbox.value()
+        print(f"antennas_spacing{antennas_spacing}")
+        beam_angle=self.get_beam_angle_value()
         shape= 'linear' if self.shape_combox.currentIndex()==0 else 'circular'
         self.array=PhasedArray(antennas_num, antennas_spacing, shape, beam_angle)    
 
@@ -286,10 +324,9 @@ class MainWindow1(QMainWindow):
         self.array.set_elements_phases_and_gains(phases, gains)
     
     def formSignal(self):
-        speed= self.prop_speed_spinbox.value()
-        self.signal.renew_amp_freq(self.amp_spinbox.value(), self.freq_spinbox.value()*10**self.freq_power_spinbox.value())
-        if speed>0:
-            self.signal.set_speed(speed*10**self.speed_power_spinbox.value())
+        self.signal.renew_amp_freq(self.freq_spinbox.value() * 10 ** self.get_frequency_multiplier())
+        current_index = self.speed_comboBox.currentIndex()  
+        self.signal.set_speed(self.update_speed(current_index))
         self.signal.create_signal()
 
     def applyChanges(self):
@@ -301,7 +338,6 @@ class MainWindow1(QMainWindow):
 
 
 if __name__ == '__main__':
-
     app = QApplication(sys.argv)
     window = MainWindow1()
     window.show()

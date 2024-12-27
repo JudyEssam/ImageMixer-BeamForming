@@ -4,7 +4,7 @@ import numpy as np
 class PhasedArray:
     def __init__(self, antennas_num, antennas_spacing, shape, beam_angle):
         self._antennas_num= antennas_num
-        self._antennas_spacing= antennas_spacing #the normalized spacing (dm/lamda)
+        self._antennas_spacing= antennas_spacing/1000 #millimeters to meters
         self._shape=shape
         self._beam_angle= np.radians(beam_angle) #azimuth
         self._steer_vector=None
@@ -22,13 +22,19 @@ class PhasedArray:
     def form_steer_vector(self, wavelength): #we simulate the array using a steering vector
         if self._shape == 'linear':
             # intrinsic phase shifts (due to element spacing) 
-                self.geometry_phases = -2j * np.pi * self._antennas_spacing * np.arange(self._antennas_num) * np.sin(self._beam_angle)          
+                spacing = self._antennas_spacing/wavelength
+                self.geometry_phases = -1j* spacing * np.arange(self._antennas_num) * np.sin(self._beam_angle)          
         
         if self._shape == 'circular':
             # Compute the angular positions of each element on the circle
-                self.element_angles = np.linspace(0, 2 * np.pi, self._antennas_num, endpoint=False)
-                self.geometry_phases = -2j * np.pi * (self._radius / wavelength) * np.cos( self.element_angles - self._beam_angle)
-        # Add individual phase offsets, account for individual gains 
+                self.element_angles = np.linspace(0, 2*np.pi, self._antennas_num, endpoint=False)
+                self.geometry_phases = -1j * (2* np.pi/wavelength ) * self._radius * np.cos(self._beam_angle - self.element_angles)
+                # radius = self._radius/wavelength # normalized by wavelength!
+                # d = np.sqrt(2 * radius**2 * (1 - np.cos(2*np.pi/self._antennas_num)))
+                # sf = 1.0 / (np.sqrt(2.0) * np.sqrt(1.0 - np.cos(2*np.pi/self._antennas_num))) # scaling factor based on geometry, eg for a hexagon it is 1.0
+                # x = d * sf * np.cos(2 * np.pi / self._antennas_num * np.arange(self._antennas_num))
+                # y = -1 * d * sf * np.sin(2 * np.pi / self._antennas_num * np.arange(self._antennas_num))
+                # self._steer_vector = np.exp(1j * 2 * np.pi * (x * np.cos(self._beam_angle) + y * np.sin(self._beam_angle)))
         self._steer_vector = np.array(self._elements_gain)* np.exp(self.geometry_phases + 1j * np.array(self._elements_phase))
 
     def get_steer_vector(self):
