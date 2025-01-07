@@ -51,16 +51,25 @@ This desktop application is designed to demonstrate the interplay and significan
 ## Screenshots
 
 ### Main Interface
+ ![screenshot1](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/9313c7b50bd04a6e04cea9bcfaf3614a614965e2/screenshots/main_interface.png
+)
 
-
-### FT Magnitude and Phase Display
+### Mixing Two Images
+ ![screenshot2](
+)
 
 ### Region Selection and Mixer
 
+ ![screenshot3](
+)
+ ![screenshot3](
+)
+
+### Brightness and Contrast 
+ ![screenshot4](
+)
 
 ---
-
-
 ### Required libraries:
   - `PyQt5`
   - `numpy`
