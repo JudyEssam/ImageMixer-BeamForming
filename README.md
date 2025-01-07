@@ -62,7 +62,7 @@ This desktop application is designed to demonstrate the interplay and significan
 
  ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/40edf25108ff0b7ec9cfe82d40c4afb43629c6f1/screenshots/inner_region.png
 )
- ![screenshot3](
+ ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/043be5934c2651761a5085e1b762cc69b3d55b09/screenshots/outer_region.png
 )
 
 ### Brightness and Contrast 
