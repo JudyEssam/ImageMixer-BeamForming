@@ -77,4 +77,17 @@ This desktop application is designed to demonstrate the interplay and significan
   - `Pillow`
   - `Logging`
 
+## Acknowledgments
+
+This project was supervised by **Dr. Tamer Basha** & **Eng. Omar**, who provided invaluable guidance and expertise throughout its development as part of the **Digital Signal Processing** course at **Cairo University Faculty of Engineering**.
+
+![Cairo University Logo](https://imgur.com/Wk4nR0m.png)
+
+## Contributors
+
+- [Judy Essam](https://github.com/JudyEssam)
+- [Laila Khaled](https://github.com/LailaKhaled352)
+- [Fatma Elsharkawy](https://github.com/FatmaElsharkawy)
+- [Hajar Ehab](https://github.com/HajarEhab)
+
 
