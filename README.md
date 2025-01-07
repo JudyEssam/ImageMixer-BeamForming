@@ -55,7 +55,7 @@ This desktop application is designed to demonstrate the interplay and significan
 )
 
 ### Mixing Two Images
- ![screenshot2](
+ ![screenshot2](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/701d1c7ed7d220599484d2a72cee82ed63ab9c14/screenshots/mixing%20two%20images.png
 )
 
 ### Region Selection and Mixer
