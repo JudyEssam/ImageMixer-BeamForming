@@ -6,6 +6,29 @@ This desktop application is designed to demonstrate the interplay and significan
 
 ---
 
+
+
+## Screenshots
+
+### Main Interface
+ ![screenshot1](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/9313c7b50bd04a6e04cea9bcfaf3614a614965e2/screenshots/main_interface.png
+)
+
+### Mixing Two Images
+ ![screenshot2](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/701d1c7ed7d220599484d2a72cee82ed63ab9c14/screenshots/mixing%20two%20images.png
+)
+
+### Region Selection and Mixer
+
+ ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/40edf25108ff0b7ec9cfe82d40c4afb43629c6f1/screenshots/inner_region.png
+)
+ ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/043be5934c2651761a5085e1b762cc69b3d55b09/screenshots/outer_region.png
+)
+### Brightness and Contrast 
+ ![screenshot4](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/a07c54b4cf37db7690e39fe0a4c069f581c1edb8/screenshots/brightness_contrast.png
+)
+
+---
 ## Features
 
 ### **Image Viewers**
@@ -45,29 +68,6 @@ This desktop application is designed to demonstrate the interplay and significan
 ### **Realtime Mixing**
 - **Progress Indication**: Lengthy IFFT operations display a progress bar to indicate the process status.
 - **Cancellation Support**: Cancel ongoing operations if new settings are applied before completion.
-
----
-
-## Screenshots
-
-### Main Interface
- ![screenshot1](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/9313c7b50bd04a6e04cea9bcfaf3614a614965e2/screenshots/main_interface.png
-)
-
-### Mixing Two Images
- ![screenshot2](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/701d1c7ed7d220599484d2a72cee82ed63ab9c14/screenshots/mixing%20two%20images.png
-)
-
-### Region Selection and Mixer
-
- ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/40edf25108ff0b7ec9cfe82d40c4afb43629c6f1/screenshots/inner_region.png
-)
- ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/043be5934c2651761a5085e1b762cc69b3d55b09/screenshots/outer_region.png
-)
-
-### Brightness and Contrast 
- ![screenshot4](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/a07c54b4cf37db7690e39fe0a4c069f581c1edb8/screenshots/brightness_contrast.png
-)
 
 ---
 ### Required libraries:
