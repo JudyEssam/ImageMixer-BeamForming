@@ -1,4 +1,4 @@
-# Fourier Transform Mixer
+# PART A: Image Mixer
 
 ## Overview
 
