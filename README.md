@@ -2,7 +2,7 @@
 
 ## Overview
 
-This desktop program is designed to illustrate the relative importance of magnitude and phase components while emphasizing the frequencies' contributions to a signal. Although demonstrated using 2D images, the concepts apply universally to any signal. The software offers several features to explore Fourier Transform (FT) components and their significance.
+This desktop application is designed to demonstrate the interplay and significance of the magnitude and phase components in the Fourier Transform (FT) of signals, using 2D images for visualization. By emphasizing the contribution of different FT components, the application allows users to explore and manipulate these elements in an intuitive way. This tool provides hands-on interaction with signal processing concepts such as FT magnitude, phase, real, and imaginary components, while enabling customized mixing and visualization.
 
 ---
 
