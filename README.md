@@ -60,7 +60,7 @@ This desktop application is designed to demonstrate the interplay and significan
 
 ### Region Selection and Mixer
 
- ![screenshot3](
+ ![screenshot3](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/40edf25108ff0b7ec9cfe82d40c4afb43629c6f1/screenshots/inner_region.png
 )
  ![screenshot3](
 )
