@@ -77,6 +77,10 @@ Beamforming is a fundamental concept in nowadays modern technologies starting fr
 radar, sonar to biomedical applications like ultrasound and tumor ablations. The core ideas of beamforming are delays/
 phase-shifts and constructive/destructive interference.
 
+## Video:
+[Watch the demo video](./videos/demo.mp4)
+
+
 ## Features:
 - **Beamforming Arrays**: Create and manipulate phased arrays, including linear and circular configurations.
 - **Interactive Controls**: Adjust beam angle  through slider, antenna parameters through sliders with respect to mode, and signal frequency through text field box.
