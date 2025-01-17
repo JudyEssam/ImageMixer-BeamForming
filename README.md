@@ -84,7 +84,7 @@ https://github.com/user-attachments/assets/dcd4398e-4f01-47d7-a752-430b6b2a4752
 - **Interactive Controls**: Adjust beam angle  through slider, antenna parameters through sliders with respect to mode, and signal frequency through text field box.
 - **Mode Switching**: Switch between Transmission and Receiving modes, each with its own set of controls and behavior.
 - **Signal Processing**: Control signal frequency, gain, and phase for each antenna element in the array.
-- **Scenario-Based Configurations**: Select different operational scenarios such as **Ultrasonic**, **5G Beamforming**, **Default**and **Tumer Ablation** through combobox.
+- **Scenario-Based Configurations**: Select different operational scenarios such as **Ultrasonic**, **5G Beamforming**, **Default** and **Tumer Ablation** through combobox.
 - **Visualization**: Display **Interference Maps**, **Beam Patterns**, and other related visual outputs.
 - **Slider Controls**: Fine-tune antenna phase, gain, and beam angle using sliders.
 - **Speed Adjustment**: Modify the propagation speed of the signal based on selected medium (Light Speed, Ultrasound).
