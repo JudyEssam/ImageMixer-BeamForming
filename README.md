@@ -70,12 +70,47 @@ This desktop application is designed to demonstrate the interplay and significan
 - **Cancellation Support**: Cancel ongoing operations if new settings are applied before completion.
 
 ---
+
+# PART B: Beamforming Simulator
+## Overview:
+Beamforming is a fundamental concept in nowadays modern technologies starting from wireless communications, 5G,
+radar, sonar to biomedical applications like ultrasound and tumor ablations. The core ideas of beamforming are delays/
+phase-shifts and constructive/destructive interference.
+
+## Features:
+- **Beamforming Arrays**: Create and manipulate phased arrays, including linear and circular configurations.
+- **Interactive Controls**: Adjust beam angle  through slider, antenna parameters through sliders with respect to mode, and signal frequency through text field box.
+- **Mode Switching**: Switch between Transmission and Receiving modes, each with its own set of controls and behavior.
+- **Signal Processing**: Control signal frequency, gain, and phase for each antenna element in the array.
+- **Scenario-Based Configurations**: Select different operational scenarios such as **Ultrasonic**, **5G Beamforming**, **Default**and **Tumer Ablation** through combobox.
+- **Visualization**: Display **Interference Maps**, **Beam Patterns**, and other related visual outputs.
+- **Slider Controls**: Fine-tune antenna phase, gain, and beam angle using sliders.
+- **Speed Adjustment**: Modify the propagation speed of the signal based on selected medium (Light Speed, Ultrasound).
+
+### Supported Modes
+- **Transmission Mode**: Control parameters related to signal transmission, including interference maps and beamforming angles.
+- **Receiving Mode**: Handle direction of arrival and map for receiving signals from the array.
+
+### Array Configuration
+- **Element Spacing**: Control the spacing between antennas in the array (Linear and Circular options).
+- **Uniform Phase**: Adjust the phase of each antenna element.
+- **Isotropic Gain**: Enable/Disable isotropic gain across antennas.
+
+### Signal Configuration
+- **Frequency Adjustment**: Modify signal frequency in various units (Hz, kHz, MHz, GHz).
+- **Propagation Speed**: Choose the speed of signal propagation, considering factors like light and ultrasound speed.
+
+
+
 ### Required libraries:
   - `PyQt5`
   - `numpy`
   - `OpenCV`
   - `Pillow`
   - `Logging`
+  - `matplotlib`
+  - ` sys`
+  - ` os`
 
 ## Acknowledgments
 
