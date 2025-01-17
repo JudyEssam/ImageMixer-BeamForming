@@ -78,8 +78,7 @@ radar, sonar to biomedical applications like ultrasound and tumor ablations. The
 phase-shifts and constructive/destructive interference.
 
 ## Video:
-[View Video](https://github.com/JudyEssam/ImageMixer-BeamForming/blob/312bc5111404120c7975c17a4721eb0f7a6d27c5/video_beamforming/videobeamforming11.mp4)
-
+https://github.com/user-attachments/assets/dcd4398e-4f01-47d7-a752-430b6b2a4752
 ## Features:
 - **Beamforming Arrays**: Create and manipulate phased arrays, including linear and circular configurations.
 - **Interactive Controls**: Adjust beam angle  through slider, antenna parameters through sliders with respect to mode, and signal frequency through text field box.
