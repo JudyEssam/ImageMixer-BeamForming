@@ -34,7 +34,12 @@ class BeamForming:
             wavelength= self._signal.get_wavelength()
             phi = np.linspace(-1*np.pi/2, 1*np.pi/2, 1000)
             beam_pattern = np.abs(np.sum([steer_vector[n] * np.exp(1j * spacing/wavelength * (n) * np.sin(phi)) for n in range(antennas_num)], axis=0))
-            beam_pattern /= max(beam_pattern)
+            if np.max(beam_pattern) > 0:
+              beam_pattern /= np.max(beam_pattern)
+            else:
+              beam_pattern = np.zeros_like(beam_pattern) 
+            print(phi.shape)  # Should be (1000,)
+            print(beam_pattern.shape)  # Ensure it is also (1000,)
 
             fig = Figure(figsize=(5, 5),  facecolor='none')
             ax = fig.add_subplot(111, projection='polar', frame_on=False)
@@ -48,6 +53,8 @@ class BeamForming:
 
         
         elif shape =='circular':
+            steer_vector = self._array.get_steer_vector()  # Ensure steer_vector is initialized
+
             # Beam pattern calculation
             antennas_num,radius,beam_angle= self._array.get_array_factor()
             elements_angular_spacing= self._array.get_elements_angles()
@@ -64,6 +71,7 @@ class BeamForming:
                     for n in range(antennas_num)]))
 
             # Normalize the beam pattern
+            
             beam_pattern = 10 * np.log10(beam_pattern / np.max(beam_pattern))
 
             # Create a polar plot
