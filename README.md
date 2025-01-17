@@ -78,7 +78,7 @@ radar, sonar to biomedical applications like ultrasound and tumor ablations. The
 phase-shifts and constructive/destructive interference.
 
 ## Video:
-[Watch the demo video](./videos/demo.mp4)
+[Watch the demo video](C:\mixer_beamforming\ImageMixer-BeamForming\video_beamforming\videobeamforming.mp4)
 
 
 ## Features:
